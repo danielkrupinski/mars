@@ -1,2 +1,4 @@
 # titan
-A big project is coming.
+Never lose hope. Something will reborn.
+
+**April 2018**
