@@ -13,9 +13,15 @@ rm build_id_hex
 BUILD_ID=$(shuf -n 1 build_names)
 
 # In case this file exists, get another one. ( checked it works )
-while [ -f "/usr/lib64/${BUILD_ID}" ]; do
-	BUILD_ID=$(shuf -n 1 build_names)
-done
+if [ -d "/usr/lib64/" ]; then
+    while [ -f "/usr/lib64/${BUILD_ID}" ]; do
+	    BUILD_ID=$(shuf -n 1 build_names)
+    done
+else
+    while [ -f "/usr/lib/x86_64-linux-gnu/${BUILD_ID}" ]; do
+	    BUILD_ID=$(shuf -n 1 build_names)
+    done
+fi
 
 # Hexify it and put it into build_id_hex
 for (( i=0; i<${#BUILD_ID}; i++ )); do
@@ -28,10 +34,16 @@ make -j"$(grep -c "^processor" /proc/cpuinfo)" "$@" || exit 1
 if [ -f build_id ]; then
     filename=$(cat build_id)
     rm "$filename"
+    if [ -d "/usr/lib64/" ]; then
     if [ -f "/usr/lib64/${filename}" ]; then
     	echo -e "Note: Old file found at /usr/lib64/{$filename}\n"
         #sudo rm "/usr/lib64/${filename}"
-
+    fi
+    else
+    if [ -f "/usr/lib/x86_64-linux-gnu/${filename}" ]; then
+    	echo -e "Note: Old file found at /usr/lib/x86_64-linux-gnu/{$filename}\n"
+        #sudo rm "/usr/lib64/${filename}"
+    fi
     fi
     chmod 660 build_id
     mv build_id build_id_old
