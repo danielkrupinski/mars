@@ -613,6 +613,7 @@ const std::map<int, PaintNames_t> itemSkins = {
 		{ 688, { "#PaintKit_cu_ump45_x-ray_machine_Tag", "ump45_x-ray_machine" } },
 		{ 689, { "#PaintKit_aq_xm1014_ziggy_anarchy_Tag", "xm1014_ziggy_anarchy" } },
         { 695, { "#PaintKit_cu_m4a4_neo_noir_Tag", "m4a4_neo_noir" } },
+        { 696, { "#PaintKit_gs_mp7_bloodsport_Tag", "mp7_bloodsport" } },
 		{ 10006, { "#PaintKit_bloodhound_black_silver_tag", "bloodhound_black_silver" } },
 		{ 10007, { "#PaintKit_bloodhound_snakeskin_brass_tag", "bloodhound_snakeskin_brass" } },
 		{ 10008, { "#PaintKit_bloodhound_metallic_tag", "bloodhound_metallic" } },
