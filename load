@@ -33,28 +33,50 @@ echo "Injecting Build ID: $filename"
 # https://www.kernel.org/doc/Documentation/security/Yama.txt
 sudo echo "2" | sudo tee /proc/sys/kernel/yama/ptrace_scope # Only allows root to inject code. This is temporary until reboot.
 
-sudo cp "$filename" "/usr/lib64/${filename}"
+if [ -d "/usr/lib64/" ]; then
+    sudo cp "$filename" "/usr/lib64/${filename}"
+else
+    sudo cp "$filename" "/usr/lib/x86_64-linux-gnu/${filename}"
+fi
 
 sudo killall -19 steam
 sudo killall -19 steamwebhelper
 
-input="$(
-sudo gdb -n -q -batch-silent \
-  -ex "set logging on" \
-  -ex "set logging file /dev/null" \
-  -ex "set logging redirect on" \
-  -ex "attach $csgo_pid" \
-  -ex "set \$dlopen = (void*(*)(char*, int)) dlopen" \
-  -ex "call \$dlopen(\"/usr/lib64/$filename\", 1)" \
-  -ex "detach" \
-  -ex "quit"
-)"
+if [ -d "/usr/lib64/" ]; then
+    input="$(
+    sudo gdb -n -q -batch-silent \
+      -ex "set logging on" \
+      -ex "set logging file /dev/null" \
+      -ex "set logging redirect on" \
+      -ex "attach $csgo_pid" \
+      -ex "set \$dlopen = (void*(*)(char*, int)) dlopen" \
+      -ex "call \$dlopen(\"/usr/lib64/$filename\", 1)" \
+      -ex "detach" \
+      -ex "quit"
+    )"
+else
+    input="$(
+    sudo gdb -n -q -batch-silent \
+      -ex "set logging on" \
+      -ex "set logging file /dev/null" \
+      -ex "set logging redirect on" \
+      -ex "attach $csgo_pid" \
+      -ex "set \$dlopen = (void*(*)(char*, int)) dlopen" \
+      -ex "call \$dlopen(\"/usr/lib/x86_64-linux-gnu/$filename\", 1)" \
+      -ex "detach" \
+      -ex "quit"
+    )"
+fi
 
 sleep 1
 sudo killall -18 steamwebhelper
 sudo killall -18 steam
 
-sudo rm "/usr/lib64/${filename}"
+if [ -d "/usr/lib64/" ]; then
+    sudo rm "/usr/lib64/${filename}"
+else
+    sudo rm "/usr/lib/x86_64-linux-gnu/${filename}"
+fi
 
 last_line="${input##*$'\n'}"
 
