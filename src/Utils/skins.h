@@ -653,6 +653,7 @@ const std::map<int, PaintNames_t> itemSkins = {
     { 10038, { "#PaintKit_sporty_green_tag", "sporty_green" } },
     { 10039, { "#PaintKit_bloodhound_guerrilla_tag", "bloodhound_guerrilla" } },
     { 10040, { "#PaintKit_slick_snakeskin_yellow_tag", "slick_snakeskin_yellow" } },
+    { 10063, { "#PaintKit_specialist_fade_tag", "specialist_fade" } },
 };
 
 namespace Skins
