@@ -1,4 +1,5 @@
 # Source sode formatting update
 
 ## Work progress
-- [x] src/Util/skins.h
+- [x] src/Utils/
+- [] src/Hacks/
