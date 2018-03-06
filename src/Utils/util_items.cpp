@@ -69,6 +69,7 @@ namespace Util
             { ItemDefinitionIndexMap.at(i::GLOVE_LEATHER_WRAP).entityName,			i::GLOVE_LEATHER_WRAP},
             { ItemDefinitionIndexMap.at(i::GLOVE_MOTORCYCLE).entityName,			i::GLOVE_MOTORCYCLE},
             { ItemDefinitionIndexMap.at(i::GLOVE_SPECIALIST).entityName,			i::GLOVE_SPECIALIST},
+            { ItemDefinitionIndexMap.at(i::GLOVE_STUDDED_HYDRA).entityName, 	    i::GLOVE_STUDDED_HYDRA},
 
         };  // ItemNames
 
@@ -169,6 +170,7 @@ namespace Util
                 case ItemDefinitionIndex::GLOVE_SLICK:
                 case ItemDefinitionIndex::GLOVE_SPORTY:
                 case ItemDefinitionIndex::GLOVE_LEATHER_WRAP:
+                case ItemDefinitionIndex::GLOVE_STUDDED_HYDRA:
                     return true;
                 default:
                     return false;
