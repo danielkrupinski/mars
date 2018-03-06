@@ -179,7 +179,7 @@ enum class ItemDefinitionIndex : int
 	GLOVE_LEATHER_WRAP = 5032,
 	GLOVE_MOTORCYCLE = 5033,
 	GLOVE_SPECIALIST = 5034,
-    GLOVE_STUDDED_HYDRA = 5035,
+    GLOVE_STUDDED_HYDRA = 5035
 };
 
 enum class EClassIds : int
@@ -1832,7 +1832,8 @@ const std::map<ItemDefinitionIndex, DefItem_t> ItemDefinitionIndexMap = {
 		{ ItemDefinitionIndex::GLOVE_SLICK,					{ "#CSGO_Wearable_v_slick_glove", "slick_gloves", "models/weapons/v_models/arms/glove_slick/v_glove_slick.mdl" } },
 		{ ItemDefinitionIndex::GLOVE_LEATHER_WRAP,			{ "#CSGO_Wearable_v_leather_handwrap", "leather_handwraps", "models/weapons/v_models/arms/glove_handwrap_leathery/v_glove_handwrap_leathery.mdl" } },
 		{ ItemDefinitionIndex::GLOVE_MOTORCYCLE,			{ "#CSGO_Wearable_v_motorcycle_glove", "motorcycle_gloves", "models/weapons/v_models/arms/glove_motorcycle/v_glove_motorcycle.mdl" } },
-		{ ItemDefinitionIndex::GLOVE_SPECIALIST,			{ "#CSGO_Wearable_v_specialist_glove", "specialist_gloves", "models/weapons/v_models/arms/glove_specialist/v_glove_specialist.mdl" } }
+		{ ItemDefinitionIndex::GLOVE_SPECIALIST,			{ "#CSGO_Wearable_v_specialist_glove", "specialist_gloves", "models/weapons/v_models/arms/glove_specialist/v_glove_specialist.mdl" } },
+        { ItemDefinitionIndex::GLOVE_STUDDED_HYDRA,	        { "#CSGO_Wearable_t_studded_hydra_gloves", "studded_hydra_gloves", "models/weapons/v_models/arms/glove_bloodhound/v_glove_bloodhound_hydra.mdl" } }
 };
 
 #define FL_ONGROUND				(1<<0)	// At rest / on the ground
