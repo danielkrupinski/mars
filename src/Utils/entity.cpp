@@ -116,15 +116,17 @@ bool Entity::IsVisibleThroughEnemies(C_BasePlayer *player, int bone, float fov, 
         return false;
 
 
-    if( tr.m_pEntityHit )
+    if (tr.m_pEntityHit)
     {
-        if( tr.m_pEntityHit != player )
+        if (tr.m_pEntityHit != player)
         {
-            if( tr.m_pEntityHit->GetTeam() == player->GetTeam() ) // if someone from the same team
+            if (tr.m_pEntityHit->GetTeam() == player->GetTeam()) // if someone from the same team
             {
                 return true;
             }
-        } else{
+        }
+        else
+        {
             return true;
         }
     }
@@ -162,15 +164,17 @@ bool Entity::IsSpotVisibleThroughEnemies(C_BasePlayer *player, Vector spot, floa
         return false;
 
 
-    if( tr.m_pEntityHit )
+    if (tr.m_pEntityHit)
     {
-        if( tr.m_pEntityHit != player )
+        if (tr.m_pEntityHit != player)
         {
-            if( tr.m_pEntityHit->GetTeam() == player->GetTeam() ) // if someone from the same team
+            if (tr.m_pEntityHit->GetTeam() == player->GetTeam()) // if someone from the same team
             {
                 return true;
             }
-        } else{
+        }
+        else
+        {
             return true;
         }
     }
