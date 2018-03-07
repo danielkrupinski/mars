@@ -653,6 +653,7 @@ const std::map<int, PaintNames_t> itemSkins = {
     { 10038, { "#PaintKit_sporty_green_tag", "sporty_green" } },
     { 10039, { "#PaintKit_bloodhound_guerrilla_tag", "bloodhound_guerrilla" } },
     { 10040, { "#PaintKit_slick_snakeskin_yellow_tag", "slick_snakeskin_yellow" } },
+    { 10045, { "#PaintKit_sporty_poison_frog_blue_white_tag", "sporty_poison_frog_blue_white" } },
     { 10046, { "#PaintKit_sporty_poison_frog_red_green_tag", "sporty_poison_frog_red_green" } },
     { 10047, { "#PaintKit_sporty_black_webbing_yellow_tag", "sporty_black_webbing_yellow" } },
     { 10048, { "#PaintKit_sporty_blue_pink_tag", "sporty_blue_pink" } },
