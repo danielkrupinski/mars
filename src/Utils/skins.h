@@ -319,7 +319,7 @@ const std::map<int, PaintNames_t> itemSkins = {
     { 384, { "#PaintKit_cu_m4a4_griffin_Tag", "m4a4_griffin" } },
     { 385, { "#PaintKit_sp_mag7_firebitten_Tag", "mag7_firebitten" } },
     { 386, { "#PaintKit_cu_mp9_chevron_Tag", "mp9_chevron" } },
-    { 387, { "#PaintKit_cu_fiveseven_urban_hazard_tag", "fiveseven_urban_hazard" } },
+    { 387, { "#PaintKit_cu_mp7-commander_tag", "fiveseven_urban_hazard" } },
     { 388, { "#PaintKit_aq_p250_cartel_Tag", "p250_cartel" } },
     { 389, { "#PaintKit_cu_p2000_fire_elemental_Tag", "p2000_fire_elemental" } },
     { 390, { "#PaintKit_aq_sawedoff_blackgold_Tag", "sawedoff_blackgold" } },
