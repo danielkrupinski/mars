@@ -656,7 +656,7 @@ const std::map<int, PaintNames_t> itemSkins = {
     { 10041, { "#PaintKit_slick_snakeskin_white_tag", "slick_snakeskin_white" } },
     { 10042, { "#PaintKit_slick_plaid_purple_tag", "slick_plaid_purple" } },
     { 10043, { "#PaintKit_slick_stitched_black_orange_tag", "slick_stitched_black_orange" } },
-    { 10044, { "#PaintKit_slick_stitched_green_grey_tag", "slick_stitched_green_grey" } },
+    { 10044, { "#PaintKit_slick_slick_stitched_green_grey_tag", "slick_stitched_green_grey" } },
     { 10045, { "#PaintKit_sporty_poison_frog_blue_white_tag", "sporty_poison_frog_blue_white" } },
     { 10046, { "#PaintKit_sporty_poison_frog_red_green_tag", "sporty_poison_frog_red_green" } },
     { 10047, { "#PaintKit_sporty_black_webbing_yellow_tag", "sporty_black_webbing_yellow" } },
