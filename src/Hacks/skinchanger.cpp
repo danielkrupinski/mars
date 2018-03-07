@@ -28,7 +28,7 @@ std::unordered_map<ItemDefinitionIndex, AttribItem_t, Util::IntHash<ItemDefiniti
 };
 
 std::unordered_map<ItemDefinitionIndex, AttribItem_t, Util::IntHash<ItemDefinitionIndex>> Settings::Skinchanger::skinsT {
-		{ ItemDefinitionIndex::WEAPON_KNIFE /*WeaponID*/, { ItemDefinitionIndex::WEAPON_KNIFE_M9_BAYONET /*itemDefinitionIndex*/, -1 /*fallbackPaintKit*/, -1 /*fallbackWear*/, -1 /*fallbackSeed*/, -1 /*fallbackStatTrak*/ , -1 /*fallbackEntityQuality*/, XORSTR("Ruby") /*customName*/ } },
+		{ ItemDefinitionIndex::WEAPON_KNIFE_T /*WeaponID*/, { ItemDefinitionIndex::WEAPON_KNIFE_M9_BAYONET /*itemDefinitionIndex*/, -1 /*fallbackPaintKit*/, -1 /*fallbackWear*/, -1 /*fallbackSeed*/, -1 /*fallbackStatTrak*/ , -1 /*fallbackEntityQuality*/, XORSTR("Ruby") /*customName*/ } },
 		{ ItemDefinitionIndex::GLOVE_T_SIDE, { ItemDefinitionIndex::GLOVE_SPORTY, 10046, 0.0005f, -1, -1, -1, "" } },
 		{ ItemDefinitionIndex::GLOVE_STUDDED_BLOODHOUND, { ItemDefinitionIndex::INVALID, 10006, 0.0005f, -1, -1, -1, ""} },
 		{ ItemDefinitionIndex::GLOVE_SPORTY, { ItemDefinitionIndex::INVALID, 10046, 0.0005f, -1, -1, -1, ""} },
@@ -37,8 +37,8 @@ std::unordered_map<ItemDefinitionIndex, AttribItem_t, Util::IntHash<ItemDefiniti
 		{ ItemDefinitionIndex::GLOVE_LEATHER_WRAP, { ItemDefinitionIndex::INVALID, 10009, 0.0005f, -1, -1, -1, ""} },
 		{ ItemDefinitionIndex::GLOVE_SPECIALIST, { ItemDefinitionIndex::INVALID, 10033, 0.0005f, -1, -1, -1, ""} },
         { ItemDefinitionIndex::GLOVE_STUDDED_HYDRA, { ItemDefinitionIndex::INVALID, 10060, 0.0005f, -1, -1, -1, ""} },
-		{ ItemDefinitionIndex::WEAPON_KNIFE_M9_BAYONET, { ItemDefinitionIndex::INVALID, 417, 0.0005f, -1, -1, -1, ""} },
-		{ ItemDefinitionIndex::WEAPON_KNIFE_KARAMBIT, { ItemDefinitionIndex::INVALID, 415, 0.0005f, -1, 2018, -1, ""} },
+		{ ItemDefinitionIndex::WEAPON_KNIFE_M9_BAYONET, { ItemDefinitionIndex::INVALID, 415, 0.0005f, -1, 2018, -1, ""} },
+		{ ItemDefinitionIndex::WEAPON_KNIFE_KARAMBIT, { ItemDefinitionIndex::INVALID, 417, 0.0005f, -1, -1, -1, ""} },
 		{ ItemDefinitionIndex::WEAPON_KNIFE_BAYONET, { ItemDefinitionIndex::INVALID, 417, 0.0005f, -1, -1, -1, ""} },
 		{ ItemDefinitionIndex::WEAPON_KNIFE_FLIP, { ItemDefinitionIndex::INVALID, 417, 0.0005f, -1, -1, -1, ""} },
 		{ ItemDefinitionIndex::WEAPON_KNIFE_GUT, { ItemDefinitionIndex::INVALID, 417, 0.0005f, -1, -1, -1, ""} },
