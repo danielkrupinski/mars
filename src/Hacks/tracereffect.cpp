@@ -85,7 +85,7 @@ const std::map<std::string, short> drawTimes = {
 void TracerEffect::RestoreTracers( )
 {
     if( tracerRecords.size() <= 0 )
-        return;
+    return;
     for( unsigned int i = 0; i < tracerRecords.size(); i++ )
     {
         CCSWeaponInfo *swag = (CCSWeaponInfo*)tracerRecords[i].address;
@@ -103,18 +103,18 @@ void TracerEffect::CreateMove(CUserCmd* cmd) {
 
     C_BasePlayer *localplayer = ( C_BasePlayer * )entityList->GetClientEntity( engine->GetLocalPlayer( ) );
     if ( !engine->IsInGame( ) || !localplayer || !localplayer->GetAlive( ) )
-        return;
+    return;
     C_BaseCombatWeapon *localWeapon = ( C_BaseCombatWeapon * )entityList->GetClientEntityFromHandle( localplayer->GetActiveWeapon( ) );
     if ( !localWeapon || localWeapon->GetInReload() )
-        return;
+    return;
 
     if ( localWeapon->GetNextPrimaryAttack() > globalVars->curtime )
-        return;
+    return;
     if ( !( cmd->buttons & IN_ATTACK ) )
     {
         /* On One-taps, it doesn't get to the taser part, so we need to switch back to the gun here */
         if ( strcmp(localWeapon->GetCSWpnData()->GetConsoleName(), "weapon_taser") == 0 && Settings::TracerEffects::serverSide )
-            engine->ExecuteClientCmd("lastinv");
+        engine->ExecuteClientCmd("lastinv");
         return;
     }
 
@@ -130,11 +130,11 @@ void TracerEffect::CreateMove(CUserCmd* cmd) {
     }
 
     if( localWeapon->GetCSWpnData()->GetWeaponType() == CSWeaponType::WEAPONTYPE_MACHINEGUN ||
-        localWeapon->GetCSWpnData()->GetWeaponType() == CSWeaponType::WEAPONTYPE_PISTOL ||
-        localWeapon->GetCSWpnData()->GetWeaponType() == CSWeaponType::WEAPONTYPE_RIFLE ||
-        localWeapon->GetCSWpnData()->GetWeaponType() == CSWeaponType::WEAPONTYPE_SUBMACHINEGUN ||
-        localWeapon->GetCSWpnData()->GetWeaponType() == CSWeaponType::WEAPONTYPE_SHOTGUN ||
-        localWeapon->GetCSWpnData()->GetWeaponType() == CSWeaponType::WEAPONTYPE_SNIPER_RIFLE )
+    localWeapon->GetCSWpnData()->GetWeaponType() == CSWeaponType::WEAPONTYPE_PISTOL ||
+    localWeapon->GetCSWpnData()->GetWeaponType() == CSWeaponType::WEAPONTYPE_RIFLE ||
+    localWeapon->GetCSWpnData()->GetWeaponType() == CSWeaponType::WEAPONTYPE_SUBMACHINEGUN ||
+    localWeapon->GetCSWpnData()->GetWeaponType() == CSWeaponType::WEAPONTYPE_SHOTGUN ||
+    localWeapon->GetCSWpnData()->GetWeaponType() == CSWeaponType::WEAPONTYPE_SNIPER_RIFLE )
     {
         if( strcmp(lastGun.c_str(), localWeapon->GetCSWpnData()->GetConsoleName()) != 0 )
         {
@@ -148,9 +148,9 @@ void TracerEffect::CreateMove(CUserCmd* cmd) {
         {
             /* Add new weapon */
             tracerRecords.push_back(tracerRecord((void*)localWeapon->GetCSWpnData(),
-                                                 localWeapon->GetCSWpnData()->GetConsoleName(),
-                                                 localWeapon->GetCSWpnData()->GetTracerEffect(),
-                                                 *localWeapon->GetCSWpnData()->GetTracerFrequency()));
+            localWeapon->GetCSWpnData()->GetConsoleName(),
+            localWeapon->GetCSWpnData()->GetTracerEffect(),
+            *localWeapon->GetCSWpnData()->GetTracerFrequency()));
         }
 
         /* The Server-sided glitch normally doesn't show on the localClient. We ignore the user settings to show the taser glitch accurately */
@@ -160,18 +160,18 @@ void TracerEffect::CreateMove(CUserCmd* cmd) {
             if( strlen(localWeapon->GetCSWpnData()->GetTracerEffect()) > strlen(tracerEffectNames[(int)TracerEffects_t::TASER]) )
             {
                 strncpy(localWeapon->GetCSWpnData()->GetTracerEffect(),
-                        tracerEffectNames[(int)TracerEffects_t::TASER],
-                        strlen(localWeapon->GetCSWpnData()->GetTracerEffect()));
+                tracerEffectNames[(int)TracerEffects_t::TASER],
+                strlen(localWeapon->GetCSWpnData()->GetTracerEffect()));
             }
             else
             {   /* This could lead to some bad juju later, since we are making the string bigger */
                 strncpy(localWeapon->GetCSWpnData()->GetTracerEffect(),
-                        tracerEffectNames[(int)TracerEffects_t::TASER],
-                        strlen(tracerEffectNames[(int)TracerEffects_t::TASER]));
+                tracerEffectNames[(int)TracerEffects_t::TASER],
+                strlen(tracerEffectNames[(int)TracerEffects_t::TASER]));
             }
             /* Gun is out, we need to Swap to taser and then quickly Fire to trigger the glitch
-             * The Glitch is that the server will use the tracer effect of your currently selected weapon
-             * Instead of the one you took the shot with */
+            * The Glitch is that the server will use the tracer effect of your currently selected weapon
+            * Instead of the one you took the shot with */
             lastGun = localWeapon->GetCSWpnData()->GetConsoleName();
             engine->ClientCmd_Unrestricted("use weapon_taser;"); // needs to be unrestricted
             cmd->buttons = cmd->buttons | IN_ATTACK;
@@ -184,21 +184,21 @@ void TracerEffect::CreateMove(CUserCmd* cmd) {
             if( strlen(localWeapon->GetCSWpnData()->GetTracerEffect()) > strlen(tracerEffectNames[(int)Settings::TracerEffects::effect]) )
             {
                 strncpy(localWeapon->GetCSWpnData()->GetTracerEffect(),
-                        tracerEffectNames[(int)Settings::TracerEffects::effect],
-                        strlen(localWeapon->GetCSWpnData()->GetTracerEffect()));
+                tracerEffectNames[(int)Settings::TracerEffects::effect],
+                strlen(localWeapon->GetCSWpnData()->GetTracerEffect()));
             }
             else
             {
                 strncpy(localWeapon->GetCSWpnData()->GetTracerEffect(),
-                        tracerEffectNames[(int)Settings::TracerEffects::effect],
-                        strlen(tracerEffectNames[(int)Settings::TracerEffects::effect]));
+                tracerEffectNames[(int)Settings::TracerEffects::effect],
+                strlen(tracerEffectNames[(int)Settings::TracerEffects::effect]));
             }
         }
     }
     else if ( strcmp(localWeapon->GetCSWpnData()->GetConsoleName(), "weapon_taser") == 0 )
     {
         if( !Settings::TracerEffects::serverSide )
-            return;
+        return;
         /* Taser is out, we need to switch back to the gun and wait for it to be cocked */
         if( drawTimes.find(lastGun) == drawTimes.end() )
         {
