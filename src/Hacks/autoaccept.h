@@ -5,8 +5,8 @@
 
 namespace AutoAccept
 {
-	//Hooks
-	void PlaySound(const char* filename);
+    //Hooks
+    void PlaySound(const char* filename);
 }
 
 extern IsReadyCallbackFn IsReadyCallback;
