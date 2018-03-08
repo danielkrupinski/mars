@@ -6,6 +6,6 @@
 
 namespace Recoilcrosshair
 {
-	//Hooks
-	void Paint();
+    //Hooks
+    void Paint();
 };
