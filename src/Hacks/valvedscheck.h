@@ -5,8 +5,8 @@
 
 namespace ValveDSCheck
 {
-	extern bool forceUT;
+    extern bool forceUT;
 
-	//Hooks
-	void FireGameEvent(IGameEvent* event);
+    //Hooks
+    void FireGameEvent(IGameEvent* event);
 }
