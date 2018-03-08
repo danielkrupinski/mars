@@ -5,6 +5,6 @@
 
 namespace Dlights
 {
-	//Hooks
-	void Paint();
+    //Hooks
+    void Paint();
 }
