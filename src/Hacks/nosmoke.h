@@ -5,9 +5,9 @@
 
 namespace NoSmoke
 {
-	void Cleanup();
+    void Cleanup();
 
-	//Hooks
-	bool RenderSmokePostViewmodel();
-	void FrameStageNotify(ClientFrameStage_t stage);
+    //Hooks
+    bool RenderSmokePostViewmodel();
+    void FrameStageNotify(ClientFrameStage_t stage);
 };
