@@ -6,7 +6,7 @@
 
 namespace Hitmarkers
 {
-	//Hooks
-	void FireGameEvent(IGameEvent* event);
-	void Paint();
+    //Hooks
+    void FireGameEvent(IGameEvent* event);
+    void Paint();
 }
