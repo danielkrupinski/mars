@@ -5,6 +5,6 @@
 
 namespace ThirdPerson
 {
-	//Hooks
-	void OverrideView(CViewSetup* pSetup);
+    //Hooks
+    void OverrideView(CViewSetup* pSetup);
 }
