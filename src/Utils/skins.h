@@ -666,6 +666,7 @@ const std::map<int, PaintNames_t> itemSkins = {
     { 10051, { "#PaintKit_motorcycle_yellow_camo_tag", "motorcycle_yellow_camo" } },
     { 10052, { "#PaintKit_motorcycle_trigrid_blue_tag", "motorcycle_trigrid_blue" } },
     { 10060, { "#PaintKit_bloodhound_hydra_case_hardened_tag", "bloodhound_hydra_case_hardened" } },
+    { 10062, { "#PaintKit_specialist_forest_brown_tag", "specialist_forest_brown" } },
     { 10063, { "#PaintKit_specialist_fade_tag", "specialist_fade" } },
     { 10064, { "#PaintKit_specialist_winterhex_tag", "specialist_winterhex" } },
 };
