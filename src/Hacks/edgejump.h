@@ -5,7 +5,7 @@
 
 namespace EdgeJump
 {
-	//Hooks
-	void PrePredictionCreateMove(CUserCmd* cmd);
-	void PostPredictionCreateMove(CUserCmd* cmd);
+    //Hooks
+    void PrePredictionCreateMove(CUserCmd* cmd);
+    void PostPredictionCreateMove(CUserCmd* cmd);
 }
