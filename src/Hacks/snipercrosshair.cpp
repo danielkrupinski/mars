@@ -6,18 +6,18 @@ bool Settings::SniperCrosshair::enabled = false;
 void SniperCrosshair::Paint( )
 {
     if( !Settings::ESP::enabled || !Settings::SniperCrosshair::enabled )
-        return;
+    return;
 
     if( !engine->IsInGame() )
-        return;
+    return;
 
     C_BasePlayer* localPlayer = (C_BasePlayer*) entityList->GetClientEntity(engine->GetLocalPlayer());
     if ( !localPlayer || !localPlayer->GetAlive() )
-        return;
+    return;
 
     C_BaseCombatWeapon *activeWeapon = (C_BaseCombatWeapon*)entityList->GetClientEntityFromHandle(localPlayer->GetActiveWeapon());
     if( activeWeapon->GetCSWpnData()->GetWeaponType() != CSWeaponType::WEAPONTYPE_SNIPER_RIFLE )
-        return;
+    return;
 
     int width, height;
     engine->GetScreenSize( width, height );
