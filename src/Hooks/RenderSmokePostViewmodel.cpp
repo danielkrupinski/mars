@@ -2,6 +2,6 @@
 
 void Hooks::RenderSmokePostViewmodel(void* thisptr)
 {
-	if (!NoSmoke::RenderSmokePostViewmodel())
-		viewRenderVMT->GetOriginalMethod<RenderSmokePostViewmodelFn>(41)(thisptr);
+    if (!NoSmoke::RenderSmokePostViewmodel())
+    viewRenderVMT->GetOriginalMethod<RenderSmokePostViewmodelFn>(41)(thisptr);
 }
