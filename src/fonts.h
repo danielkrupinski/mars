@@ -6,5 +6,5 @@ extern HFont esp_font;
 
 namespace Fonts
 {
-	void SetupFonts();
+    void SetupFonts();
 }
