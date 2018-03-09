@@ -78,6 +78,6 @@ extern uintptr_t* polleventJumpAddress;
 
 namespace Interfaces
 {
-	void FindInterfaces();
-	void DumpInterfaces();
+    void FindInterfaces();
+    void DumpInterfaces();
 }
