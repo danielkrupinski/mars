@@ -2,7 +2,7 @@
 #include "../atgui.h"
 namespace Walk
 {
-	extern bool showWindow;
+    extern bool showWindow;
 
-	extern void RenderWindow();
+    extern void RenderWindow();
 }
