@@ -29,42 +29,42 @@ typedef float (*GetViewModelFOVFn) (void*);
 
 namespace Hooks
 {
-	void PaintTraverse(void* thisptr, VPANEL vgui_panel, bool force_repaint, bool allow_force);
-	void FrameStageNotify(void* thisptr, ClientFrameStage_t stage);
-	void DrawModelExecute(void* thisptr, void* context, void *state, const ModelRenderInfo_t &pInfo, matrix3x4_t* pCustomBoneToWorld);
-	bool CreateMove(void* thisptr, float flInputSampleTime, CUserCmd* cmd);
-	bool FireEvent(void* thisptr, IGameEvent* event, bool bDontBroadcast);
-	bool FireEventClientSide(void* thisptr, IGameEvent* event);
-	int IN_KeyEvent(void* thisptr, int eventcode, int keynum, const char* currentbinding);
-	void RenderView(void* thisptr, CViewSetup& setup, CViewSetup& hudViewSetup, unsigned int nClearFlags, int whatToDraw);
-	void OverrideView(void* thisptr, CViewSetup* pSetup);
-	void SetKeyCodeState(void* thisptr, ButtonCode_t code, bool bPressed);
-	void SetMouseCodeState(void* thisptr, ButtonCode_t code, MouseCodeState_t state);
-	void OnScreenSizeChanged(void* thisptr, int oldwidth, int oldheight);
-	void PlaySound(void* thisptr, const char* filename);
-	void BeginFrame(void* thisptr, float frameTime);
-	int PumpWindowsMessageLoop(void* thisptr, void* unknown);
-	void Paint(void* thisptr, PaintMode_t mode);
-	void PaintImGui(); // Draw with ImGui.
-	void EmitSound1(void* thisptr, IRecipientFilter& filter, int iEntIndex, int iChannel, const char* pSoundEntry, unsigned int nSoundEntryHash, const char *pSample, float flVolume, int nSeed, float flAttenuation, int iFlags, int iPitch, const Vector* pOrigin, const Vector* pDirection, void* pUtlVecOrigins, bool bUpdatePositions, float soundtime, int speakerentity);
-	void EmitSound2(void* thisptr, IRecipientFilter& filter, int iEntIndex, int iChannel, const char* pSoundEntry, unsigned int nSoundEntryHash, const char *pSample, float flVolume, int nSeed, soundlevel_t iSoundLevel, int iFlags, int iPitch, const Vector* pOrigin, const Vector* pDirection, void* pUtlVecOrigins, bool bUpdatePositions, float soundtime, int speakerentity);
-	void RenderSmokePostViewmodel(void* thisptr);
-	float GetViewModelFOV(void* thisptr);
+    void PaintTraverse(void* thisptr, VPANEL vgui_panel, bool force_repaint, bool allow_force);
+    void FrameStageNotify(void* thisptr, ClientFrameStage_t stage);
+    void DrawModelExecute(void* thisptr, void* context, void *state, const ModelRenderInfo_t &pInfo, matrix3x4_t* pCustomBoneToWorld);
+    bool CreateMove(void* thisptr, float flInputSampleTime, CUserCmd* cmd);
+    bool FireEvent(void* thisptr, IGameEvent* event, bool bDontBroadcast);
+    bool FireEventClientSide(void* thisptr, IGameEvent* event);
+    int IN_KeyEvent(void* thisptr, int eventcode, int keynum, const char* currentbinding);
+    void RenderView(void* thisptr, CViewSetup& setup, CViewSetup& hudViewSetup, unsigned int nClearFlags, int whatToDraw);
+    void OverrideView(void* thisptr, CViewSetup* pSetup);
+    void SetKeyCodeState(void* thisptr, ButtonCode_t code, bool bPressed);
+    void SetMouseCodeState(void* thisptr, ButtonCode_t code, MouseCodeState_t state);
+    void OnScreenSizeChanged(void* thisptr, int oldwidth, int oldheight);
+    void PlaySound(void* thisptr, const char* filename);
+    void BeginFrame(void* thisptr, float frameTime);
+    int PumpWindowsMessageLoop(void* thisptr, void* unknown);
+    void Paint(void* thisptr, PaintMode_t mode);
+    void PaintImGui(); // Draw with ImGui.
+    void EmitSound1(void* thisptr, IRecipientFilter& filter, int iEntIndex, int iChannel, const char* pSoundEntry, unsigned int nSoundEntryHash, const char *pSample, float flVolume, int nSeed, float flAttenuation, int iFlags, int iPitch, const Vector* pOrigin, const Vector* pDirection, void* pUtlVecOrigins, bool bUpdatePositions, float soundtime, int speakerentity);
+    void EmitSound2(void* thisptr, IRecipientFilter& filter, int iEntIndex, int iChannel, const char* pSoundEntry, unsigned int nSoundEntryHash, const char *pSample, float flVolume, int nSeed, soundlevel_t iSoundLevel, int iFlags, int iPitch, const Vector* pOrigin, const Vector* pDirection, void* pUtlVecOrigins, bool bUpdatePositions, float soundtime, int speakerentity);
+    void RenderSmokePostViewmodel(void* thisptr);
+    float GetViewModelFOV(void* thisptr);
 }
 
 namespace CreateMove
 {
-	extern bool sendPacket;
-	extern QAngle lastTickViewAngles;
+    extern bool sendPacket;
+    extern QAngle lastTickViewAngles;
 }
 
 namespace OverrideView
 {
-	extern float currentFOV;
+    extern float currentFOV;
 }
 
 namespace SetKeyCodeState
 {
-	extern bool shouldListen;
-	extern ButtonCode_t* keyOutput;
+    extern bool shouldListen;
+    extern ButtonCode_t* keyOutput;
 }
