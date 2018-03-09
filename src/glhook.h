@@ -17,8 +17,8 @@ typedef int (*SDL_PollEvent_t) (SDL_Event*);
 
 namespace SDL2
 {
-	void SwapWindow(SDL_Window*);
-	void UnhookWindow();
-	int PollEvent(SDL_Event*);
-	void UnhookPollEvent();
+    void SwapWindow(SDL_Window*);
+    void UnhookWindow();
+    int PollEvent(SDL_Event*);
+    void UnhookPollEvent();
 }
