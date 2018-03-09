@@ -2,17 +2,17 @@
 
 void Hooks::BeginFrame(void* thisptr, float frameTime)
 {
-	ClanTagChanger::BeginFrame(frameTime);
-	NameChanger::BeginFrame(frameTime);
-	NameStealer::BeginFrame(frameTime);
-	Spammer::BeginFrame(frameTime);
-	Radar::BeginFrame();
-	DisablePostProcessing::BeginFrame();
+    ClanTagChanger::BeginFrame(frameTime);
+    NameChanger::BeginFrame(frameTime);
+    NameStealer::BeginFrame(frameTime);
+    Spammer::BeginFrame(frameTime);
+    Radar::BeginFrame();
+    DisablePostProcessing::BeginFrame();
 
-	if (!engine->IsInGame())
-		CreateMove::sendPacket = true;
+    if (!engine->IsInGame())
+    CreateMove::sendPacket = true;
 
-	Skins::Localize();
+    Skins::Localize();
 
-	return materialVMT->GetOriginalMethod<BeginFrameFn>(42)(thisptr, frameTime);
+    return materialVMT->GetOriginalMethod<BeginFrameFn>(42)(thisptr, frameTime);
 }
