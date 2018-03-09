@@ -10,7 +10,7 @@
 
 namespace Fuzion
 {
-	void SelfShutdown();
-	extern void *prev, *curr, *next;
-	extern char buildID[NAME_MAX];
+    void SelfShutdown();
+    extern void *prev, *curr, *next;
+    extern char buildID[NAME_MAX];
 }
