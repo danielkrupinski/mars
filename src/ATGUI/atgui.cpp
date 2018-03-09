@@ -64,79 +64,79 @@ bool Settings::UI::Windows::Walkbot::reload = false;
 
 void SetupMainMenuBar()
 {
-	if (ImGui::BeginMainMenuBar())
-	{
-		ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(8 * 2.0f, 4 * 2.0f));
+    if (ImGui::BeginMainMenuBar())
+    {
+        ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(8 * 2.0f, 4 * 2.0f));
 
-		ImGui::Selectable(XORSTR("Main Window"), &Main::showWindow, 0, ImVec2(ImGui::CalcTextSize(XORSTR("Main Window"), NULL, true).x, 0.0f));
-		ImGui::SameLine();
+        ImGui::Selectable(XORSTR("Main Window"), &Main::showWindow, 0, ImVec2(ImGui::CalcTextSize(XORSTR("Main Window"), NULL, true).x, 0.0f));
+        ImGui::SameLine();
 
-		ImGui::Selectable(XORSTR("Skin & Model Changer Window"), &SkinModelChanger::showWindow, 0, ImVec2(ImGui::CalcTextSize(XORSTR("Skin & Model Changer Window"), NULL, true).x, 0.0f));
-		ImGui::SameLine();
+        ImGui::Selectable(XORSTR("Skin & Model Changer Window"), &SkinModelChanger::showWindow, 0, ImVec2(ImGui::CalcTextSize(XORSTR("Skin & Model Changer Window"), NULL, true).x, 0.0f));
+        ImGui::SameLine();
 
-		ImGui::Selectable(XORSTR("Config Window"), &Configs::showWindow, 0, ImVec2(ImGui::CalcTextSize(XORSTR("Config Window"), NULL, true).x, 0.0f));
-		ImGui::SameLine();
+        ImGui::Selectable(XORSTR("Config Window"), &Configs::showWindow, 0, ImVec2(ImGui::CalcTextSize(XORSTR("Config Window"), NULL, true).x, 0.0f));
+        ImGui::SameLine();
 
-		ImGui::Selectable(XORSTR("Spectators Window"), &Settings::ShowSpectators::enabled, 0, ImVec2(ImGui::CalcTextSize(XORSTR("Spectators Window"), NULL, true).x, 0.0f));
-		ImGui::SameLine();
+        ImGui::Selectable(XORSTR("Spectators Window"), &Settings::ShowSpectators::enabled, 0, ImVec2(ImGui::CalcTextSize(XORSTR("Spectators Window"), NULL, true).x, 0.0f));
+        ImGui::SameLine();
 
-		ImGui::Selectable(XORSTR("Colors Window"), &Colors::showWindow, 0, ImVec2(ImGui::CalcTextSize(XORSTR("Colors Window"), NULL, true).x, 0.0f));
-		ImGui::SameLine();
+        ImGui::Selectable(XORSTR("Colors Window"), &Colors::showWindow, 0, ImVec2(ImGui::CalcTextSize(XORSTR("Colors Window"), NULL, true).x, 0.0f));
+        ImGui::SameLine();
 
-		ImGui::Selectable(XORSTR("Player List Window"), &PlayerList::showWindow, 0, ImVec2(ImGui::CalcTextSize(XORSTR("Player List Window"), NULL, true).x, 0.0f));
-		ImGui::SameLine();
+        ImGui::Selectable(XORSTR("Player List Window"), &PlayerList::showWindow, 0, ImVec2(ImGui::CalcTextSize(XORSTR("Player List Window"), NULL, true).x, 0.0f));
+        ImGui::SameLine();
 
-		ImGui::Selectable(XORSTR("Walk Bot Window"), &Walk::showWindow, 0, ImVec2(ImGui::CalcTextSize(XORSTR("Walk Bot Window"), NULL, true).x, 0.0f));
-		ImGui::SameLine(ImGui::GetWindowContentRegionMax().x-ImVec2(ImGui::CalcTextSize(XORSTR("Unload   "), NULL, true)).x);
+        ImGui::Selectable(XORSTR("Walk Bot Window"), &Walk::showWindow, 0, ImVec2(ImGui::CalcTextSize(XORSTR("Walk Bot Window"), NULL, true).x, 0.0f));
+        ImGui::SameLine(ImGui::GetWindowContentRegionMax().x-ImVec2(ImGui::CalcTextSize(XORSTR("Unload   "), NULL, true)).x);
 
-		if( ImGui::Button(XORSTR("Unload   "), ImVec2(ImGui::CalcTextSize(XORSTR("Unload   "), NULL, true).x, 0.0f)) )
-		{
-			Fuzion::SelfShutdown();
-		}
+        if( ImGui::Button(XORSTR("Unload   "), ImVec2(ImGui::CalcTextSize(XORSTR("Unload   "), NULL, true).x, 0.0f)) )
+        {
+            Fuzion::SelfShutdown();
+        }
 
-		ImGui::PopStyleVar();
-		ImGui::EndMainMenuBar();
-	}
+        ImGui::PopStyleVar();
+        ImGui::EndMainMenuBar();
+    }
 }
 
 void UI::SwapWindow()
 {
-	if (UI::isVisible)
-		return;
+    if (UI::isVisible)
+    return;
 
-	if (engine->IsInGame())
-		return;
+    if (engine->IsInGame())
+    return;
 
     Draw::ImText( ImVec2( 4.f, 4.f ), ImColor( 255, 255, 255, 255 ), XORSTR( "Fuzion" ), NULL, 0.0f, NULL,
-                  ImFontFlags_Shadow );
+    ImFontFlags_Shadow );
 }
 
 void UI::SetVisible(bool visible)
 {
-	UI::isVisible = visible;
-	cvar->FindVar(XORSTR("cl_mouseenable"))->SetValue(!UI::isVisible);
+    UI::isVisible = visible;
+    cvar->FindVar(XORSTR("cl_mouseenable"))->SetValue(!UI::isVisible);
 }
 
 void UI::SetupWindows()
 {
-	if (UI::isVisible)
-	{
-		SetupMainMenuBar();
+    if (UI::isVisible)
+    {
+        SetupMainMenuBar();
 
-		ImGui::PushStyleVar(ImGuiStyleVar_WindowMinSize, ImVec2(960, 645));
-			Main::RenderWindow();
-		ImGui::PopStyleVar();
+        ImGui::PushStyleVar(ImGuiStyleVar_WindowMinSize, ImVec2(960, 645));
+        Main::RenderWindow();
+        ImGui::PopStyleVar();
 
-		ImGui::PushStyleVar(ImGuiStyleVar_WindowMinSize, ImVec2(1050, 645));
-			SkinModelChanger::RenderWindow();
-		ImGui::PopStyleVar();
+        ImGui::PushStyleVar(ImGuiStyleVar_WindowMinSize, ImVec2(1050, 645));
+        SkinModelChanger::RenderWindow();
+        ImGui::PopStyleVar();
 
-		Configs::RenderWindow();
-		Colors::RenderWindow();
-		PlayerList::RenderWindow();
-		Walk::RenderWindow();
-	}
+        Configs::RenderWindow();
+        Colors::RenderWindow();
+        PlayerList::RenderWindow();
+        Walk::RenderWindow();
+    }
 
-	ShowSpectators::RenderWindow();
-	Radar::RenderWindow();
+    ShowSpectators::RenderWindow();
+    Radar::RenderWindow();
 }
