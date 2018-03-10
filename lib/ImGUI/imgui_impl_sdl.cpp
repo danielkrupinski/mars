@@ -207,7 +207,7 @@ bool ImGui_ImplSdl_Init(SDL_Window* window) {
 
 void ImGui_ImplSdl_Shutdown() {
 	ImGui_ImplSdl_InvalidateDeviceObjects();
-	ImGui::Shutdown();
+	ImGui::DestroyContext();
 }
 
 void ImGui_ImplSdl_NewFrame(SDL_Window *window) {
