@@ -7,7 +7,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <stdlib.h>
-#include "json/json.h"
+#include "../lib/json/json.h"
 #include "SDK/SDK.h"
 #include "fonts.h"
 #include "Utils/draw.h"
