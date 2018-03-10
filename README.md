@@ -47,11 +47,11 @@ sudo emerge cmake dev-vcs/git gdb libsdl2 mesa lua xdotool patchelf
 #### Download Fuzion:
 
 ```bash
-git clone --recursive https://github.com/LWSS/Fuzion
+git clone https://github.com/danielkrupinski/mars
 ```
 
 ```bash
-cd Fuzion
+cd mars
 ```
 
 ===================
@@ -73,9 +73,9 @@ You can later update with
 
 First of all, make sure CS:GO is open, it does not matter whether you are in game or not. However, it is not recommended to inject while CS:GO is loading into a map. 
 
-Navigate to the directory where Fuzion was built if you have not ready.
+Navigate to the directory where Mars was built if you have not ready.
 ```bash
-cd Fuzion
+cd mars
 ```
 
 Now, you can inject the hack with the `load` script
