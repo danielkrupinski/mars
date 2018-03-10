@@ -5,9 +5,9 @@
 
 #include "ATGUI/atgui.h"
 
-#include "ImGUI/imgui.h"
-#include "ImGUI/imgui_impl_sdl.h"
-#include "ImGUI/imgui_internal.h"
+#include "../lib/ImGUI/imgui.h"
+#include "../lib/ImGUI/imgui_impl_sdl.h"
+#include "../lib/ImGUI/imgui_internal.h"
 
 namespace Shortcuts
 {
