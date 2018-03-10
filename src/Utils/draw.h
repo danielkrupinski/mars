@@ -7,7 +7,7 @@
 #include <stdarg.h>
 #include <wchar.h>
 #include "../fonts.h"
-#include "../ImGUI/imgui.h"
+#include "../../lib/ImGUI/imgui.h"
 
 enum ImFontFlags
 {
