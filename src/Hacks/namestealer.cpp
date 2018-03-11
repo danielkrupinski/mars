@@ -1,4 +1,4 @@
-#include "namestealer.h"
+#include "../../include/Hacks/namestealer.h"
 
 bool Settings::NameStealer::enabled = false;
 int Settings::NameStealer::team = 1;
