@@ -1,4 +1,4 @@
-#include "playerlist.h"
+#include "../../../include/ATGUI/Windows/playerlist.h"
 
 bool PlayerList::showWindow = false;
 
