@@ -1,4 +1,4 @@
-#include "shortcuts.h"
+#include "../include/shortcuts.h"
 
 void Shortcuts::PollEvent(SDL_Event* event)
 {
