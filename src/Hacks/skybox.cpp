@@ -1,4 +1,4 @@
-#include "skybox.h"
+#include "../../include/Hacks/skybox.h"
 
 bool Settings::NoSky::enabled = false;
 bool Settings::SkyBox::enabled = false;
