@@ -1,4 +1,4 @@
-#include "autostrafe.h"
+#include "../../include/Hacks/autostrafe.h"
 
 bool Settings::AutoStrafe::enabled = false;
 AutostrafeType Settings::AutoStrafe::type = AutostrafeType::AS_FORWARDS;
