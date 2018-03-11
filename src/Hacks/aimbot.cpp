@@ -1,5 +1,5 @@
-#include "aimbot.h"
-#include "autowall.h"
+#include "../../include/Hacks/aimbot.h"
+#include "../../include/Hacks/autowall.h"
 
 // Default aimbot settings
 bool Settings::Aimbot::enabled = false;
