@@ -1,4 +1,4 @@
-#include "namechanger.h"
+#include "../../include/Hacks/namechanger.h"
 
 std::string NameChanger::origName = "";
 int NameChanger::changes = -1;
