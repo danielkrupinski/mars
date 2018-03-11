@@ -1,4 +1,4 @@
-#include "grenadehelper.h"
+#include "../../include/Hacks/grenadehelper.h"
 
 std::vector<GrenadeInfo> Settings::GrenadeHelper::grenadeInfos = {};
 bool Settings::GrenadeHelper::enabled = false;
