@@ -53,7 +53,8 @@ int main(int argc, char** argv)
         }
     }
 
-    return binary_to_compressed_c(argv[argn], argv[argn+1], use_base85_encoding, use_compression) ? 0 : 1;
+    binary_to_compressed_c(argv[argn], argv[argn+1], use_base85_encoding, use_compression);
+    return 1;
 }
 
 char Encode85Byte(unsigned int x) 
