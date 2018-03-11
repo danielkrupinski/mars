@@ -1,4 +1,4 @@
-#include "snipercrosshair.h"
+#include "../../include/Hacks/snipercrosshair.h"
 
 bool Settings::SniperCrosshair::enabled = false;
 
