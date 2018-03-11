@@ -1,4 +1,4 @@
-#include "edgejump.h"
+#include "../../include/Hacks/edgejump.h"
 
 bool Settings::EdgeJump::enabled = false;
 ButtonCode_t Settings::EdgeJump::key = ButtonCode_t::KEY_C;
