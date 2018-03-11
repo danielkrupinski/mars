@@ -1,4 +1,4 @@
-#include "thirdperson.h"
+#include "../../include/Hacks/thirdperson.h"
 
 bool Settings::ThirdPerson::enabled = false;
 float Settings::ThirdPerson::distance = 30.f;
