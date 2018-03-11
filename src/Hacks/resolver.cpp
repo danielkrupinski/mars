@@ -1,4 +1,4 @@
-#include "resolver.h"
+#include "../../include/Hacks/resolver.h"
 
 bool Settings::Resolver::resolveAll = false;
 std::vector<int64_t> Resolver::Players = { };
