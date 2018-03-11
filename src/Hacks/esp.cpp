@@ -1,7 +1,7 @@
 #include <iomanip>
 
-#include "esp.h"
-#include "autowall.h"
+#include "../../include/Hacks/esp.h"
+#include "../../include/Hacks/autowall.h"
 //#include "../Utils/skins.h"
 
 bool Settings::ESP::enabled = false;
