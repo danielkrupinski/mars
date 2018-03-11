@@ -1,4 +1,4 @@
-#include "autowall.h"
+#include "../../include/Hacks/autowall.h"
 static float GetHitgroupDamageMultiplier(HitGroups iHitGroup)
 {
     switch (iHitGroup)
