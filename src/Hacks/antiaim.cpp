@@ -1,4 +1,4 @@
-#include "antiaim.h"
+#include "../../include/Hacks/antiaim.h"
 
 bool Settings::AntiAim::Yaw::enabled = false;
 bool Settings::AntiAim::Pitch::enabled = false;
