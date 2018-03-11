@@ -1,4 +1,4 @@
-#include "tracereffect.h"
+#include "../../include/Hacks/tracereffect.h"
 
 bool Settings::TracerEffects::enabled = false;
 bool Settings::TracerEffects::serverSide = false;
