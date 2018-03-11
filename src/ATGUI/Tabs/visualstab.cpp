@@ -1,4 +1,4 @@
-#include "visualstab.h"
+#include "../../../include/ATGUI/Tabs/visualstab.h"
 
 void Visuals::RenderTab()
 {
