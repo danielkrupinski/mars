@@ -189,16 +189,16 @@ void Draw::ImText(ImVec2 pos, ImColor color, const char *text_begin, const char 
     {
         if (flags & ImFontFlags_Outline)
         {
-            ImGui::GetWindowDrawList()->AddText(ImGui::GetWindowFont(), ImGui::GetWindowFontSize(), ImVec2(pos.x - 1, pos.y - 1), ImColor(0, 0, 0, 255), text_begin, text_end, wrap_width, cpu_fine_clip_rect);
-            ImGui::GetWindowDrawList()->AddText(ImGui::GetWindowFont(), ImGui::GetWindowFontSize(), ImVec2(pos.x + 2, pos.y), ImColor(0, 0, 0, 255), text_begin, text_end, wrap_width, cpu_fine_clip_rect);
-            ImGui::GetWindowDrawList()->AddText(ImGui::GetWindowFont(), ImGui::GetWindowFontSize(), ImVec2(pos.x, pos.y + 2), ImColor(0, 0, 0, 255), text_begin, text_end, wrap_width, cpu_fine_clip_rect);
-            ImGui::GetWindowDrawList()->AddText(ImGui::GetWindowFont(), ImGui::GetWindowFontSize(), ImVec2(pos.x - 2, pos.y), ImColor(0, 0, 0, 255), text_begin, text_end, wrap_width, cpu_fine_clip_rect);
+            ImGui::GetWindowDrawList()->AddText(ImGui::GetFont(), ImGui::GetFontSize(), ImVec2(pos.x - 1, pos.y - 1), ImColor(0, 0, 0, 255), text_begin, text_end, wrap_width, cpu_fine_clip_rect);
+            ImGui::GetWindowDrawList()->AddText(ImGui::GetFont(), ImGui::GetFontSize(), ImVec2(pos.x + 2, pos.y), ImColor(0, 0, 0, 255), text_begin, text_end, wrap_width, cpu_fine_clip_rect);
+            ImGui::GetWindowDrawList()->AddText(ImGui::GetFont(), ImGui::GetFontSize(), ImVec2(pos.x, pos.y + 2), ImColor(0, 0, 0, 255), text_begin, text_end, wrap_width, cpu_fine_clip_rect);
+            ImGui::GetWindowDrawList()->AddText(ImGui::GetFont(), ImGui::GetFontSize(), ImVec2(pos.x - 2, pos.y), ImColor(0, 0, 0, 255), text_begin, text_end, wrap_width, cpu_fine_clip_rect);
         }
 
         if (flags & ImFontFlags_Shadow)
-        ImGui::GetWindowDrawList()->AddText(ImGui::GetWindowFont(), ImGui::GetWindowFontSize(), ImVec2(pos.x + 1, pos.y + 1), ImColor(0, 0, 0, 255), text_begin, text_end, wrap_width, cpu_fine_clip_rect);
+        ImGui::GetWindowDrawList()->AddText(ImGui::GetFont(), ImGui::GetFontSize(), ImVec2(pos.x + 1, pos.y + 1), ImColor(0, 0, 0, 255), text_begin, text_end, wrap_width, cpu_fine_clip_rect);
 
-        ImGui::GetWindowDrawList()->AddText(ImGui::GetWindowFont(), ImGui::GetWindowFontSize(), pos, color, text_begin, text_end, wrap_width, cpu_fine_clip_rect);
+        ImGui::GetWindowDrawList()->AddText(ImGui::GetFont(), ImGui::GetFontSize(), pos, color, text_begin, text_end, wrap_width, cpu_fine_clip_rect);
     }
 
     void Draw::ImCircle(ImVec2 point, ImColor color, float radius, int num_segments, float thickness)

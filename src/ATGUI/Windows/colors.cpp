@@ -123,7 +123,7 @@ void Colors::RenderWindow()
 
     static int colorSelected = 0;
 
-    if (ImGui::Begin("Colors", &Colors::showWindow, ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_ShowBorders | ImGuiWindowFlags_NoResize))
+    if (ImGui::Begin("Colors", &Colors::showWindow, ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoResize))
     {
         Settings::UI::Windows::Colors::open = true;
         ImVec2 temp = ImGui::GetWindowSize();
