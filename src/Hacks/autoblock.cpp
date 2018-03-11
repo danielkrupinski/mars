@@ -1,4 +1,4 @@
-#include "autoblock.h"
+#include "../../include/Hacks/autoblock.h"
 
 bool Settings::Autoblock::enabled = false;
 ButtonCode_t Settings::Autoblock::key = ButtonCode_t::KEY_6;
