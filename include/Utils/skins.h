@@ -606,7 +606,7 @@ const std::map<int, PaintNames_t> itemSkins = {
     { 681, { "#PaintKit_gs_m4a1_shatter_Tag", "m4a1_shatter" } },
     { 682, { "#PaintKit_am_mac10_oceani_Tag", "mac10_oceani" } },
     { 683, { "#PaintKit_gs_r8_llamacannon_Tag", "r8_llamacannon" } },
-    { 685, { "#PaintKit_hy_scar20_jungle_slipstream_Tag", "scar20_jungle_slipstream" } },
+    { 685, { "#PaintKit_hy_bizon_torn_green_Tag", "scar20_jungle_slipstream" } },
     { 684, { "#PaintKit_cu_tec9_cracked_opal_Tag", "tec9_cracked_opal" } },
     { 686, { "#PaintKit_gs_sg553_phantom_Tag", "sg553_phantom" } },
     { 687, { "#PaintKit_gs_cz75_tacticat_Tag", "cz75_tacticat" } },
