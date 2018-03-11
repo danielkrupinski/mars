@@ -1,4 +1,4 @@
-#include "recoilcrosshair.h"
+#include "../../include/Hacks/recoilcrosshair.h"
 
 bool Settings::Recoilcrosshair::enabled = false;
 bool Settings::Recoilcrosshair::showOnlyWhenShooting = false;
