@@ -1,4 +1,4 @@
-#include "interfaces.h"
+#include "../include/interfaces.h"
 
 IBaseClientDLL* client = nullptr;
 IClientMode* clientMode = nullptr;
