@@ -1,4 +1,4 @@
-#include "nosmoke.h"
+#include "../../include/Hacks/nosmoke.h"
 
 bool Settings::NoSmoke::enabled = false;
 
