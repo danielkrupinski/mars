@@ -1,4 +1,4 @@
-#include "triggerbottab.h"
+#include "../../../include/ATGUI/Tabs/triggerbottab.h"
 
 void Triggerbot::RenderTab()
 {
