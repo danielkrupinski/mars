@@ -1,4 +1,4 @@
-#include "atgui.h"
+#include "../../include/ATGUI/atgui.h"
 
 void UI::KeyBindButton(ButtonCode_t* key)
 {
