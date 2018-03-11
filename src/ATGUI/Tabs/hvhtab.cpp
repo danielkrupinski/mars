@@ -1,4 +1,4 @@
-#include "hvhtab.h"
+#include "../../../include/ATGUI/Tabs/hvhtab.h"
 
 void HvH::RenderTab()
 {
