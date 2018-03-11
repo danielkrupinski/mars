@@ -1,4 +1,4 @@
-#include "autoaccept.h"
+#include "../../include/Hacks/autoaccept.h"
 
 bool Settings::AutoAccept::enabled = false;
 
