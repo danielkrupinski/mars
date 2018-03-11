@@ -1,4 +1,4 @@
-#include "spammer.h"
+#include "../../include/Hacks/spammer.h"
 
 SpammerType Settings::Spammer::type = SpammerType::SPAMMER_NONE;
 bool Settings::Spammer::say_team = false;
