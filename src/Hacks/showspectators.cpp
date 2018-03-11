@@ -1,4 +1,4 @@
-#include "showspectators.h"
+#include "../../include/Hacks/showspectators.h"
 
 bool Settings::ShowSpectators::enabled = false;
 
