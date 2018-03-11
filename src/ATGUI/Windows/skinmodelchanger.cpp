@@ -1,4 +1,4 @@
-#include "skinmodelchanger.h"
+#include "../../../include/ATGUI/Tabs/skinmodelchanger.h"
 
 bool SkinModelChanger::showWindow = false;
 
