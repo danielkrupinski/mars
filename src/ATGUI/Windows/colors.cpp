@@ -1,4 +1,4 @@
-#include "colors.h"
+#include "../../../include/ATGUI/Windows/colors.h"
 
 bool Colors::showWindow = false;
 
