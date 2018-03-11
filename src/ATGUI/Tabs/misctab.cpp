@@ -1,4 +1,4 @@
-#include "misctab.h"
+#include "../../../include/ATGUI/Tabs/misctab.h"
 
 static char nickname[127] = "";
 
