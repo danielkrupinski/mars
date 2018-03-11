@@ -1,4 +1,4 @@
-#include "fakelag.h"
+#include "../../include/Hacks/fakelag.h"
 
 bool Settings::FakeLag::enabled = false;
 int Settings::FakeLag::value = 9;
