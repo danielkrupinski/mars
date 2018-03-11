@@ -7,28 +7,28 @@
 // //////////////////////////////////////////////////////////////////////
 
 /*
-The JsonCpp library's source code, including accompanying documentation, 
+The JsonCpp library's source code, including accompanying documentation,
 tests and demonstration applications, are licensed under the following
 conditions...
 
-The author (Baptiste Lepilleur) explicitly disclaims copyright in all 
-jurisdictions which recognize such a disclaimer. In such jurisdictions, 
+The author (Baptiste Lepilleur) explicitly disclaims copyright in all
+jurisdictions which recognize such a disclaimer. In such jurisdictions,
 this software is released into the Public Domain.
 
 In jurisdictions which do not recognize Public Domain property (e.g. Germany as of
 2010), this software is Copyright (c) 2007-2010 by Baptiste Lepilleur, and is
 released under the terms of the MIT License (see below).
 
-In jurisdictions which recognize Public Domain property, the user of this 
-software may choose to accept it either as 1) Public Domain, 2) under the 
-conditions of the MIT License (see below), or 3) under the terms of dual 
+In jurisdictions which recognize Public Domain property, the user of this
+software may choose to accept it either as 1) Public Domain, 2) under the
+conditions of the MIT License (see below), or 3) under the terms of dual
 Public Domain/MIT License conditions described here, as they choose.
 
 The MIT License is about as close to Public Domain as a license can get, and is
 described in clear, concise terms at:
 
    http://en.wikipedia.org/wiki/MIT_License
-   
+
 The full text of the MIT License follows:
 
 ========================================================================
@@ -83,7 +83,7 @@ license you like.
 // Beginning of content of file: include/json/config.h
 // //////////////////////////////////////////////////////////////////////
 
-// Copyright 2007-2010 Baptiste Lepilleur
+// Copyright 2007-2010 Baptiste Lepilleur and The JsonCpp Authors
 // Distributed under MIT license, or public domain if desired and
 // recognized in your jurisdiction.
 // See file LICENSE for detail or copy at http://jsoncpp.sourceforge.net/LICENSE
@@ -110,9 +110,9 @@ license you like.
 #define JSON_USE_EXCEPTION 1
 #endif
 
-/// If defined, indicates that the source file is amalgated
+/// If defined, indicates that the source file is amalgamated
 /// to prevent private header inclusion.
-/// Remarks: it is automatically defined in the generated amalgated header.
+/// Remarks: it is automatically defined in the generated amalgamated header.
 // #define JSON_IS_AMALGAMATION
 
 #ifdef JSON_IN_CPPTL
@@ -163,15 +163,29 @@ license you like.
 
 #endif // defined(_MSC_VER)
 
-// In c++11 the override keyword allows you to explicity define that a function
+// In c++11 the override keyword allows you to explicitly define that a function
 // is intended to override the base-class version.  This makes the code more
-// managable and fixes a set of common hard-to-find bugs.
+// manageable and fixes a set of common hard-to-find bugs.
 #if __cplusplus >= 201103L
 # define JSONCPP_OVERRIDE override
-#elif defined(_MSC_VER) && _MSC_VER > 1600
+# define JSONCPP_NOEXCEPT noexcept
+# define JSONCPP_OP_EXPLICIT explicit
+#elif defined(_MSC_VER) && _MSC_VER > 1600 && _MSC_VER < 1900
 # define JSONCPP_OVERRIDE override
+# define JSONCPP_NOEXCEPT throw()
+# if _MSC_VER >= 1800 // MSVC 2013
+#   define JSONCPP_OP_EXPLICIT explicit
+# else
+#   define JSONCPP_OP_EXPLICIT
+# endif
+#elif defined(_MSC_VER) && _MSC_VER >= 1900
+# define JSONCPP_OVERRIDE override
+# define JSONCPP_NOEXCEPT noexcept
+# define JSONCPP_OP_EXPLICIT explicit
 #else
 # define JSONCPP_OVERRIDE
+# define JSONCPP_NOEXCEPT throw()
+# define JSONCPP_OP_EXPLICIT
 #endif
 
 #ifndef JSON_HAS_RVALUE_REFERENCES
@@ -199,6 +213,9 @@ license you like.
 #endif
 
 #ifdef __clang__
+#  if __has_extension(attribute_deprecated_with_message)
+#    define JSONCPP_DEPRECATED(message)  __attribute__ ((deprecated(message)))
+#  endif
 #elif defined __GNUC__ // not clang (gcc comes later since clang emulates gcc)
 #  if (__GNUC__ > 4 || (__GNUC__ == 4 && __GNUC_MINOR__ >= 5))
 #    define JSONCPP_DEPRECATED(message)  __attribute__ ((deprecated(message)))
@@ -275,7 +292,7 @@ typedef UInt64 LargestUInt;
 // Beginning of content of file: include/json/forwards.h
 // //////////////////////////////////////////////////////////////////////
 
-// Copyright 2007-2010 Baptiste Lepilleur
+// Copyright 2007-2010 Baptiste Lepilleur and The JsonCpp Authors
 // Distributed under MIT license, or public domain if desired and
 // recognized in your jurisdiction.
 // See file LICENSE for detail or copy at http://jsoncpp.sourceforge.net/LICENSE
