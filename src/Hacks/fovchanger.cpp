@@ -1,4 +1,4 @@
-#include "fovchanger.h"
+#include "../../include/Hacks/fovchanger.h"
 
 bool Settings::FOVChanger::enabled = false;
 bool Settings::FOVChanger::ignoreScope = true;
