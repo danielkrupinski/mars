@@ -1,4 +1,4 @@
-#include "view.h"
+#include "../../include/Hacks/view.h"
 
 bool Settings::View::NoAimPunch::enabled = false;
 bool Settings::View::NoViewPunch::enabled = false;
