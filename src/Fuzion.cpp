@@ -1,7 +1,7 @@
-#include "Fuzion.h"
-#include "EventListener.h"
-#include "preload.h"
-#include "Utils/netvarmanager.h"
+#include "../include/Fuzion.h"
+#include "../include/EventListener.h"
+#include "../include/preload.h"
+#include "../include/Utils/netvarmanager.h"
 
 static EventListener* eventListener = nullptr;
 
