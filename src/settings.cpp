@@ -1,4 +1,4 @@
-#include "settings.h"
+#include "../include/settings.h"
 
 void GetVal(Json::Value &config, int* setting)
 {
