@@ -1,4 +1,4 @@
-#include "customglow.h"
+#include "../../include/Hacks/customglow.h"
 
 std::vector<std::pair<int, int>> custom_glow_entities;
 
