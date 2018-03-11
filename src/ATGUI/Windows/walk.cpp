@@ -22,7 +22,7 @@ void Walk::RenderWindow()
         return;
     }
 
-    if (ImGui::Begin(XORSTR("Walkbot"), &Walk::showWindow, ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoResize))
+    if (ImGui::Begin(XORSTR("Walkbot"), &Walk::showWindow, ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_ShowBorders | ImGuiWindowFlags_NoResize))
     {
         Settings::UI::Windows::Walkbot::open = true;
         ImVec2 temp = ImGui::GetWindowSize();
