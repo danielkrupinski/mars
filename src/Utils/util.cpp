@@ -1,5 +1,5 @@
-#include "util.h"
-#include "../settings.h"
+#include "../../include/Utils/util.h"
+#include "../../include/settings.h"
 
 struct link_map_wrapper
 {

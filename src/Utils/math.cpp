@@ -1,4 +1,4 @@
-#include "math.h"
+#include "../../include/Utils/math.h"
 
 void inline Math::SinCos(float radians, float *sine, float *cosine)
 {

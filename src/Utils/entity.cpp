@@ -1,5 +1,5 @@
-#include "entity.h"
-#include "math.h"
+#include "../../include/Utils/entity.h"
+#include "../../include/Utils/math.h"
 
 bool Entity::IsVisible(C_BasePlayer* player, int bone, float fov, bool smoke_check)
 {
