@@ -1,4 +1,4 @@
-#include "autoknife.h"
+#include "../../include/Hacks/autoknife.h"
 
 bool Settings::AutoKnife::enabled = false;
 bool Settings::AutoKnife::Filters::enemies = true;
