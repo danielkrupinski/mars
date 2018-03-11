@@ -1,4 +1,4 @@
-#include "walk.h"
+#include "../../../include/ATGUI/Windows/walk.h"
 
 bool Walk::showWindow = false;
 
