@@ -5,7 +5,6 @@
 
 # This cheat is detected!
 
-**Mars is currently unstable - especially bugged menu. Stable release is coming 01.04.2018.**
 ## What is Mars?
 
 A fully featured internal hack for *CounterStrike : Global Offensive* written in C++.
