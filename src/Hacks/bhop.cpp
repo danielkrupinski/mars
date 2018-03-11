@@ -1,4 +1,4 @@
-#include "bhop.h"
+#include "../../include/Hacks/bhop.h"
 
 bool Settings::BHop::enabled = false;
 bool Settings::BHop::Chance::enabled = false;
