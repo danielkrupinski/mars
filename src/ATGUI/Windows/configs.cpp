@@ -1,4 +1,4 @@
-#include "configs.h"
+#include "../../../include/ATGUI/Windows/configs.h"
 
 bool Configs::showWindow = false;
 
