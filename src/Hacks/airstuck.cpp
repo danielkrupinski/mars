@@ -1,4 +1,4 @@
-#include "airstuck.h"
+#include "../../include/Hacks/airstuck.h"
 
 bool Settings::Airstuck::enabled = false;
 ButtonCode_t Settings::Airstuck::key = ButtonCode_t::KEY_F;
