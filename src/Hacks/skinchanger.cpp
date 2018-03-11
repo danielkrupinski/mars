@@ -1,4 +1,4 @@
-#include "skinchanger.h"
+#include "../../include/Hacks/skinchanger.h"
 
 bool Settings::Skinchanger::Skins::enabled = false;
 bool Settings::Skinchanger::Models::enabled = false;
