@@ -1,4 +1,4 @@
-#include "hooks.h"
+#include "../../include/Hooks/hooks.h"
 
 void Hooks::PaintTraverse(void* thisptr, VPANEL vgui_panel, bool force_repaint, bool allow_force)
 {

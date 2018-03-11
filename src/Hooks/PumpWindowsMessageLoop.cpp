@@ -1,4 +1,4 @@
-#include "hooks.h"
+#include "../../include/Hooks/hooks.h"
 
 int Hooks::PumpWindowsMessageLoop(void* thisptr, void* unknown)
 {

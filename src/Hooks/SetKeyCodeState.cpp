@@ -1,4 +1,4 @@
-#include "hooks.h"
+#include "../../include/Hooks/hooks.h"
 
 bool SetKeyCodeState::shouldListen = false;
 ButtonCode_t* SetKeyCodeState::keyOutput = nullptr;

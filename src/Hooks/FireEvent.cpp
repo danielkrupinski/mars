@@ -1,4 +1,4 @@
-#include "hooks.h"
+#include "../../include/Hooks/hooks.h"
 
 bool Hooks::FireEvent(void* thisptr, IGameEvent* event, bool bDontBroadcast)
 {

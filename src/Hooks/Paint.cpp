@@ -1,4 +1,4 @@
-#include "hooks.h"
+#include "../../include/Hooks/hooks.h"
 
 extern StartDrawingFn StartDrawing;
 extern FinishDrawingFn FinishDrawing;

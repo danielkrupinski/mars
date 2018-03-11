@@ -1,4 +1,4 @@
-#include "hooks.h"
+#include "../../include/Hooks/hooks.h"
 
 void Hooks::RenderSmokePostViewmodel(void* thisptr)
 {

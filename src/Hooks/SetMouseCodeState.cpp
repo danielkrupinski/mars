@@ -1,4 +1,4 @@
-#include "hooks.h"
+#include "../../include/Hooks/hooks.h"
 
 void Hooks::SetMouseCodeState(void* thisptr, ButtonCode_t code, MouseCodeState_t state)
 {

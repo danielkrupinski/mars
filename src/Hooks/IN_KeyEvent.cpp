@@ -1,4 +1,4 @@
-#include "hooks.h"
+#include "../../include/Hooks/hooks.h"
 
 int Hooks::IN_KeyEvent(void* thisptr, int eventcode, int keynum, const char* currentbinding)
 {
