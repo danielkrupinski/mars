@@ -1,4 +1,4 @@
-#include "autodefuse.h"
+#include "../../include/Hacks/autodefuse.h"
 
 bool Settings::AutoDefuse::enabled = false;
 bool Settings::AutoDefuse::silent = false;
