@@ -1,4 +1,4 @@
-#include "noflash.h"
+#include "../../include/Hacks/noflash.h"
 
 bool Settings::Noflash::enabled = false;
 float Settings::Noflash::value = 160.0f;
