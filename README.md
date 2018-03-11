@@ -3,20 +3,21 @@
 </p>
 ===================
 
-# It looks like we are starting to get detected. Use public forks at your own Risk! 
+# This cheat is detected!
 
-## What is Fuzion?
+**Mars is currently unstable - especially bugged menu. Stable release is coming 01.04.2018.**
+## What is Mars?
 
 A fully featured internal hack for *CounterStrike : Global Offensive* written in C++.
 
 
 ## Compiling
 
-**Note:** _Fuzion Requires an additional package for Lua and xdo._
+**Note:** _Mars Requires an additional package for Lua and xdo._
 
 **Note:** _Do NOT download or compile as the root user._
 
-#### Download the dependencies required to build Fuzion:
+#### Download the dependencies required to build Mars:
 
 If you are having problems compiling make sure you've got the latest version of `g++`.
 
@@ -44,7 +45,7 @@ sudo emerge cmake dev-vcs/git gdb libsdl2 mesa lua xdotool patchelf
 
 ===================
 
-#### Download Fuzion:
+#### Download Mars:
 
 ```bash
 git clone https://github.com/danielkrupinski/mars
@@ -63,7 +64,7 @@ You can build easily with the included build script.
 ./build
 ```
 
-You can later update with 
+You can later update with
 ```bash
 ./update
 ```
@@ -71,7 +72,7 @@ You can later update with
 
 ## Injecting using the load script
 
-First of all, make sure CS:GO is open, it does not matter whether you are in game or not. However, it is not recommended to inject while CS:GO is loading into a map. 
+First of all, make sure CS:GO is open, it does not matter whether you are in game or not. However, it is not recommended to inject while CS:GO is loading into a map.
 
 Navigate to the directory where Mars was built if you have not ready.
 ```bash
@@ -85,7 +86,7 @@ Now, you can inject the hack with the `load` script
 
 You might be prompted to enter in your password, this is because the injection script requires root access.
 
-The text printed out during injection is not important. 
+The text printed out during injection is not important.
 
 If the injection was successful you will see a message at the bottom saying `Successfully injected!`, however, if the message says `Injection failed`, then you've most likely done something wrong.
 
@@ -96,21 +97,21 @@ Now, go back into CS:GO, if you are in the main menu of the game you should see 
 
 ## Injecting using the preload script (experimental)
 
-We have a new loading method that uses LD_PRELOAD and library function hooking to stay undetected. 
+We have a new loading method that uses LD_PRELOAD and library function hooking to stay undetected.
 
 To use this method, you need to have CS:GO closed and use the `preload` script with your CS:GO launch options.
 
-Here is an example. Note that you need *-steam* for VAC to be enabled. 
+Here is an example. Note that you need *-steam* for VAC to be enabled.
 ```
 ./preload -steam -nobreakpad -high -threads 4
 ```
 
-Once CS:GO is loaded, the cheat should be loaded as well and you can check the CS:GO console for more information. 
+Once CS:GO is loaded, the cheat should be loaded as well and you can check the CS:GO console for more information.
 
 
 ## Using the hack
 
-Now that Fuzion has been injected into the game, press <kbd>Insert</kbd> on your keyboard to open the hack menu (<kbd>ALT</kbd>+<kbd>I</kbd> if you are using a laptop).
+Now that Mars has been injected into the game, press <kbd>Insert</kbd> on your keyboard to open the hack menu (<kbd>ALT</kbd>+<kbd>I</kbd> if you are using a laptop).
 
 If you want to change skins, create and load configs or open the player list, you can find those buttons at the top of the screen.
 
@@ -125,12 +126,12 @@ If you wish to unload the hack from the game, you can do so by entering the comm
 
 ## Configs
 
-Configs are stored in a hidden directory in your home folder. Specifically 
+Configs are stored in a hidden directory in your home folder. Specifically
 ```
 ~/.config/Fuzion
 ```
 
-Each `config.json` is stored in a seperately named folder (The name you see in-game, in the config window). 
+Each `config.json` is stored in a seperately named folder (The name you see in-game, in the config window).
 
 To add a config, create a folder inside of the `~/.config/Fuzion` folder with a name of your choice, and paste the `config.json` inside of that folder.
 
