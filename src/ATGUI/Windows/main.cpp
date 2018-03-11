@@ -1,4 +1,4 @@
-#include "main.h"
+#include "../../../include/ATGUI/Windows/main.h"
 
 bool Main::showWindow = true;
 
