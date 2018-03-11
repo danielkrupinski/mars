@@ -1,4 +1,4 @@
-#include "fonts.h"
+#include "../include/fonts.h"
 
 HFont esp_font = 0;
 
