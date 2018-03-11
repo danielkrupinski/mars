@@ -1,4 +1,4 @@
-#include "jumpthrow.h"
+#include "../../include/Hacks/jumpthrow.h"
 
 bool inAttackState = false;
 bool Settings::JumpThrow::enabled = false;
