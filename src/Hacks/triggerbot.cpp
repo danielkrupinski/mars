@@ -1,5 +1,5 @@
-#include "triggerbot.h"
-#include "autowall.h"
+#include "../../include/Hacks/triggerbot.h"
+#include "../../include/Hacks/autowall.h"
 
 bool Settings::Triggerbot::enabled = false;
 bool Settings::Triggerbot::Filters::enemies = true;
