@@ -1,4 +1,4 @@
-#include "modelstab.h"
+#include "../../../include/ATGUI/Tabs/modelstab.h"
 
 void Models::RenderTab()
 {
