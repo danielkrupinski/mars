@@ -1,4 +1,4 @@
-#include "dlights.h"
+#include "../../include/Hacks/dlights.h"
 
 bool Settings::Dlights::enabled = false;
 float Settings::Dlights::radius = 500.0f;
