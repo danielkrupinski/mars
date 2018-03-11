@@ -1,4 +1,4 @@
-#include "glhook.h"
+#include "../include/glhook.h"
 
 SDL_GLContext context = nullptr;
 
