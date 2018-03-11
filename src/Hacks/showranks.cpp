@@ -1,4 +1,4 @@
-#include "showranks.h"
+#include "../../include/Hacks/showranks.h"
 
 bool Settings::ShowRanks::enabled = false;
 
