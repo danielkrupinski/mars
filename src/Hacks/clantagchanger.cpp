@@ -1,4 +1,4 @@
-#include "clantagchanger.h"
+#include "../../include/Hacks/clantagchanger.h"
 
 char Settings::ClanTagChanger::value[30] = "";
 bool Settings::ClanTagChanger::animation = false;
