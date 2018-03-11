@@ -1,4 +1,4 @@
-#include "disablepostprocessing.h"
+#include "../../include/Hacks/disablepostprocessing.h"
 
 bool Settings::DisablePostProcessing::enabled = false;
 
