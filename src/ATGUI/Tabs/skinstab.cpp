@@ -1,4 +1,4 @@
-#include "skinstab.h"
+#include "../../../include/ATGUI/Tabs/skinstab.h"
 
 void SplitSkins()
 {
