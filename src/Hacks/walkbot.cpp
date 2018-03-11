@@ -1,4 +1,4 @@
-#include "walkbot.h"
+#include "../../include/Hacks/walkbot.h"
 
 bool Settings::WalkBot::enabled = false;
 bool Settings::WalkBot::forceReset = false; // if a Reset is queued up by the User
