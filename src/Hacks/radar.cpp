@@ -1,4 +1,4 @@
-#include "radar.h"
+#include "../../include/Hacks/radar.h"
 
 bool Settings::Radar::enabled = false;
 float Settings::Radar::zoom = 16.f;
