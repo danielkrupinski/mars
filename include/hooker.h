@@ -1,4 +1,5 @@
-#pragma once
+#ifndef HOOKER_H
+#define HOOKER_H
 
 #include <memory>
 #include <unordered_map>
@@ -12,18 +13,16 @@
 #include "glhook.h"
 #include "interfaces.h"
 
-struct dlinfo_t
-{
+struct dlinfo_t {
     const char* library = nullptr;
     uintptr_t address = 0;
     size_t size = 0;
 };
 
-namespace Hooker
-{
-    bool GetLibraryInformation(const char* library, uintptr_t* address, size_t* size);
+namespace Hooker {
+    bool GetLibraryInformation(const char*, uintptr_t*, size_t*);
     void InitializeVMHooks();
-    bool HookRecvProp(const char* className, const char* propertyName, std::unique_ptr<RecvPropHook>& recvPropHook);
+    bool HookRecvProp(const char*, const char*, std::unique_ptr<RecvPropHook>&);
     void FindIClientMode();
     void FindGlobalVars();
     void FindCInput();
@@ -40,10 +39,11 @@ namespace Hooker
     void FindLineGoesThroughSmoke();
     void FindInitKeyValues();
     void FindLoadFromBuffer();
-    //void FindVstdlibFunctions();
     void FindOverridePostProcessingDisable();
     void HookSwapWindow();
     void HookPollEvent();
     void FindSDLInput();
     void FindSetNamedSkybox();
 }
+
+#endif // HOOKER_H

@@ -6,3 +6,4 @@
 - [x] include/fonts.h
 - [x] include/Fuzion.h
 - [x] include/glhook.h
+- [x] include/hooker.h
