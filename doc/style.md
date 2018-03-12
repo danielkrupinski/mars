@@ -7,3 +7,4 @@
 - [x] include/Fuzion.h
 - [x] include/glhook.h
 - [x] include/hooker.h
+- [x] include/interfaces.h

@@ -1,8 +1,9 @@
-#pragma once
+#ifndef INTERFACES_H
+#define INTERFACES_H
 
 #include <set>
 #include <fstream>
-#include <link.h> // dl_iterate_phdr
+#include <link.h>
 
 #include "SDK/SDK.h"
 #include "Utils/vmt.h"
@@ -58,11 +59,6 @@ extern LineGoesThroughSmokeFn LineGoesThroughSmoke;
 extern InitKeyValuesFn InitKeyValues;
 extern LoadFromBufferFn LoadFromBuffer;
 
-//extern RandomSeedFn RandomSeed;
-//extern RandomFloatFn RandomFloat;
-//extern RandomFloatExpFn RandomFloatExp;
-//extern RandomIntFn RandomInt;
-//extern RandomGaussianFloatFn RandomGaussianFloat;
 
 extern SetNamedSkyBoxFn SetNamedSkyBox;
 
@@ -76,8 +72,9 @@ extern uintptr_t* swapWindowJumpAddress;
 extern uintptr_t oPollEvent;
 extern uintptr_t* polleventJumpAddress;
 
-namespace Interfaces
-{
+namespace Interfaces {
     void FindInterfaces();
     void DumpInterfaces();
 }
+
+#endif // INTERFACES_H
