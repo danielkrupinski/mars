@@ -1,4 +1,5 @@
-#pragma once
+#ifndef CONFIG_H
+#define CONFIG_H
 
 #include <unistd.h>
 #include <string>
@@ -13,8 +14,7 @@
 bool DoesFileExist(const char* path);
 bool DoesDirectoryExist(const char* path);
 
-struct Config
-{
+struct Config {
     std::string name;
     std::string path;
 
@@ -26,3 +26,5 @@ std::vector<std::string> GetConfigs();
 
 std::string GetConfigDirectory();
 std::string GetGhConfigDirectory();
+
+#endif // CONFIG_H
