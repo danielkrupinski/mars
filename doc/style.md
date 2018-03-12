@@ -8,3 +8,4 @@
 - [x] include/glhook.h
 - [x] include/hooker.h
 - [x] include/interfaces.h
+- [x] include/offsets.h

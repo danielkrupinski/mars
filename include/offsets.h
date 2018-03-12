@@ -1,12 +1,11 @@
-#pragma once
+#ifndef OFFSETS_H
+#define OFFSETS_H
 
 #include <cstdio>
 #include "SDK/vector.h"
 
-struct COffsets
-{
-    struct
-    {
+struct COffsets {
+    struct {
         std::ptrdiff_t m_Local;
         std::ptrdiff_t m_aimPunchAngle;
         std::ptrdiff_t m_viewPunchAngle;
@@ -23,8 +22,7 @@ struct COffsets
         std::ptrdiff_t deadflag;
     } DT_BasePlayer;
 
-    struct
-    {
+    struct {
         std::ptrdiff_t m_flAnimTime;
         std::ptrdiff_t m_flSimulationTime;
         std::ptrdiff_t m_vecOrigin;
@@ -35,15 +33,13 @@ struct COffsets
         std::ptrdiff_t m_bSpotted;
     } DT_BaseEntity;
 
-    struct
-    {
+    struct {
         std::ptrdiff_t m_hActiveWeapon;
         std::ptrdiff_t m_hMyWeapons;
         std::ptrdiff_t m_hMyWearables;
     } DT_BaseCombatCharacter;
 
-    struct
-    {
+    struct {
         std::ptrdiff_t m_iPing;
         std::ptrdiff_t m_iKills;
         std::ptrdiff_t m_iAssists;
@@ -55,8 +51,7 @@ struct COffsets
         std::ptrdiff_t m_iHealth;
     } DT_PlayerResource;
 
-    struct
-    {
+    struct {
         std::ptrdiff_t m_iPlayerC4;
         std::ptrdiff_t m_iPlayerVIP;
         std::ptrdiff_t m_bHostageAlive;
@@ -91,16 +86,14 @@ struct COffsets
         std::ptrdiff_t m_nPersonaDataPublicCommendsFriendly;
     } DT_CSPlayerResource;
 
-    struct
-    {
+    struct {
         std::ptrdiff_t m_bBombTicking;
         std::ptrdiff_t m_flC4Blow;
         std::ptrdiff_t m_bBombDefused;
         std::ptrdiff_t m_hBombDefuser;
     } DT_PlantedC4;
 
-    struct
-    {
+    struct {
         std::ptrdiff_t m_iShotsFired;
         std::ptrdiff_t m_angEyeAngles[2];
         std::ptrdiff_t m_iAccount;
@@ -118,8 +111,7 @@ struct COffsets
         std::ptrdiff_t m_flLowerBodyYawTarget;
     } DT_CSPlayer;
 
-    struct
-    {
+    struct {
         std::ptrdiff_t m_iItemDefinitionIndex;
         std::ptrdiff_t m_iItemIDHigh;
         std::ptrdiff_t m_iAccountID;
@@ -131,26 +123,22 @@ struct COffsets
         std::ptrdiff_t m_nFallbackStatTrak;
     } DT_BaseAttributableItem;
 
-    struct
-    {
+    struct {
         std::ptrdiff_t m_nModelIndex;
         std::ptrdiff_t m_hWeapon;
         std::ptrdiff_t m_hOwner;
     } DT_BaseViewModel;
 
-    struct
-    {
+    struct {
         std::ptrdiff_t m_bReloadVisuallyComplete;
         std::ptrdiff_t m_fAccuracyPenalty;
     } DT_WeaponCSBase;
 
-    struct
-    {
+    struct {
         std::ptrdiff_t m_bStartedArming;
     } DT_WeaponC4;
 
-    struct
-    {
+    struct {
         std::ptrdiff_t m_bRedraw;
         std::ptrdiff_t m_bIsHeldByPlayer;
         std::ptrdiff_t m_bPinPulled;
@@ -159,21 +147,18 @@ struct COffsets
         std::ptrdiff_t m_flThrowStrength;
     } DT_BaseCSGrenade;
 
-    struct
-    {
+    struct {
         std::ptrdiff_t m_flNextPrimaryAttack;
         std::ptrdiff_t m_hOwner;
         std::ptrdiff_t m_iClip1;
         std::ptrdiff_t m_bInReload;
     } DT_BaseCombatWeapon;
 
-    struct
-    {
+    struct {
         std::ptrdiff_t m_bShouldGlow;
     } DT_DynamicProp;
 
-    struct
-    {
+    struct {
         std::ptrdiff_t m_bFreezePeriod;
         std::ptrdiff_t m_bMatchWaitingForResume;
         std::ptrdiff_t m_bWarmupPeriod;
@@ -255,9 +240,10 @@ struct COffsets
     } DT_CSGameRulesProxy;
 };
 
-namespace Offsets
-{
+namespace Offsets {
     void GetOffsets();
 }
 
 extern COffsets offsets;
+
+#endif // OFFSETS_H
