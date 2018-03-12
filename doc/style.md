@@ -4,3 +4,4 @@
 - [x] include/config.h
 - [x] include/EventListener.h
 - [x] include/fonts.h
+- [x] include/Fuzion.h

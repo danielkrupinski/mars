@@ -1,4 +1,6 @@
-#pragma once
+#ifndef FUZION_H
+#define FUZION_H
+
 #include <thread>
 #include <chrono>
 #include <fcntl.h>
@@ -8,9 +10,10 @@
 #include "interfaces.h"
 #include "Utils/util.h"
 
-namespace Fuzion
-{
+namespace Fuzion {
     void SelfShutdown();
     extern void *prev, *curr, *next;
     extern char buildID[NAME_MAX];
 }
+
+#endif // FUZION_H
