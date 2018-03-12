@@ -11,17 +11,17 @@
 #include "Utils/xorstring.h"
 #include "interfaces.h"
 
-bool DoesFileExist(const char* path);
-bool DoesDirectoryExist(const char* path);
+bool DoesFileExist(const char*);
+bool DoesDirectoryExist(const char*);
 
 struct Config {
     std::string name;
     std::string path;
 
-    Config(const char* name, const char* path);
+    Config(const char*, const char*);
 };
 
-std::vector<Config> GetConfigs(const char* directory);
+std::vector<Config> GetConfigs(const char*);
 std::vector<std::string> GetConfigs();
 
 std::string GetConfigDirectory();
