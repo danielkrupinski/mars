@@ -1,12 +1,12 @@
-#pragma once
+#ifndef EVENT_LISTENER_H
+#define EVENT_LISTENER_H
 
-class EventListener : public IGameEventListener2
-{
+class EventListener : public IGameEventListener2 {
 public:
     EventListener(std::vector<const char*> events)
     {
         for (auto& it : events)
-        gameEvents->AddListener(this, it, false);
+            gameEvents->AddListener(this, it, false);
     }
 
     ~EventListener()
@@ -30,3 +30,5 @@ public:
         return EVENT_DEBUG_ID_INIT;
     }
 };
+
+#endif // EVENT_LISTENER_H
