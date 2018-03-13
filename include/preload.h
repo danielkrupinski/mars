@@ -22,7 +22,7 @@ extern "C" {
 
 namespace Preload {
     void PrintStatus();
-    bool Startup(char buildID[]);
+    bool Startup(char[]);
     void CleanEnvironment();
     void Cleanup();
 }
