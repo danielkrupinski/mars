@@ -1,4 +1,4 @@
-#Programming style update
+# Programming style update
 
 ## Work progress
 - [x] include/config.h
@@ -11,3 +11,5 @@
 - [x] include/offsets.h
 - [x] include/preload.h
 - [x] include/settings.h
+- [x] include/shortcuts.h
+- [x] include/Utils/draw.h
