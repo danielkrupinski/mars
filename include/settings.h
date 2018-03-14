@@ -21,29 +21,25 @@
 #include "ATGUI/atgui.h"
 #include "Hacks/esp.h"
 
-enum class SmoothType : int
-{
+enum class SmoothType : int {
     SLOW_END,
     CONSTANT,
     FAST_END,
 };
 
-enum class TracerType : int
-{
+enum class TracerType : int {
     BOTTOM,
     CURSOR,
 };
 
-enum class ClanTagType : int
-{
+enum class ClanTagType : int {
     STATIC,
     MARQUEE,
     WORDS,
     LETTERS,
 };
 
-enum class AutostrafeType : int
-{
+enum class AutostrafeType : int {
     AS_FORWARDS,
     AS_BACKWARDS,
     AS_LEFTSIDEWAYS,
@@ -51,8 +47,7 @@ enum class AutostrafeType : int
     AS_RAGE,
 };
 
-enum class AntiAimType_Y : int
-{
+enum class AntiAimType_Y : int {
     SPIN_SLOW,
     SPIN_FAST,
     JITTER,
@@ -80,8 +75,7 @@ enum class AntiAimType_Y : int
     LUA_UNCLAMPED2
 };
 
-enum class AntiAimType_X : int
-{
+enum class AntiAimType_X : int {
     STATIC_UP,
     STATIC_DOWN,
     DANCE,
@@ -95,24 +89,21 @@ enum class AntiAimType_X : int
     LUA_UNCLAMPED,
 };
 
-enum class ChamsType : int
-{
+enum class ChamsType : int {
     CHAMS,
     CHAMS_XQZ,
     CHAMS_FLAT,
     CHAMS_FLAT_XQZ,
 };
 
-enum class BoxType : int
-{
+enum class BoxType : int {
     FLAT_2D,
     FRAME_2D,
     BOX_3D,
     HITBOXES,
 };
 
-enum class BarType : int
-{
+enum class BarType : int {
     VERTICAL,
     VERTICAL_RIGHT,
     HORIZONTAL,
@@ -120,42 +111,36 @@ enum class BarType : int
     INTERWEBZ,
 };
 
-enum class BarColorType : int
-{
+enum class BarColorType : int {
     STATIC_COLOR,
     HEALTH_BASED,
 };
 
-enum class TeamColorType : int
-{
+enum class TeamColorType : int {
     ABSOLUTE,
     RELATIVE,
 };
 
-enum class ArmsType : int
-{
+enum class ArmsType : int {
     DEFAULT,
     WIREFRAME,
     NONE,
 };
 
-enum class AimTargetType : int
-{
+enum class AimTargetType : int {
     FOV,
     DISTANCE,
     REAL_DISTANCE,
     HP,
 };
 
-enum class SpammerType : int
-{
+enum class SpammerType : int {
     SPAMMER_NONE,
     SPAMMER_NORMAL,
     SPAMMER_POSITIONS,
 };
 
-struct AimbotWeapon_t
-{
+struct AimbotWeapon_t {
     bool enabled, silent, friendly, closestBone, desiredBones[31], engageLock, engageLockTR;
     int engageLockTTR;
     Bone bone;
@@ -218,7 +203,7 @@ struct AimbotWeapon_t
             this->moveMouse = moveMouse;
 
             for (int bone = (int) DesiredBones::BONE_PELVIS; bone <= (int) DesiredBones::BONE_RIGHT_SOLE; bone++)
-            this->desiredBones[bone] = (desiredBones != nullptr ) ? desiredBones[bone] : false;
+                this->desiredBones[bone] = (desiredBones != nullptr ) ? desiredBones[bone] : false;
 
             this->autoAimRealDistance = autoAimRealDistance;
         }
@@ -229,8 +214,8 @@ struct AimbotWeapon_t
         {
             for (int bone = (int) DesiredBones::BONE_PELVIS; bone <= (int) DesiredBones::BONE_RIGHT_SOLE; bone++)
             {
-                if( this->desiredBones[bone] != another.desiredBones[bone] )
-                return false;
+                if (this->desiredBones[bone] != another.desiredBones[bone])
+                    return false;
             }
 
             return this->enabled == another.enabled &&
@@ -277,8 +262,7 @@ struct AimbotWeapon_t
         }
     };
 
-    class ColorVar
-    {
+    class ColorVar {
     public:
         ImColor color;
         bool rainbow;
@@ -301,8 +285,7 @@ struct AimbotWeapon_t
         }
     };
 
-    class HealthColorVar : public ColorVar
-    {
+    class HealthColorVar : public ColorVar {
     public:
         bool hp;
 
@@ -322,19 +305,15 @@ struct AimbotWeapon_t
         }
     };
 
-    namespace Settings
-    {
-        namespace UI
-        {
+    namespace Settings {
+        namespace UI {
             extern ColorVar mainColor;
             extern ColorVar bodyColor;
             extern ColorVar fontColor;
             extern ColorVar accentColor;
 
-            namespace Windows
-            {
-                namespace Colors
-                {
+            namespace Windows {
+                namespace Colors {
                     extern int posX;
                     extern int posY;
                     extern int sizeX;
@@ -342,8 +321,7 @@ struct AimbotWeapon_t
                     extern bool open;
                     extern bool reload; // True on config load, used to change Window Position.
                 }
-                namespace Config
-                {
+                namespace Config {
                     extern int posX;
                     extern int posY;
                     extern int sizeX;
@@ -351,8 +329,7 @@ struct AimbotWeapon_t
                     extern bool open;
                     extern bool reload; // True on config load, used to change Window Position.
                 }
-                namespace Main
-                {
+                namespace Main {
                     extern int posX;
                     extern int posY;
                     extern int sizeX;
@@ -360,8 +337,7 @@ struct AimbotWeapon_t
                     extern bool open;
                     extern bool reload; // True on config load, used to change Window Position.
                 }
-                namespace Playerlist
-                {
+                namespace Playerlist {
                     extern int posX;
                     extern int posY;
                     extern int sizeX;
@@ -369,8 +345,7 @@ struct AimbotWeapon_t
                     extern bool open;
                     extern bool reload; // True on config load, used to change Window Position.
                 }
-                namespace Skinmodel
-                {
+                namespace Skinmodel {
                     extern int posX;
                     extern int posY;
                     extern int sizeX;
@@ -378,16 +353,14 @@ struct AimbotWeapon_t
                     extern bool open;
                     extern bool reload; // True on config load, used to change Window Position.
                 }
-                namespace Spectators
-                {
+                namespace Spectators {
                     extern int posX;
                     extern int posY;
                     extern int sizeX;
                     extern int sizeY;
                     extern bool reload; // True on config load, used to change Window Position.
                 }
-                namespace Walkbot
-                {
+                namespace Walkbot {
                     extern int posX;
                     extern int posY;
                     extern int sizeX;
@@ -396,10 +369,8 @@ struct AimbotWeapon_t
                     extern bool reload; // True on config load, used to change Window Position.
                 }
             }
-            namespace Fonts
-            {
-                namespace ESP
-                {
+            namespace Fonts {
+                namespace ESP {
                     extern char* family;
                     extern int size;
                     extern int flags;
@@ -407,8 +378,7 @@ struct AimbotWeapon_t
             }
         }
 
-        namespace Aimbot
-        {
+        namespace Aimbot {
             extern bool enabled;
             extern bool silent;
             extern bool friendly;
@@ -417,27 +387,23 @@ struct AimbotWeapon_t
             extern bool aimkeyOnly;
             extern bool moveMouse;
 
-            namespace Smooth
-            {
+            namespace Smooth {
                 extern bool enabled;
                 extern float value;
                 extern SmoothType type;
 
-                namespace Salting
-                {
+                namespace Salting {
                     extern bool enabled;
                     extern float multiplier;
                 }
             }
 
-            namespace ErrorMargin
-            {
+            namespace ErrorMargin {
                 extern bool enabled;
                 extern float value;
             }
 
-            namespace AutoAim
-            {
+            namespace AutoAim {
                 extern bool enabled;
                 extern float fov;
                 extern bool realDistance;
@@ -448,91 +414,76 @@ struct AimbotWeapon_t
                 extern int engageLockTTR;
             }
 
-            namespace AutoWall
-            {
+            namespace AutoWall {
                 extern bool enabled;
                 extern float value;
             }
 
-            namespace AimStep
-            {
+            namespace AimStep {
                 extern bool enabled;
                 extern float min;
                 extern float max;
             }
 
-            namespace RCS
-            {
+            namespace RCS {
                 extern bool enabled;
                 extern bool always_on;
                 extern float valueX;
                 extern float valueY;
             }
 
-            namespace AutoPistol
-            {
+            namespace AutoPistol {
                 extern bool enabled;
             }
 
-            namespace AutoShoot
-            {
+            namespace AutoShoot {
                 extern bool enabled;
                 extern bool velocityCheck;
                 extern bool autoscope;
             }
 
-            namespace AutoCrouch
-            {
+            namespace AutoCrouch {
                 extern bool enabled;
             }
 
-            namespace AutoSlow
-            {
+            namespace AutoSlow {
                 extern bool enabled;
                 extern bool goingToSlow;
             }
 
-            namespace NoShoot
-            {
+            namespace NoShoot {
                 extern bool enabled;
             }
 
-            namespace IgnoreJump
-            {
+            namespace IgnoreJump {
                 extern bool enabled;
             }
 
-            namespace SmokeCheck
-            {
+            namespace SmokeCheck {
                 extern bool enabled;
             }
 
-            namespace FlashCheck
-            {
+            namespace FlashCheck {
                 extern bool enabled;
             }
 
-            namespace SpreadLimit
-            {
+            namespace SpreadLimit {
                 extern bool enabled;
                 extern float value;
             }
 
-            namespace Prediction
-            {
+            namespace Prediction {
                 extern bool enabled;
             }
 
             extern std::unordered_map<ItemDefinitionIndex, AimbotWeapon_t, Util::IntHash<ItemDefinitionIndex>> weapons;
         }
 
-        namespace Triggerbot
-        {
+        namespace Triggerbot {
             extern bool enabled;
             extern ButtonCode_t key;
 
-            namespace Filters
-            {
+            namespace Filters {
                 extern bool enemies;
                 extern bool allies;
                 extern bool walls;
@@ -545,8 +496,7 @@ struct AimbotWeapon_t
                 extern bool legs;
             }
 
-            namespace RandomDelay
-            {
+            namespace RandomDelay {
                 extern bool enabled;
                 extern int lowBound; // in ms
                 extern int highBound;// in ms
@@ -554,36 +504,30 @@ struct AimbotWeapon_t
             }
         }
 
-        namespace AntiAim
-        {
-            namespace AutoDisable
-            {
+        namespace AntiAim {
+            namespace AutoDisable {
                 extern bool noEnemy;
                 extern bool knifeHeld;
             }
 
-            namespace Yaw
-            {
+            namespace Yaw {
                 extern bool enabled;
                 extern AntiAimType_Y type;
                 extern AntiAimType_Y typeFake;
                 extern bool antiResolver;
             }
 
-            namespace Pitch
-            {
+            namespace Pitch {
                 extern bool enabled;
                 extern AntiAimType_X type;
             }
 
-            namespace HeadEdge
-            {
+            namespace HeadEdge {
                 extern bool enabled;
                 extern float distance;
             }
 
-            namespace Lua
-            {
+            namespace Lua {
                 extern bool debugMode; // turns on/off error checking. Can be turned off after your script is working for speed.
                 extern char scriptX[512];
                 extern char scriptY[512];
@@ -591,13 +535,11 @@ struct AimbotWeapon_t
             }
         }
 
-        namespace Resolver
-        {
+        namespace Resolver {
             extern bool resolveAll;
         }
 
-        namespace ESP
-        {
+        namespace ESP {
             extern bool enabled;
             extern ButtonCode_t key;
             extern TeamColorType teamColorType;
@@ -623,8 +565,7 @@ struct AimbotWeapon_t
             extern ColorVar molotovColor;
             extern HealthColorVar localplayerColor;
 
-            namespace Glow
-            {
+            namespace Glow {
                 extern bool enabled;
                 extern HealthColorVar allyColor;
                 extern HealthColorVar enemyColor;
@@ -636,8 +577,7 @@ struct AimbotWeapon_t
                 extern HealthColorVar localplayerColor;
             }
 
-            namespace Filters
-            {
+            namespace Filters {
                 extern bool legit;
                 extern bool visibilityCheck;
                 extern bool smokeCheck;
@@ -654,8 +594,7 @@ struct AimbotWeapon_t
                 extern bool localplayer;
             }
 
-            namespace Info
-            {
+            namespace Info {
                 extern bool name;
                 extern bool clan;
                 extern bool steamId;
@@ -673,50 +612,42 @@ struct AimbotWeapon_t
                 extern bool location;
             }
 
-            namespace Skeleton
-            {
+            namespace Skeleton {
                 extern bool enabled;
                 extern ColorVar color;
             }
 
-            namespace Boxes
-            {
+            namespace Boxes {
                 extern bool enabled;
                 extern BoxType type;
             }
 
-            namespace Bars
-            {
+            namespace Bars {
                 extern bool enabled;
                 extern BarType type;
                 extern BarColorType colorType;
             }
 
-            namespace Tracers
-            {
+            namespace Tracers {
                 extern bool enabled;
                 extern TracerType type;
             }
 
-            namespace BulletTracers
-            {
+            namespace BulletTracers {
                 extern bool enabled;
             }
 
-            namespace Bomb
-            {
+            namespace Bomb {
                 extern bool enabled;
             }
 
-            namespace FOVCrosshair
-            {
+            namespace FOVCrosshair {
                 extern bool enabled;
                 extern bool filled;
                 extern ColorVar color;
             }
 
-            namespace Chams
-            {
+            namespace Chams {
                 extern bool enabled;
                 extern HealthColorVar allyColor;
                 extern HealthColorVar allyVisibleColor;
@@ -725,28 +656,24 @@ struct AimbotWeapon_t
                 extern HealthColorVar localplayerColor;
                 extern ChamsType type;
 
-                namespace Arms
-                {
+                namespace Arms {
                     extern bool enabled;
                     extern ColorVar color;
                     extern ArmsType type;
                 }
 
-                namespace Weapon
-                {
+                namespace Weapon {
                     extern bool enabled;
                     extern ColorVar color;
                 }
             }
 
-            namespace Sounds
-            {
+            namespace Sounds {
                 extern bool enabled;
                 extern int time;
             }
 
-            namespace Hitmarker
-            {
+            namespace Hitmarker {
                 extern bool enabled;
                 extern bool enemies;
                 extern bool allies;
@@ -755,20 +682,17 @@ struct AimbotWeapon_t
                 extern int size;
                 extern int innerGap;
 
-                namespace Damage
-                {
+                namespace Damage {
                     extern bool enabled;
                 }
             }
 
-            namespace HeadDot
-            {
+            namespace HeadDot {
                 extern bool enabled;
                 extern float size;
             }
 
-            namespace Spread
-            {
+            namespace Spread {
                 extern bool enabled; // show current spread
                 extern bool spreadLimit; // show spreadLimit value
                 extern ColorVar color;
@@ -776,36 +700,30 @@ struct AimbotWeapon_t
             }
         }
 
-        namespace Dlights
-        {
+        namespace Dlights {
             extern bool enabled;
             extern float radius;
         }
 
-        namespace Spammer
-        {
+        namespace Spammer {
             extern SpammerType type;
             extern bool say_team;
 
-            namespace KillSpammer
-            {
+            namespace KillSpammer {
                 extern bool enabled;
                 extern bool sayTeam;
                 extern std::vector<std::string> messages;
             }
 
-            namespace RadioSpammer
-            {
+            namespace RadioSpammer {
                 extern bool enabled;
             }
 
-            namespace NormalSpammer
-            {
+            namespace NormalSpammer {
                 extern std::vector<std::string> messages;
             }
 
-            namespace PositionSpammer
-            {
+            namespace PositionSpammer {
                 extern int team;
                 extern bool showName;
                 extern bool showWeapon;
@@ -817,18 +735,15 @@ struct AimbotWeapon_t
             }
         }
 
-        namespace BHop
-        {
+        namespace BHop {
             extern bool enabled;
 
-            namespace Chance
-            {
+            namespace Chance {
                 extern bool enabled;
                 extern int value;
             }
 
-            namespace Hops
-            {
+            namespace Hops {
                 extern bool enabledMax;
                 extern int Max;
                 extern bool enabledMin;
@@ -836,21 +751,18 @@ struct AimbotWeapon_t
             }
         }
 
-        namespace AutoStrafe
-        {
+        namespace AutoStrafe {
             extern bool enabled;
             extern AutostrafeType type;
             extern bool silent;
         }
 
-        namespace Noflash
-        {
+        namespace Noflash {
             extern bool enabled;
             extern float value;
         }
 
-        namespace FOVChanger
-        {
+        namespace FOVChanger {
             extern bool enabled;
             extern bool viewmodelEnabled;
             extern float value;
@@ -858,8 +770,7 @@ struct AimbotWeapon_t
             extern bool ignoreScope;
         }
 
-        namespace Radar
-        {
+        namespace Radar {
             extern bool enabled;
             extern float zoom;
             extern bool enemies;
@@ -883,40 +794,33 @@ struct AimbotWeapon_t
             extern ColorVar defuserColor;
             extern float iconsScale;
 
-            namespace InGame
-            {
+            namespace InGame {
                 extern bool enabled;
             }
         }
 
-        namespace Recoilcrosshair
-        {
+        namespace Recoilcrosshair {
             extern bool enabled;
             extern bool showOnlyWhenShooting;
         }
 
-        namespace Airstuck
-        {
+        namespace Airstuck {
             extern bool enabled;
             extern ButtonCode_t key;
         }
 
-        namespace Autoblock
-        {
+        namespace Autoblock {
             extern bool enabled;
             extern ButtonCode_t key;
         }
 
-        namespace Skinchanger
-        {
-            namespace Skins
-            {
+        namespace Skinchanger {
+            namespace Skins {
                 extern bool enabled;
                 extern bool perTeam;
             }
 
-            namespace Models
-            {
+            namespace Models {
                 extern bool enabled;
             }
 
@@ -924,18 +828,15 @@ struct AimbotWeapon_t
             extern std::unordered_map<ItemDefinitionIndex, AttribItem_t, Util::IntHash<ItemDefinitionIndex>> skinsT;
         }
 
-        namespace ShowRanks
-        {
+        namespace ShowRanks {
             extern bool enabled;
         }
 
-        namespace ShowSpectators
-        {
+        namespace ShowSpectators {
             extern bool enabled;
         }
 
-        namespace ClanTagChanger
-        {
+        namespace ClanTagChanger {
             extern char value[30];
             extern bool animation;
             extern int animationSpeed;
@@ -943,106 +844,87 @@ struct AimbotWeapon_t
             extern ClanTagType type;
         }
 
-        namespace View
-        {
-            namespace NoAimPunch
-            {
+        namespace View {
+            namespace NoAimPunch {
                 extern bool enabled;
             }
 
-            namespace NoViewPunch
-            {
+            namespace NoViewPunch {
                 extern bool enabled;
             }
         }
 
-        namespace FakeLag
-        {
+        namespace FakeLag {
             extern bool enabled;
             extern int value;
             extern bool adaptive;
         }
 
-        namespace AutoAccept
-        {
+        namespace AutoAccept {
             extern bool enabled;
         }
 
-        namespace NoSky
-        {
+        namespace NoSky {
             extern bool enabled;
             extern ColorVar color;
         }
 
-        namespace SkyBox
-        {
+        namespace SkyBox {
             extern bool enabled;
             extern int skyBoxNumber; // number in skyBoxNames
         }
 
-        namespace ASUSWalls
-        {
+        namespace ASUSWalls {
             extern bool enabled;
             extern ColorVar color;
         }
 
-        namespace NoScopeBorder
-        {
+        namespace NoScopeBorder {
             extern bool enabled;
         }
 
-        namespace SniperCrosshair
-        {
+        namespace SniperCrosshair {
             extern bool enabled;
         }
 
-        namespace AutoDefuse
-        {
+        namespace AutoDefuse {
             extern bool enabled;
             extern bool silent;
         }
 
-        namespace NoSmoke
-        {
+        namespace NoSmoke {
             extern bool enabled;
         }
 
-        namespace ScreenshotCleaner
-        {
+        namespace ScreenshotCleaner {
             extern bool enabled;
         }
 
-        namespace EdgeJump
-        {
+        namespace EdgeJump {
             extern bool enabled;
             extern ButtonCode_t key;
         }
 
-        namespace NameStealer
-        {
+        namespace NameStealer {
             extern bool enabled;
             extern int team;
         }
 
-        namespace ThirdPerson
-        {
+        namespace ThirdPerson {
             extern bool enabled;
             extern float distance;
         }
 
-        namespace JumpThrow
-        {
+        namespace JumpThrow {
             extern bool enabled;
             extern ButtonCode_t key;
         }
 
-        namespace DisablePostProcessing
-        {
+        namespace DisablePostProcessing {
             extern bool enabled;
         }
 
-        namespace GrenadeHelper
-        {
+        namespace GrenadeHelper {
             extern std::vector<GrenadeInfo> grenadeInfos;
             extern bool enabled;
             extern bool onlyMatchingInfos;
@@ -1059,50 +941,46 @@ struct AimbotWeapon_t
             extern std::string actMapName;
         }
 
-        namespace WalkBot
-        {
+        namespace WalkBot {
             extern bool enabled;
             extern bool forceReset;
             extern bool autobuy;
             extern int autobuyAt;
         }
-        namespace TracerEffects
-        {
+
+        namespace TracerEffects {
             extern bool enabled;
             extern bool serverSide;
             extern TracerEffects_t effect;
             extern int frequency;
 
         }
-        namespace AutoKnife
-        {
+
+        namespace AutoKnife {
             extern bool enabled;
             extern bool onKey;
 
-            namespace Filters
-            {
+            namespace Filters {
                 extern bool enemies;
                 extern bool allies;
             }
         }
-        namespace Debug
-        {
-            namespace AutoWall
-            {
+
+        namespace Debug {
+            namespace AutoWall {
                 extern bool debugView;
             }
-            namespace AutoAim
-            {
+
+            namespace AutoAim {
                 extern bool drawTarget;
                 extern Vector target;
             }
-            namespace BoneMap
-            {
+
+            namespace BoneMap {
                 extern bool draw;
                 extern bool justDrawDots;
             }
         }
-
 
         void LoadDefaultsOrSave(std::string path);
         void LoadConfig(std::string path);
