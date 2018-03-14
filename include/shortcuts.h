@@ -1,4 +1,5 @@
-#pragma once
+#ifndef SHORTCUTS_H
+#define SHORTCUTS_H
 
 #include "settings.h"
 #include "SDK/SDK.h"
@@ -14,3 +15,5 @@ namespace Shortcuts
     void PollEvent(SDL_Event* event);
     void SetKeyCodeState(ButtonCode_t code, bool bPressed);
 }
+
+#endif // SHORTCUTS_H
