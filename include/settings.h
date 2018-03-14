@@ -1,4 +1,5 @@
-#pragma once
+#ifndef SETTINGS_H
+#define SETTINGS_H
 
 #include <unordered_map>
 #include <zconf.h>
@@ -1110,3 +1111,5 @@ struct AimbotWeapon_t
         void SaveGrenadeInfo(std::string path);
         void LoadGrenadeInfo(std::string path);
     }
+
+#endif // SETTINGS_H
