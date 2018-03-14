@@ -10,10 +10,9 @@
 #include "../lib/ImGUI/imgui_impl_sdl.h"
 #include "../lib/ImGUI/imgui_internal.h"
 
-namespace Shortcuts
-{
-    void PollEvent(SDL_Event* event);
-    void SetKeyCodeState(ButtonCode_t code, bool bPressed);
+namespace Shortcuts {
+    void PollEvent(SDL_Event*);
+    void SetKeyCodeState(ButtonCode_t, bool);
 }
 
 #endif // SHORTCUTS_H
