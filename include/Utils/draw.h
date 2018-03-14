@@ -1,4 +1,5 @@
-#pragma once
+#ifndef DRAW_H
+#define DRAW_H
 
 #include "../interfaces.h"
 
@@ -52,3 +53,5 @@ namespace Draw
     void ImText(ImVec2 pos, ImColor color, const char *text_begin, const char *text_end = NULL, float wrap_width = 0.0f, const ImVec4 *cpu_fine_clip_rect = NULL, ImFontFlags flags = ImFontFlags_None);
     void ImEnd();
 }
+
+#endif // DRAW_H
