@@ -10,3 +10,4 @@
 - [x] include/interfaces.h
 - [x] include/offsets.h
 - [x] include/preload.h
+- [x] include/settings.h
