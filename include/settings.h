@@ -982,12 +982,12 @@ struct AimbotWeapon_t {
             }
         }
 
-        void LoadDefaultsOrSave(std::string path);
-        void LoadConfig(std::string path);
+        void LoadDefaultsOrSave(std::string);
+        void LoadConfig(std::string);
         void LoadSettings();
-        void DeleteConfig(std::string path);
-        void SaveGrenadeInfo(std::string path);
-        void LoadGrenadeInfo(std::string path);
+        void DeleteConfig(std::string);
+        void SaveGrenadeInfo(std::string);
+        void LoadGrenadeInfo(std::string);
     }
 
 #endif // SETTINGS_H
