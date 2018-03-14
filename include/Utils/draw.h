@@ -42,13 +42,13 @@ namespace Draw {
 
     // ImGui
     void ImStart();
-    void ImCircle(ImVec2 point, ImColor color, float radius, int num_segments = 12, float thickness = 1.0f);
-    void ImCircleFilled(ImVec2 point, ImColor color, float radius, int num_segments);
-    void ImLine(ImVec2 a, ImVec2 b, ImColor color, float thickness = 1.0f);
-    void ImRect(ImVec2 a, ImVec2 b, ImColor color, float rounding = 0.0f, int rounding_corners_flags = ~0, float thickness = 1.0f);
-    void ImRect(int x0, int y0, int x1, int y1, Color color, float rounding = 0.0f, int rounding_corners_flags = ~0, float thickness = 1.0f);
-    void ImRect(ImVec2 a, ImVec2 b, Color color, float rounding = 0.0f, int rounding_corners_flags = ~0, float thickness = 1.0f);
-    void ImText(ImVec2 pos, ImColor color, const char *text_begin, const char *text_end = NULL, float wrap_width = 0.0f, const ImVec4 *cpu_fine_clip_rect = NULL, ImFontFlags flags = ImFontFlags_None);
+    void ImCircle(ImVec2, ImColor, float, int num_segments = 12, float thickness = 1.0f);
+    void ImCircleFilled(ImVec2, ImColor, float, int);
+    void ImLine(ImVec2, ImVec2, ImColor, float thickness = 1.0f);
+    void ImRect(ImVec2, ImVec2, ImColor, float rounding = 0.0f, int rounding_corners_flags = ~0, float thickness = 1.0f);
+    void ImRect(int, int, int, int, Color, float rounding = 0.0f, int rounding_corners_flags = ~0, float thickness = 1.0f);
+    void ImRect(ImVec2, ImVec2, Color, float rounding = 0.0f, int rounding_corners_flags = ~0, float thickness = 1.0f);
+    void ImText(ImVec2, ImColor, const char*, const char* text_end = nullptr, float wrap_width = 0.0f, const ImVec4 *cpu_fine_clip_rect = nullptr, ImFontFlags flags = ImFontFlags_None);
     void ImEnd();
 }
 
