@@ -3,10 +3,9 @@
 
 #include <cstdint>
 
-namespace PatternFinder
-{
-    uintptr_t FindPattern(uintptr_t dwAddress, uintptr_t dwLen, unsigned char* bMask, const char* szMask);
-    uintptr_t FindPatternInModule(const char* moduleName, unsigned char* bMask, const char* szMask);
+namespace PatternFinder {
+    uintptr_t FindPattern(uintptr_t, uintptr_t, unsigned char*, const char*);
+    uintptr_t FindPatternInModule(const char*, unsigned char*, const char*);
 }
 
 #endif PATTERN_FINDER_H
