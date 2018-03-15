@@ -5,8 +5,7 @@
 #include "../SDK/SDK.h"
 #include "../interfaces.h"
 
-namespace Entity
-{
+namespace Entity {
     bool IsVisible(C_BasePlayer*, int, float = 180.f, bool = false);
     bool IsSpotVisible(C_BasePlayer*, Vector, float = 180.f, bool = false);
     bool IsVisibleThroughEnemies(C_BasePlayer*, int, float = 180.f, bool = false);
