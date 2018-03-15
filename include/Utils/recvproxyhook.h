@@ -3,7 +3,6 @@
 
 #include "../SDK/SDK.h"
 
-// credits: emskye96
 class RecvPropHook {
 private:
     RecvProp* target_property;
@@ -13,7 +12,7 @@ public:
         : target_property{target_property}, original_proxy_fn{target_property->m_ProxyFn} {}
     ~RecvPropHook();
 
-    RecvVarProxyFn GetOriginalFunction();
+    RecvVarProxyFn GetOriginalFunction() { return original_proxy_fn; };
     void SetProxyFunction(RecvVarProxyFn user_proxy_fn);
 };
 
