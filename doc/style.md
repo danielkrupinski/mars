@@ -16,3 +16,5 @@
 - [x] include/Utils/entity.h
 - [x] include/Utils/math.h
 - [x] include/Utils/netvarmanager.h
+- [x] include/Utils/patternfinder.h
+- [x] include/Utils/recvproxyhook.h
