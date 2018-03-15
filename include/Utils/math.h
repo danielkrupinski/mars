@@ -17,4 +17,4 @@ namespace Math {
     float float_rand(float, float);
 }
 
-#endif MATH_H
+#endif // MATH_H
