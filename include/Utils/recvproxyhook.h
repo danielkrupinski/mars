@@ -9,7 +9,7 @@ private:
     RecvProp* target_property;
     RecvVarProxyFn original_proxy_fn;
 public:
-    RecvPropHook(RecvProp* target_property);
+    explicit RecvPropHook(RecvProp* target_property);
     ~RecvPropHook();
 
     RecvVarProxyFn GetOriginalFunction();
