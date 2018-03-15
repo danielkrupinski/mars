@@ -1,4 +1,5 @@
-#pragma once
+#ifndef RECVPROXY_HOOK_H
+#define RECVPROXY_HOOK_H
 
 #include "../SDK/SDK.h"
 
@@ -29,3 +30,5 @@ public:
         target_property->m_ProxyFn = user_proxy_fn;
     }
 };
+
+#endif // RECVPROXY_HOOK_H
