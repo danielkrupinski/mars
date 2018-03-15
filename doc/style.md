@@ -13,3 +13,5 @@
 - [x] include/settings.h
 - [x] include/shortcuts.h
 - [x] include/Utils/draw.h
+- [x] include/Utils/entity.h
+- [x] include/Utils/math.h
