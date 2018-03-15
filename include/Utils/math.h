@@ -1,4 +1,5 @@
-#pragma once
+#ifndef MATH_H
+#define MATH_H
 
 #include "../SDK/SDK.h"
 
@@ -15,3 +16,5 @@ namespace Math {
     QAngle CalcAngle(const Vector &src, const Vector &dst);
     float float_rand( float min, float max );
 }
+
+#endif MATH_H
