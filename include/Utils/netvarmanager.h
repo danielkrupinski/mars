@@ -1,4 +1,5 @@
-#pragma once
+#ifndef NETVAR_MANAGER_H
+#define NETVAR_MANAGER_H
 
 #include <vector>
 #include <string>
@@ -25,3 +26,5 @@ namespace NetVarManager
     bool HookProp(const char* tableName, const char* propName, RecvVarProxyFn f);
     void DumpNetvars();
 }
+
+#endif // NETVAR_MANAGER_H
