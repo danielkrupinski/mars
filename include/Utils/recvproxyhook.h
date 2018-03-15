@@ -12,7 +12,7 @@ public:
         : target_property{target_property}, original_proxy_fn{target_property->m_ProxyFn} {}
     ~RecvPropHook() { target_property->m_ProxyFn = original_proxy_fn; };
 
-    RecvVarProxyFn GetOriginalFunction() { return original_proxy_fn; };
+    constexpr RecvVarProxyFn GetOriginalFunction() { return original_proxy_fn; };
     void SetProxyFunction(RecvVarProxyFn user_proxy_fn) { target_property->m_ProxyFn = user_proxy_fn; };
 };
 
