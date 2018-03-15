@@ -1,4 +1,5 @@
-#pragma once
+#ifndef ENTITY_H
+#define ENTITY_H
 
 #include <list>
 #include "../SDK/SDK.h"
@@ -13,3 +14,5 @@ namespace Entity
     bool IsPlanting(C_BasePlayer* player);
     Bone GetBoneByName(C_BasePlayer* player, const char* boneName);
 }
+
+#endif // ENTITY_H
