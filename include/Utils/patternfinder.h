@@ -8,4 +8,4 @@ namespace PatternFinder {
     uintptr_t FindPatternInModule(const char*, unsigned char*, const char*);
 }
 
-#endif PATTERN_FINDER_H
+#endif // PATTERN_FINDER_H
