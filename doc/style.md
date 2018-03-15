@@ -15,3 +15,4 @@
 - [x] include/Utils/draw.h
 - [x] include/Utils/entity.h
 - [x] include/Utils/math.h
+- [x] include/Utils/netvarmanager.h
