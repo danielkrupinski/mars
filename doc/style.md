@@ -19,3 +19,7 @@
 - [x] include/Utils/patternfinder.h
 - [x] include/Utils/recvproxyhook.h
 - [x] include/Utils/skins.h
+- [x] include/Utils/util_items.h
+- [x] include/Utils/util_sdk.h
+- [x] include/Utils/util.h
+- [x] include/Utils/vmt.h
