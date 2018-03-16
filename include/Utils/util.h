@@ -1,4 +1,5 @@
-#pragma once
+#ifndef UTIL_H
+#define UTIL_H
 
 #include <string>
 #include <sys/mman.h>
@@ -83,3 +84,5 @@ namespace Util
         }
     };
 }
+
+#endif // UTIL_H
