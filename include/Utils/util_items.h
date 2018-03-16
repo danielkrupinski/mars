@@ -7,10 +7,8 @@
 #include "util.h"
 #include "../SDK/SDK.h"
 
-namespace Util
-{
-    namespace Items
-    {
+namespace Util {
+    namespace Items {
         /*
         * Look up a ItemDefinitionIndex ordinal value by the symbolic name
         * using an internal map
@@ -23,17 +21,17 @@ namespace Util
         */
         std::string GetItemName(const enum ItemDefinitionIndex);
 
-        std::string GetItemEntityName(ItemDefinitionIndex index);
+        std::string GetItemEntityName(ItemDefinitionIndex);
 
-        std::string GetItemConfigEntityName(ItemDefinitionIndex index);
+        std::string GetItemConfigEntityName(ItemDefinitionIndex);
 
-        std::string GetItemDisplayName(ItemDefinitionIndex index);
+        std::string GetItemDisplayName(ItemDefinitionIndex);
 
-        bool IsKnife(ItemDefinitionIndex index);
-        bool IsUtility(ItemDefinitionIndex index);
-        bool IsGlove(ItemDefinitionIndex index);
-        bool IsCTWeapon(ItemDefinitionIndex index);
-        bool IsTWeapon(ItemDefinitionIndex index);
+        bool IsKnife(ItemDefinitionIndex);
+        bool IsUtility(ItemDefinitionIndex);
+        bool IsGlove(ItemDefinitionIndex);
+        bool IsCTWeapon(ItemDefinitionIndex);
+        bool IsTWeapon(ItemDefinitionIndex);
     }
 }
 
