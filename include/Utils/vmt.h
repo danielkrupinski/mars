@@ -9,13 +9,16 @@ private:
     uintptr_t* vmt;
 public:
     // New virtual method table
-    uintptr_t** interface = nullptr;
+    uintptr_t** interface;
 
-    uintptr_t* original_vmt = nullptr;
+    uintptr_t* original_vmt;
 
-    uint32_t methodCount = 0;
+    uint32_t methodCount;
+
+    VMT() : interface{}, original_vmt{}, methodCount{} {}
 
     VMT(void* interface)
+        : interface{}, original_vmt{}, methodCount{}
     {
         this->interface = reinterpret_cast<uintptr_t**>(interface);
 
