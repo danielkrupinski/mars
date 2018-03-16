@@ -6,13 +6,12 @@
 #include "../interfaces.h"
 #include "../settings.h"
 
-struct PaintNames_t
-{
+struct PaintNames_t {
     const char* displayName = nullptr;
     const char* paintName = nullptr;
 };
 
-const std::map<int, PaintNames_t> itemSkins = {
+const std::map<int, PaintNames_t> itemSkins {
     { -1, { "No Skin" } },
     { 2, { "#PaintKit_so_olive_Tag", "olive" } },
     { 3, { "#PaintKit_so_red_Tag", "red" } },
@@ -680,8 +679,7 @@ const std::map<int, PaintNames_t> itemSkins = {
     { 10064, { "#PaintKit_specialist_winterhex_tag", "specialist_winterhex" } },
 };
 
-namespace Skins
-{
+namespace Skins {
     void Localize();
 }
 
