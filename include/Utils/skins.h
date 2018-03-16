@@ -676,7 +676,7 @@ const std::map<int, PaintNames_t> itemSkins {
     { 10061, { "#PaintKit_specialist_webs_red_tag", "specialist_webs_red" } },
     { 10062, { "#PaintKit_specialist_forest_brown_tag", "specialist_forest_brown" } },
     { 10063, { "#PaintKit_specialist_fade_tag", "specialist_fade" } },
-    { 10064, { "#PaintKit_specialist_winterhex_tag", "specialist_winterhex" } },
+    { 10064, { "#PaintKit_specialist_winterhex_tag", "specialist_winterhex" } }
 };
 
 namespace Skins {
