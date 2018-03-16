@@ -15,32 +15,31 @@
 #include "../../lib/ImGUI/imgui.h"
 #include "../SDK/SDK.h"
 
-namespace Util
-{
-    std::string ReplaceString(std::string subject, const std::string& search, const std::string& replace);
+namespace Util {
+    std::string ReplaceString(std::string, const std::string&, const std::string&);
     void StdReplaceStr(std::string&, const std::string&, const std::string&);
-    const char* PadStringRight(std::string text, size_t value);
-    bool Contains(const std::string &word, const std::string &sentence);
-    std::string ToLower(std::string str);
-    std::string ToUpper(std::string str);
-    std::string WstringToString(std::wstring wstr);
-    std::wstring StringToWstring(std::string str);
-    ImColor GetRainbowColor(float speed);
-    Color GetHealthColor(int hp);
-    Color GetHealthColor(C_BasePlayer* player);
-    int RandomInt(int min, int max);
+    const char* PadStringRight(std::string, size_t);
+    bool Contains(const std::string&, const std::string&);
+    std::string ToLower(std::string);
+    std::string ToUpper(std::string);
+    std::string WstringToString(std::wstring);
+    std::wstring StringToWstring(std::string);
+    ImColor GetRainbowColor(float);
+    Color GetHealthColor(int);
+    Color GetHealthColor(C_BasePlayer*);
+    int RandomInt(int, int);
     long GetEpochTime();
     int IsDebuggerPresent();
-    void RemoveLinkMapEntry(char *partialName, void **prev, void **curr, void **next);
-    void RestoreLinkMapEntry(void *prev, void *curr, void *next);
+    void RemoveLinkMapEntry(char*, void**, void**, void**);
+    void RestoreLinkMapEntry(void*, void*, void*);
     void PrintLinkMapIDs();
-    bool SearchLinkMap(char *partialName);
-    bool SearchLinkMap(char *partialName, void **addr);
+    bool SearchLinkMap(char*);
+    bool SearchLinkMap(char*, void**);
 
-    const std::map<int,int> * GetModelTypeBoneMap(C_BasePlayer* player);
-    ModelType GetModelTypeID(C_BasePlayer* player);
-    std::string ModelTypeToString(ModelType model);
-    std::string BoneToString(const std::map<int,int> * model, int boneID );
+    const std::map<int,int>* GetModelTypeBoneMap(C_BasePlayer*);
+    ModelType GetModelTypeID(C_BasePlayer*);
+    std::string ModelTypeToString(ModelType);
+    std::string BoneToString(const std::map<int,int>*, int);
     template <typename T>
     T GetValueByKey(std::vector<std::pair<int, T>> vec, int key)
     {
@@ -76,8 +75,7 @@ namespace Util
     }
 
     template<typename T>
-    struct IntHash
-    {
+    struct IntHash {
         size_t operator()(const T& t) const noexcept
         {
             return std::hash<int>()((int) t);
