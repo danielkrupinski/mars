@@ -18,3 +18,4 @@
 - [x] include/Utils/netvarmanager.h
 - [x] include/Utils/patternfinder.h
 - [x] include/Utils/recvproxyhook.h
+- [x] include/Utils/skins.h
