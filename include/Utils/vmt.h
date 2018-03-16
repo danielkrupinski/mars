@@ -20,14 +20,14 @@ public:
     VMT(void* interface)
         : interface{}, original_vmt{}, methodCount{}
     {
-        this->interface = reinterpret_cast<uintptr_t**>(interface);
+        interface = reinterpret_cast<uintptr_t**>(interface);
 
         size_t method_count = 0;
 
-        while (reinterpret_cast<uintptr_t*>(*this->interface)[method_count])
+        while (reinterpret_cast<uintptr_t*>(*interface)[method_count])
             method_count++;
 
-        original_vmt = *this->interface;
+        original_vmt = *interface;
 
         vmt = new uintptr_t[sizeof(uintptr_t) * method_count];
 
@@ -48,12 +48,12 @@ public:
 
     void ApplyVMT()
     {
-        *this->interface = vmt;
+        interface = vmt;
     }
 
     void ReleaseVMT()
     {
-        *this->interface = original_vmt;
+        interface = original_vmt;
     }
 };
 
