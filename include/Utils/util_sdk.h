@@ -1,4 +1,5 @@
-#pragma once
+#ifndef UTIL_SDK_H
+#define UTIL_SDK_H
 
 #include "../SDK/SDK.h"
 #include "../interfaces.h"
@@ -12,3 +13,5 @@ namespace Util
 
     IMaterial* CreateMaterial(std::string type, std::string texture, bool ignorez, bool nofog, bool model, bool nocull, bool halflambert);
 }
+
+#endif // UTIL_SDK_H
