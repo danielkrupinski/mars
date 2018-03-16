@@ -1,4 +1,5 @@
-#pragma once
+#ifndef SKINS_H
+#define SKINS_H
 
 #include "util.h"
 #include "../SDK/SDK.h"
@@ -683,3 +684,5 @@ namespace Skins
 {
     void Localize();
 }
+
+#endif // SKINS_H
