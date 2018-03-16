@@ -7,9 +7,8 @@
 #include "../settings.h"
 
 struct PaintNames_t {
-    const char* displayName;
-    const char* paintName;
-    PaintNames_t() : displayName{}, paintName{} {}
+    const char* displayName = nullptr;
+    const char* paintName = nullptr;
 };
 
 const std::map<int, PaintNames_t> itemSkins {
