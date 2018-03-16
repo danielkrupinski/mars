@@ -1,4 +1,5 @@
-#pragma once
+#ifndef UTIL_ITEMS_H
+#define UTIL_ITEMS_H
 
 #include <string>
 #include <map>
@@ -35,3 +36,5 @@ namespace Util
         bool IsTWeapon(ItemDefinitionIndex index);
     }
 }
+
+#endif // UTIL_ITEMS_H
