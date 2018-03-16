@@ -1,4 +1,5 @@
-#pragma once
+#ifndef VMT_H
+#define VMT_H
 
 #include <cstdint>
 #include <cstddef>
@@ -52,3 +53,5 @@ public:
         *this->interface = original_vmt;
     }
 };
+
+#endif // VMT_H
