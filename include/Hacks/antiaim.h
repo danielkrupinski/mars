@@ -8,13 +8,12 @@
 #include "aimbot.h"
 #include <lua.hpp>
 
-namespace AntiAim
-{
+namespace AntiAim {
     void LuaInit();
     void LuaCleanup();
 
     //Hooks
-    void CreateMove(CUserCmd* cmd);
+    void CreateMove(CUserCmd*);
 }
 
 #endif // ANTIAIM_H
