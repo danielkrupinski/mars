@@ -18,8 +18,8 @@ namespace Aimbot {
     void XDOCleanup();
 
     //Hooks
-    void CreateMove(CUserCmd* cmd);
-    void FireGameEvent(IGameEvent* event);
+    void CreateMove(CUserCmd*);
+    void FireGameEvent(IGameEvent*);
     void UpdateValues();
 }
 
