@@ -18,3 +18,4 @@
 - [x] include/Hacks/antiaim.h
 - [x] include/Hacks/asuswalls.h
 - [x] include/Hacks/autoaccept.h
+- [x] include/Hacks/autoblock.h
