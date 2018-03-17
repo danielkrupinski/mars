@@ -13,3 +13,8 @@
 - [x] include/settings.h
 - [x] include/shortcuts.h
 - [x] include/Utils/
+- [x] include/Hacks/aimbot.h
+- [x] include/Hacks/airstuck.h
+- [x] include/Hacks/antiaim.h
+- [x] include/Hacks/asuswalls.h
+- [x] include/Hacks/autoaccept.h
