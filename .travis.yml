@@ -6,20 +6,12 @@ matrix:
           sources:
             - ubuntu-toolchain-r-test
           packages:
-            - g++-7
-            - cmake
-            - gdb
-            - git
-            - libsdl2-dev
-            - zlib1g-dev
-            - liblua5.3-0
-            - libxdo-dev
-            - patchelf
       env:
         - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
 
 before_install:
     - eval "${MATRIX_EVAL}"
+    - sudo apt-get install cmake g++-7 gdb git libsdl2-dev zlib1g-dev liblua5.3 libxdo-dev patchelf
 language: cpp
 compiler: g++
 script:
