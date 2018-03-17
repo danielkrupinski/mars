@@ -4,6 +4,13 @@ matrix:
       addons:
         apt:
           sources:
+            - sourceline: 'deb http://archive.ubuntu.com/ubuntu/ trusty main restricted universe multiverse '
+            - sourceline: 'deb http://archive.ubuntu.com/ubuntu/ trusty-security main restricted universe multiverse '
+            - sourceline: 'deb http://archive.ubuntu.com/ubuntu/ trusty-updates main restricted universe multiverse '
+            - sourceline: 'deb http://archive.ubuntu.com/ubuntu/ trusty-proposed main restricted universe multiverse '
+            - sourceline: 'deb http://archive.ubuntu.com/ubuntu/ trusty-backports main restricted universe multiverse '
+            - sourceline: 'deb http://archive.canonical.com/ubuntu trusty partner '
+            - sourceline: 'deb http://extras.ubuntu.com/ubuntu trusty main '
             - ubuntu-toolchain-r-test
           packages:
             - cmake
@@ -12,9 +19,9 @@ matrix:
             - git
             - libsdl2-dev
             - zlib1g-dev
-            #- liblua5.3
+            - liblua5.3
             - libxdo-dev
-            #- patchelf
+            - patchelf
       env:
         - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
 
