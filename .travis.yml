@@ -25,6 +25,7 @@ matrix:
         - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
 
 before_install:
+    - sudo apt autoremove
     - eval "${MATRIX_EVAL}"
 language: cpp
 compiler: g++
