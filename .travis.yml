@@ -1,16 +1,16 @@
 language: cpp
 compiler: g++
 before_script:
-    - echo "deb http://pl.archive.ubuntu.com/ubuntu/ trusty main restricted" | sudo tee -a /etc/apt/sources.list
-    - echo "deb http://pl.archive.ubuntu.com/ubuntu/ trusty-updates main restricted" | sudo tee -a /etc/apt/sources.list
-    - echo "deb http://pl.archive.ubuntu.com/ubuntu/ trusty universe" | sudo tee -a /etc/apt/sources.list
-    - echo "deb http://pl.archive.ubuntu.com/ubuntu/ trusty-updates universe" | sudo tee -a /etc/apt/sources.list
-    - echo "deb http://pl.archive.ubuntu.com/ubuntu/ trusty multiverse" | sudo tee -a /etc/apt/sources.list
-    - echo "deb http://pl.archive.ubuntu.com/ubuntu/ trusty-updates multiverse" | sudo tee -a /etc/apt/sources.list
-    - echo "deb http://pl.archive.ubuntu.com/ubuntu/ trusty-backports main restricted universe multiverse" | sudo tee -a /etc/apt/sources.list
-    - echo "deb http://security.ubuntu.com/ubuntu trusty-security main restricted" | sudo tee -a /etc/apt/sources.list
-    - echo "deb http://security.ubuntu.com/ubuntu trusty-security universe" | sudo tee -a /etc/apt/sources.list
-    - echo "deb http://security.ubuntu.com/ubuntu trusty-security multiverse" | sudo tee -a /etc/apt/sources.list
+    - echo "deb http://pl.archive.ubuntu.com/ubuntu/ artful main restricted" | sudo tee -a /etc/apt/sources.list
+    - echo "deb http://pl.archive.ubuntu.com/ubuntu/ artful-updates main restricted" | sudo tee -a /etc/apt/sources.list
+    - echo "deb http://pl.archive.ubuntu.com/ubuntu/ artful universe" | sudo tee -a /etc/apt/sources.list
+    - echo "deb http://pl.archive.ubuntu.com/ubuntu/ artful-updates universe" | sudo tee -a /etc/apt/sources.list
+    - echo "deb http://pl.archive.ubuntu.com/ubuntu/ artful multiverse" | sudo tee -a /etc/apt/sources.list
+    - echo "deb http://pl.archive.ubuntu.com/ubuntu/ artful-updates multiverse" | sudo tee -a /etc/apt/sources.list
+    - echo "deb http://pl.archive.ubuntu.com/ubuntu/ artful-backports main restricted universe multiverse" | sudo tee -a /etc/apt/sources.list
+    - echo "deb http://security.ubuntu.com/ubuntu artful-security main restricted" | sudo tee -a /etc/apt/sources.list
+    - echo "deb http://security.ubuntu.com/ubuntu artful-security universe" | sudo tee -a /etc/apt/sources.list
+    - echo "deb http://security.ubuntu.com/ubuntu artful-security multiverse" | sudo tee -a /etc/apt/sources.list
     - sudo apt-get update
     - sudo apt-get install cmake g++ gdb git libsdl2-dev zlib1g-dev liblua5.3 libxdo-dev patchelf
 script:
