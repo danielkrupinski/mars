@@ -12,6 +12,6 @@ before_script:
     - echo "deb http://security.ubuntu.com/ubuntu artful-security universe" | sudo tee -a /etc/apt/sources.list
     - echo "deb http://security.ubuntu.com/ubuntu artful-security multiverse" | sudo tee -a /etc/apt/sources.list
     - sudo apt-get update
-    - sudo apt-get install cmake g++ gdb git libsdl2-dev zlib1g-dev liblua5.3 libxdo-dev patchelf
+    - sudo apt-get install -f cmake g++ gdb git libsdl2-dev zlib1g-dev liblua5.3 libxdo-dev patchelf
 script:
   - ./build
