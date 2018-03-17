@@ -4,7 +4,7 @@ matrix:
       addons:
         apt:
           sources:
-            - sourceline: 'deb http://archive.ubuntu.com/ubuntu/ artful main'
+            - sourceline: 'deb http://archive.ubuntu.com/ubuntu/ artful main universe'
             - ubuntu-toolchain-r-test
           packages:
             - cmake
