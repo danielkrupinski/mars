@@ -4,10 +4,9 @@
 #include "../settings.h"
 #include "../interfaces.h"
 
-namespace Autoblock
-{
+namespace Autoblock {
     //Hooks
-    void CreateMove(CUserCmd* cmd);
+    void CreateMove(CUserCmd*);
 }
 
 #endif // AUTOBLOCK_H
