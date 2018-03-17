@@ -4,14 +4,9 @@ matrix:
       addons:
         apt:
           sources:
-            - sourceline: 'http://archive.ubuntu.com/ubuntu/ artful main universe multiverse '
-            #- ubuntu-toolchain-r-test
+            - sourceline: 'deb http://archive.ubuntu.com/ubuntu/ artful main'
+            - ubuntu-toolchain-r-test
           packages:
-            - libpython3.6
-            - perl
-            - liberror-perl
-            - libibus-1.0-dev
-            - libpulse-dev
             - cmake
             - g++-7
             - gdb
@@ -25,7 +20,6 @@ matrix:
         - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
 
 before_install:
-    - sudo apt autoremove
     - eval "${MATRIX_EVAL}"
 language: cpp
 compiler: g++
