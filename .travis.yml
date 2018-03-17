@@ -4,7 +4,7 @@ matrix:
       addons:
         apt:
           sources:
-            - sourceline: 'deb http://archive.ubuntu.com/ubuntu/ artful main universe multiverse '
+            - sourceline: 'http://archive.ubuntu.com/ubuntu/ artful main universe multiverse '
             #- ubuntu-toolchain-r-test
           packages:
             - libpython3.6
