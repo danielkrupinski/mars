@@ -1,4 +1,5 @@
-#pragma once
+#ifndef XOR_STRING_H
+#define XOR_STRING_H
 
 //-------------------------------------------------------------//
 // "Malware related compile-time hacks with C++11" by LeFF   //
@@ -7,8 +8,7 @@
 // don't cut off this comment when copy-pasting... ;-)       //
 //-------------------------------------------------------------//
 
-namespace Util
-{
+namespace Util {
     ////////////////////////////////////////////////////////////////////
     template <int X> struct EnsureCompileTime {
         enum : int {
@@ -87,3 +87,5 @@ namespace Util
     #define XORSTR( String ) ( Util::CXorString<Util::ConstructIndexList<sizeof( String ) - 1>::Result>( String ).decrypt() )
     ////////////////////////////////////////////////////////////////////
 }
+
+#endif // XOR_STRING_H
