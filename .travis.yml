@@ -7,6 +7,11 @@ matrix:
             - sourceline: 'deb http://archive.ubuntu.com/ubuntu/ artful main universe multiverse '
             #- ubuntu-toolchain-r-test
           packages:
+            - libpython3.6
+            - perl
+            - liberror-perl
+            - libibus-1.0-dev
+            - libpulse-dev
             - cmake
             - g++-7
             - gdb
