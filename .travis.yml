@@ -12,7 +12,7 @@ matrix:
             - git
             - libsdl2-dev
             - zlib1g-dev
-            - liblua5.3
+            - liblua5.3-0
             - libxdo-dev
             - patchelf
       env:
