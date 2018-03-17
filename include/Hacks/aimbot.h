@@ -1,4 +1,5 @@
-#pragma once
+#ifndef AIMBOT_H
+#define AIMBOT_H
 
 #include "../settings.h"
 #include "../interfaces.h"
@@ -21,3 +22,5 @@ namespace Aimbot {
     void FireGameEvent(IGameEvent* event);
     void UpdateValues();
 }
+
+#endif // AIMBOT_H
