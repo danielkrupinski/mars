@@ -4,10 +4,9 @@
 #include "../settings.h"
 #include "../interfaces.h"
 
-namespace Airstuck
-{
+namespace Airstuck {
     //Hooks
-    void CreateMove(CUserCmd* cmd);
+    void CreateMove(CUserCmd*);
 }
 
 #endif // AIRSTUCK_H
