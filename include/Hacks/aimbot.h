@@ -5,13 +5,11 @@
 #include "../Utils/entity.h"
 #include "../Utils/math.h"
 
-extern "C"
-{
+extern "C" {
     #include <xdo.h>
 }
 
-namespace Aimbot
-{
+namespace Aimbot {
     extern bool aimStepInProgress;
     extern std::vector<int64_t> friends;
     extern int targetAimbot;
@@ -22,6 +20,4 @@ namespace Aimbot
     void CreateMove(CUserCmd* cmd);
     void FireGameEvent(IGameEvent* event);
     void UpdateValues();
-
-
 }
