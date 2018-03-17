@@ -1,32 +1,17 @@
-matrix:
-  include:
-    - os: linux
-      addons:
-        apt:
-          sources:
-            - sourceline: 'deb http://archive.ubuntu.com/ubuntu/ artful main universe'
-            - ubuntu-toolchain-r-test
-          packages:
-            - libpython3.6
-            - perl
-            - liberror-perl
-            - libibus-1.0-dev
-            - libpulse-dev
-            - cmake
-            - g++-7
-            - gdb
-            - git
-            - libsdl2-dev
-            - zlib1g-dev
-            - liblua5.3
-            - libxdo-dev
-            - patchelf
-      env:
-        - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
-
-before_install:
-    - eval "${MATRIX_EVAL}"
 language: cpp
 compiler: g++
+before_script:
+    - echo "deb http://pl.archive.ubuntu.com/ubuntu/ bionic main restricted" | sudo tee -a /etc/apt/sources.list
+    - echo "deb http://pl.archive.ubuntu.com/ubuntu/ bionic-updates main restricted" | sudo tee -a /etc/apt/sources.list
+    - echo "deb http://pl.archive.ubuntu.com/ubuntu/ bionic universe" | sudo tee -a /etc/apt/sources.list
+    - echo "deb http://pl.archive.ubuntu.com/ubuntu/ bionic-updates universe" | sudo tee -a /etc/apt/sources.list
+    - echo "deb http://pl.archive.ubuntu.com/ubuntu/ bionic multiverse" | sudo tee -a /etc/apt/sources.list
+    - echo "deb http://pl.archive.ubuntu.com/ubuntu/ bionic-updates multiverse" | sudo tee -a /etc/apt/sources.list
+    - echo "deb http://pl.archive.ubuntu.com/ubuntu/ bionic-backports main restricted universe multiverse" | sudo tee -a /etc/apt/sources.list
+    - echo "deb http://security.ubuntu.com/ubuntu bionic-security main restricted" | sudo tee -a /etc/apt/sources.list
+    - echo "deb http://security.ubuntu.com/ubuntu bionic-security universe" | sudo tee -a /etc/apt/sources.list
+    - echo "deb http://security.ubuntu.com/ubuntu bionic-security multiverse" | sudo tee -a /etc/apt/sources.list
+    - sudo apt-get update
+    - sudo apt-get install cmake g++ gdb git libsdl2-dev zlib1g-dev liblua5.3 libxdo-dev patchelf
 script:
   - ./build
