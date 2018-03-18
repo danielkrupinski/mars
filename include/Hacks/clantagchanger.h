@@ -6,10 +6,8 @@
 #include "../SDK/SDK.h"
 #include "../interfaces.h"
 
-namespace ClanTagChanger
-{
-    struct Frame
-    {
+namespace ClanTagChanger {
+    struct Frame {
         int time;
         std::wstring text;
 
@@ -20,14 +18,12 @@ namespace ClanTagChanger
         }
     };
 
-    enum AnimationLoopType
-    {
+    enum AnimationLoopType {
         ANIM_LOOP,
         ANIM_LOOP_BACK
     };
 
-    struct Animation
-    {
+    struct Animation {
         std::string name;
         unsigned int currentFrame;
         std::vector<Frame> frames;
@@ -51,7 +47,7 @@ namespace ClanTagChanger
             currentFrame++;
 
             if (currentFrame >= frames.size())
-            currentFrame = 0;
+                currentFrame = 0;
         }
     };
 
