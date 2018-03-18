@@ -1,13 +1,12 @@
-#pragma once
+#ifndef AUTOWALL_H
+#define AUTOWALL_H
 
 #include "../SDK/SDK.h"
 #include "../interfaces.h"
 #include "../settings.h"
 
-namespace Autowall
-{
-    struct FireBulletData
-    {
+namespace Autowall {
+    struct FireBulletData {
         Vector src;
         trace_t enter_trace;
         Vector direction;
@@ -18,5 +17,7 @@ namespace Autowall
         int penetrate_count;
     };
 
-    float GetDamage(const Vector& vecPoint, bool teamCheck, FireBulletData& fData);
+    float GetDamage(const Vector&, bool, FireBulletData&);
 }
+
+#endif // AUTOWALL_H
