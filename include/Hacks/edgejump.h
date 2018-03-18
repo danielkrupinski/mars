@@ -1,11 +1,13 @@
-#pragma once
+#ifndef EDGEJUMP_H
+#define EDGEJUMP_H
 
 #include "../interfaces.h"
 #include "../settings.h"
 
-namespace EdgeJump
-{
+namespace EdgeJump {
     //Hooks
-    void PrePredictionCreateMove(CUserCmd* cmd);
-    void PostPredictionCreateMove(CUserCmd* cmd);
+    void PrePredictionCreateMove(CUserCmd*);
+    void PostPredictionCreateMove(CUserCmd*);
 }
+
+#endif // EDGEJUMP_H
