@@ -1,10 +1,12 @@
-#pragma once
+#ifndef THIRDPERSON_H
+#define THIRDPERSON_H
 
 #include "../interfaces.h"
 #include "../settings.h"
 
-namespace ThirdPerson
-{
+namespace ThirdPerson {
     //Hooks
-    void OverrideView(CViewSetup* pSetup);
+    void OverrideView(CViewSetup*);
 }
+
+#endif // THIRDPERSON_H
