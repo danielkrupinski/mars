@@ -9,4 +9,4 @@ namespace Colors {
     extern void RenderWindow();
 }
 
-#endif COLORS_H
+#endif // COLORS_H
