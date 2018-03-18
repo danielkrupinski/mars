@@ -1,7 +1,5 @@
 #!/bin/bash
 
 cmake . || exit 1
-
 make -j"$(grep -c "^processor" /proc/cpuinfo)" "$@" || exit 1
-
 echo "Build Completed."
