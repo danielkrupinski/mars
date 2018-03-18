@@ -1,4 +1,5 @@
-#pragma once
+#ifndef IMGUI_H
+#define IMGUI_H
 
 #include <string>
 #include <vector>
@@ -30,3 +31,5 @@ namespace ImGui {
                 static_cast<void*>(&values), values.size(), height_in_items);
         }
     }
+
+#endif // IMGUI_H
