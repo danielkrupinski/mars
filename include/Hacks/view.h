@@ -1,11 +1,13 @@
-#pragma once
+#ifndef VIEW_H
+#define VIEW_H
 
 #include "../interfaces.h"
 #include "../settings.h"
 
-namespace View
-{
+namespace View {
     //Hooks
-    void FrameStageNotify(ClientFrameStage_t stage);
-    void PostFrameStageNotify(ClientFrameStage_t stage);
+    void FrameStageNotify(ClientFrameStage_t);
+    void PostFrameStageNotify(ClientFrameStage_t);
 }
+
+#endif // VIEW_H
