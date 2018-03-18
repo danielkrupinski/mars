@@ -1,7 +1,7 @@
-#pragma once
+#ifndef C_BASE_CLIENT_STATE_H
+#define C_BASE_CLIENT_STATE_H
 
-class CBaseClientState
-{
+class CBaseClientState {
 public:
     char _pad0[0x20C];
     int m_nDeltaTick;
@@ -12,3 +12,5 @@ public:
     char m_szLevelName[260];
     char m_szLevelNameShort[40];
 };
+
+#endif // C_BASE_CLIENT_STATE_H
