@@ -1,11 +1,13 @@
-#pragma once
+#ifndef JUMPTHROW_H
+#define JUMPTHROW_H
 
 #include "../interfaces.h"
 #include "../settings.h"
 #include "../Utils/entity.h"
 
-namespace JumpThrow
-{
+namespace JumpThrow {
     //Hooks
-    void CreateMove(CUserCmd* cmd);
+    void CreateMove(CUserCmd*);
 }
+
+#endif // JUMPTHROW_H
