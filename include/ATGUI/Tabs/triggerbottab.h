@@ -7,4 +7,4 @@ namespace Triggerbot {
     void RenderTab();
 }
 
-#endif TRIGGERBOT_TAB_H
+#endif // TRIGGERBOT_TAB_H
