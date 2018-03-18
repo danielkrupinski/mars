@@ -58,6 +58,6 @@ public:
     virtual void DisconnectClient(IClient* client, const char* reason) = 0;
 };
 
-class CGameServer : public IServer;
+class CGameServer : public IServer {};
 
 #endif // C_GAME_SERVER_H
