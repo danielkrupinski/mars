@@ -32,3 +32,4 @@
 - [x] include/Hacks/edgejump.h
 - [x] include/Hacks/esp.h
 - [x] include/Hacks/fakelag.h
+- [x] include/Hacks/fovchanger.h
