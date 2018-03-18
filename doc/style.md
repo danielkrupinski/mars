@@ -25,3 +25,10 @@
 - [x] include/Hacks/autowall.h
 - [x] include/Hacks/bhop.h
 - [x] include/Hacks/chams.h
+- [x] include/Hacks/clanatagchanger.h
+- [x] include/Hacks/customglow.h
+- [x] include/Hacks/disablepostprocessing.h
+- [x] include/Hacks/dlights.h
+- [x] include/Hacks/edgejump.h
+- [x] include/Hacks/esp.h
+- [x] include/Hacks/fakelag.h
