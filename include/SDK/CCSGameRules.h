@@ -1,7 +1,7 @@
-#pragma once
+#ifndef C_CS_GAME_RULES_H
+#define C_CS_GAME_RULES_H
 
-class C_CSGameRules
-{
+class C_CSGameRules {
 public:
     bool IsValveDS()
     {
@@ -22,3 +22,5 @@ public:
         return *(bool *) ((uintptr_t) this + offsets.DT_CSGameRulesProxy.m_bFreezePeriod);
     }
 };
+
+#endif // C_CS_GAME_RULES_H
