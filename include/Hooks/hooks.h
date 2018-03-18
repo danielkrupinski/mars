@@ -1,4 +1,5 @@
-#pragma once
+#ifndef HOOKS_H
+#define HOOKS_H
 
 #include "../SDK/SDK.h"
 #include "../interfaces.h"
@@ -68,3 +69,5 @@ namespace SetKeyCodeState
     extern bool shouldListen;
     extern ButtonCode_t* keyOutput;
 }
+
+#endif // HOOKS_H
