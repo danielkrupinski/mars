@@ -1,20 +1,19 @@
-#pragma once
+#ifndef C_GAME_SERVER_H
+#define C_GAME_SERVER_H
 
 class IClient;
 class INetMessage;
 class IRecipientFilter;
 typedef void* netpacket_t;
 
-class IConnectionlessPacketHandler
-{
+class IConnectionlessPacketHandler {
 public:
     virtual ~IConnectionlessPacketHandler(void) {};
 
     virtual bool ProcessConnectionlessPacket(netpacket_t* packet) = 0; // process a connectionless packet
 };
 
-class IServer : public IConnectionlessPacketHandler
-{
+class IServer : public IConnectionlessPacketHandler {
 public:
     virtual	~IServer() {}
 
@@ -59,7 +58,6 @@ public:
     virtual void DisconnectClient(IClient* client, const char* reason) = 0;
 };
 
-class CGameServer : public IServer
-{
+class CGameServer : public IServer;
 
-};
+#endif // C_GAME_SERVER_H
