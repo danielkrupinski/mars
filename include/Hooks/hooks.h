@@ -28,8 +28,7 @@ typedef void (*RenderSmokePostViewmodelFn) (void*);
 typedef void (*OverrideViewFn) (void*, CViewSetup*);
 typedef float (*GetViewModelFOVFn) (void*);
 
-namespace Hooks
-{
+namespace Hooks {
     void PaintTraverse(void* thisptr, VPANEL vgui_panel, bool force_repaint, bool allow_force);
     void FrameStageNotify(void* thisptr, ClientFrameStage_t stage);
     void DrawModelExecute(void* thisptr, void* context, void *state, const ModelRenderInfo_t &pInfo, matrix3x4_t* pCustomBoneToWorld);
@@ -53,19 +52,16 @@ namespace Hooks
     float GetViewModelFOV(void* thisptr);
 }
 
-namespace CreateMove
-{
+namespace CreateMove {
     extern bool sendPacket;
     extern QAngle lastTickViewAngles;
 }
 
-namespace OverrideView
-{
+namespace OverrideView {
     extern float currentFOV;
 }
 
-namespace SetKeyCodeState
-{
+namespace SetKeyCodeState {
     extern bool shouldListen;
     extern ButtonCode_t* keyOutput;
 }
