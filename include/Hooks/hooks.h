@@ -29,27 +29,27 @@ typedef void (*OverrideViewFn) (void*, CViewSetup*);
 typedef float (*GetViewModelFOVFn) (void*);
 
 namespace Hooks {
-    void PaintTraverse(void* thisptr, VPANEL vgui_panel, bool force_repaint, bool allow_force);
-    void FrameStageNotify(void* thisptr, ClientFrameStage_t stage);
-    void DrawModelExecute(void* thisptr, void* context, void *state, const ModelRenderInfo_t &pInfo, matrix3x4_t* pCustomBoneToWorld);
-    bool CreateMove(void* thisptr, float flInputSampleTime, CUserCmd* cmd);
-    bool FireEvent(void* thisptr, IGameEvent* event, bool bDontBroadcast);
-    bool FireEventClientSide(void* thisptr, IGameEvent* event);
-    int IN_KeyEvent(void* thisptr, int eventcode, int keynum, const char* currentbinding);
-    void RenderView(void* thisptr, CViewSetup& setup, CViewSetup& hudViewSetup, unsigned int nClearFlags, int whatToDraw);
-    void OverrideView(void* thisptr, CViewSetup* pSetup);
-    void SetKeyCodeState(void* thisptr, ButtonCode_t code, bool bPressed);
-    void SetMouseCodeState(void* thisptr, ButtonCode_t code, MouseCodeState_t state);
-    void OnScreenSizeChanged(void* thisptr, int oldwidth, int oldheight);
-    void PlaySound(void* thisptr, const char* filename);
-    void BeginFrame(void* thisptr, float frameTime);
-    int PumpWindowsMessageLoop(void* thisptr, void* unknown);
-    void Paint(void* thisptr, PaintMode_t mode);
+    void PaintTraverse(void*, VPANEL, bool, bool);
+    void FrameStageNotify(void*, ClientFrameStage_t);
+    void DrawModelExecute(void*, void*, void*, const ModelRenderInfo_t&, matrix3x4_t*);
+    bool CreateMove(void*, float, CUserCmd*);
+    bool FireEvent(void*, IGameEvent*, bool);
+    bool FireEventClientSide(void*, IGameEvent*);
+    int IN_KeyEvent(void*, int, int, const char*);
+    void RenderView(void*, CViewSetup&, CViewSetup&, unsigned int, int);
+    void OverrideView(void*, CViewSetup*);
+    void SetKeyCodeState(void*, ButtonCode_t, bool);
+    void SetMouseCodeState(void*, ButtonCode_t, MouseCodeState_t);
+    void OnScreenSizeChanged(void*, int, int);
+    void PlaySound(void*, const char*);
+    void BeginFrame(void*, float);
+    int PumpWindowsMessageLoop(void*, void*);
+    void Paint(void*, PaintMode_t);
     void PaintImGui(); // Draw with ImGui.
-    void EmitSound1(void* thisptr, IRecipientFilter& filter, int iEntIndex, int iChannel, const char* pSoundEntry, unsigned int nSoundEntryHash, const char *pSample, float flVolume, int nSeed, float flAttenuation, int iFlags, int iPitch, const Vector* pOrigin, const Vector* pDirection, void* pUtlVecOrigins, bool bUpdatePositions, float soundtime, int speakerentity);
-    void EmitSound2(void* thisptr, IRecipientFilter& filter, int iEntIndex, int iChannel, const char* pSoundEntry, unsigned int nSoundEntryHash, const char *pSample, float flVolume, int nSeed, soundlevel_t iSoundLevel, int iFlags, int iPitch, const Vector* pOrigin, const Vector* pDirection, void* pUtlVecOrigins, bool bUpdatePositions, float soundtime, int speakerentity);
-    void RenderSmokePostViewmodel(void* thisptr);
-    float GetViewModelFOV(void* thisptr);
+    void EmitSound1(void*, IRecipientFilter&, int, int, const char*, unsigned int, const char*, float, int, float, int, int, const Vector*, const Vector*, void*, bool, float, int);
+    void EmitSound2(void*, IRecipientFilter&, int, int, const char*, unsigned int, const char*, float, int, soundlevel_t, int, int, const Vector*, const Vector*, void*, bool, float, int);
+    void RenderSmokePostViewmodel(void*);
+    float GetViewModelFOV(void*);
 }
 
 namespace CreateMove {
