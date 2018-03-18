@@ -44,7 +44,7 @@ namespace ClanTagChanger {
 
         void NextFrame()
         {
-            currentFrame++;
+            ++currentFrame;
 
             if (currentFrame >= frames.size())
                 currentFrame = 0;
@@ -57,7 +57,7 @@ namespace ClanTagChanger {
     void UpdateClanTagCallback();
 
     //Hooks
-    void BeginFrame(float frameTime);
+    void BeginFrame(float);
 }
 
 extern SendClanTagFn SendClanTag;
