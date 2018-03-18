@@ -12,3 +12,5 @@ namespace TracerEffect {
     //Hooks
     void CreateMove(CUserCmd*);
 }
+
+#endif // TRACER_EFFECT_H
