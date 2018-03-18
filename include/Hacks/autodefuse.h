@@ -9,6 +9,6 @@
 namespace AutoDefuse {
     //Hooks
     void CreateMove(CUserCmd*);
-};
+}
 
 #endif // AUTODEFUSE_H

@@ -12,6 +12,6 @@ namespace AutoKnife {
     int GetKnifeDamageDone(C_BasePlayer*, C_BasePlayer*);
     int GetKnife2DamageDone(C_BasePlayer*, C_BasePlayer*);
     void CreateMove(CUserCmd*);
-};
+}
 
 #endif // AUTOKNIFE_H
