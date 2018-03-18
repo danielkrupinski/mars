@@ -1,11 +1,13 @@
-#pragma once
+#ifndef CHAMS_H
+#define CHAMS_H
 
 #include "../Hooks/hooks.h"
 #include "../interfaces.h"
 #include "../settings.h"
 
-namespace Chams
-{
+namespace Chams {
     //Hooks
-    void DrawModelExecute(void* thisptr, void* context, void *state, const ModelRenderInfo_t &pInfo, matrix3x4_t* pCustomBoneToWorld);
+    void DrawModelExecute(void*, void*, void*, const ModelRenderInfo_t&, matrix3x4_t*);
 }
+
+#endif // CHAMS_H
