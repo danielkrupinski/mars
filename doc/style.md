@@ -19,3 +19,9 @@
 - [x] include/Hacks/asuswalls.h
 - [x] include/Hacks/autoaccept.h
 - [x] include/Hacks/autoblock.h
+- [x] include/Hacks/autodefuse.h
+- [x] include/Hacks/autoknife.h
+- [x] include/Hacks/autostrafe.h
+- [x] include/Hacks/autowall.h
+- [x] include/Hacks/bhop.h
+- [x] include/Hacks/chams.h
