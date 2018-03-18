@@ -1,10 +1,12 @@
-#pragma once
+#ifndef AUTOSTRAFE_H
+#define AUTOSTRAFE_H
 
 #include "../interfaces.h"
 #include "../settings.h"
 
-namespace AutoStrafe
-{
+namespace AutoStrafe {
     //Hooks
-    void CreateMove(CUserCmd* cmd);
+    void CreateMove(CUserCmd*);
 }
+
+#endif // AUTOSTRAFE_H
