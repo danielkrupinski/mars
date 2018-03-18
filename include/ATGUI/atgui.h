@@ -25,18 +25,17 @@
 #include "../Utils/xorstring.h"
 #include "../Fuzion.h"
 
-namespace UI
-{
+namespace UI {
     extern bool isVisible;
 
-    void SetVisible(bool visible);
+    void SetVisible(bool);
     void SwapWindow();
     void SetupColors();
     void SetupWindows();
-    bool ColorPicker(float* col, bool alphabar);
-    bool ColorPicker3(float col[3]);
-    bool ColorPicker4(float col[4]);
-    void KeyBindButton(ButtonCode_t* key);
+    bool ColorPicker(float*, bool);
+    bool ColorPicker3(float[3]);
+    bool ColorPicker4(float[4]);
+    void KeyBindButton(ButtonCode_t*);
     void UpdateWeaponSettings();
     void ReloadWeaponSettings();
 }
