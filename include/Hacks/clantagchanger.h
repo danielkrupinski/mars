@@ -18,7 +18,7 @@ namespace ClanTagChanger {
         }
     };
 
-    enum AnimationLoopType {
+    enum class AnimationLoopType {
         ANIM_LOOP,
         ANIM_LOOP_BACK
     };
