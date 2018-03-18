@@ -9,6 +9,6 @@
 namespace FakeLag {
     //Hooks
     void CreateMove(CUserCmd*);
-};
+}
 
 #endif // FAKELAG_H

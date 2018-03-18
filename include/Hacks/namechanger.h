@@ -41,6 +41,6 @@ namespace NameChanger {
 
     //Hooks
     void BeginFrame(float);
-};
+}
 
 #endif // NAMECHANGER_H

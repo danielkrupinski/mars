@@ -8,6 +8,6 @@ namespace FOVChanger {
     //Hooks
     void OverrideView(CViewSetup*);
     void GetViewModelFOV(float&);
-};
+}
 
 #endif // FOVCHANGER_H

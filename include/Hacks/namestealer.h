@@ -10,6 +10,6 @@ namespace NameStealer {
     //Hooks
     void BeginFrame(float);
     void FireGameEvent(IGameEvent*);
-};
+}
 
 #endif // NAMESTEALER_H
