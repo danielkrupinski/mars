@@ -1,13 +1,12 @@
-#pragma once
+#ifndef RADAR_H
+#define RADAR_H
 
 #include <set>
 #include "../settings.h"
 #include "../interfaces.h"
 
-namespace Radar
-{
-    enum EntityShape_t : int
-    {
+namespace Radar {
+    enum EntityShape_t : int {
         SHAPE_CIRCLE,
         SHAPE_SQUARE,
         SHAPE_TRIANGLE,
@@ -18,4 +17,6 @@ namespace Radar
 
     //Hooks
     void BeginFrame();
-};
+}
+
+#endif // RADAR_H
