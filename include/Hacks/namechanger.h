@@ -1,11 +1,11 @@
-#pragma once
+#ifndef NAMECHANGER_H
+#define NAMECHANGER_H
+
 #include "../SDK/SDK.h"
 #include "../settings.h"
 
-namespace NameChanger
-{
-    enum class Colors
-    {
+namespace NameChanger {
+    enum class Colors {
         WHITE = 1,
         DARK_RED,
         LIGHT_PURPLE,
@@ -24,8 +24,7 @@ namespace NameChanger
         ORANGE,
     };
 
-    enum class NC_Type
-    {
+    enum class NC_Type {
         NC_NORMAL,
         NC_RAINBOW,
         NC_SOLID,
@@ -37,9 +36,11 @@ namespace NameChanger
     extern Colors color;
     extern std::vector<std::pair<NameChanger::Colors, const char*>> colors;
 
-    void SetName(const char* name);
-    void InitColorChange(NC_Type type, Colors color = Colors::LIGHT_RED);
+    void SetName(const char);
+    void InitColorChange(NC_Type, Colors = Colors::LIGHT_RED);
 
     //Hooks
-    void BeginFrame(float frameTime);
+    void BeginFrame(float);
 };
+
+#endif // NAMECHANGER_H
