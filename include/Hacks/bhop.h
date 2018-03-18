@@ -1,10 +1,12 @@
-#pragma once
+#ifndef BHOP_H
+#define BHOP_H
 
 #include "../interfaces.h"
 #include "../settings.h"
 
-namespace BHop
-{
+namespace BHop {
     //Hooks
-    void CreateMove(CUserCmd* cmd);
+    void CreateMove(CUserCmd*);
 }
+
+#endif // BHOP_H
