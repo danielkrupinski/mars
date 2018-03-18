@@ -9,4 +9,4 @@ namespace CustomGlow {
     void FrameStageNotify(ClientFrameStage_t);
 }
 
-#endif CUSTOMGLOW_H
+#endif // CUSTOMGLOW_H
