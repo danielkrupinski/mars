@@ -1,16 +1,7 @@
 #!/bin/bash
-#TODO: check distro and packages
 
 cmake . || exit 1
 
-#if ! hash patchelf 2>/dev/null; then
-#    echo -e "\\e[31mYou need to install the \"patchelf\" command!\nUse your package manager to install it, or get source here:\nhttps://github.com/NixOS/patchelf\\e[0m"
-#    exit 1
-#fi
-
 make -j"$(grep -c "^processor" /proc/cpuinfo)" "$@" || exit 1
-
-#strip -s -v "$BUILD_ID"
-#patchelf --set-soname "libFuzion" "libFuzion" || echo -e "\\e[33mWarning: your patchelf version does not support \"--set-soname\"\nConsider building from source: https://github.com/NixOS/patchelf\\e[0m"
 
 echo "Build Completed."
