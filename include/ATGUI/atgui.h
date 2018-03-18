@@ -1,4 +1,5 @@
-#pragma once
+#ifndef ATGUI_H
+#define ATGUI_H
 
 #include <list>
 #include "../../lib/ImGUI/imgui.h"
@@ -46,3 +47,5 @@ inline void SetTooltip(const char* text)
     if (ImGui::IsItemHovered())
     ImGui::SetTooltip("%s", text);
 }
+
+#endif // ATGUI_H
