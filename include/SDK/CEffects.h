@@ -1,9 +1,9 @@
-#pragma once
+#ifndef C_EFFECTS_H
+#define C_EFFECTS_H
 
 #define MAX_DLIGHTS 32
 
-enum
-{
+enum {
     DLIGHT_NO_WORLD_ILLUMINATION = 0x1,
     DLIGHT_NO_MODEL_ILLUMINATION = 0x2,
 
@@ -15,8 +15,7 @@ enum
     DLIGHT_DISPLACEMENT_MASK = (DLIGHT_ADD_DISPLACEMENT_ALPHA | DLIGHT_SUBTRACT_DISPLACEMENT_ALPHA),
 };
 
-struct ColorRGBExp32
-{
+struct ColorRGBExp32 {
     unsigned char r, g, b;
     signed char exponent;
 };
@@ -39,7 +38,8 @@ struct dlight_t {
 
     // see comments above about HL2_BROKEN_MIN_LIGHTING_VALUE and MIN_LIGHTING_VALUE
     // THIS SHOULD ONLY GET CALLED FROM THE ENGINE
-    float GetRadius() const {
+    float GetRadius() const
+    {
         // return FastSqrt( radius * radius * ( HL2_BROKEN_MIN_LIGHTING_VALUE / MIN_LIGHTING_VALUE ) );
         return radius;
     }
@@ -64,8 +64,7 @@ struct model_t;
 struct color32;
 class IMaterial;
 
-class CEffects
-{
+class CEffects {
 public:
     // Retrieve decal texture index from decal by name
     virtual int Draw_DecalIndexFromName(char *name) = 0;
@@ -93,3 +92,5 @@ public:
     // Given an elight key, find it. Does not search ordinary dlights. May return NULL.
     virtual dlight_t* GetElightByKey(int key) = 0;
 };
+
+#endif // C_EFFECTS_H
