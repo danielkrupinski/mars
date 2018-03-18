@@ -16,3 +16,7 @@
 - [x] include/Hacks/
 - [x] include/Hooks/
 - [x] include/ATGUI/
+- [x] include/SDK/CBaseClientState.h
+- [x] include/SDK/CCSGameRules.h
+- [x] include/SDK/CEffects.h
+- [x] include/SDK/CGameServer.h
