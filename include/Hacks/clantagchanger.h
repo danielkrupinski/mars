@@ -37,7 +37,7 @@ namespace ClanTagChanger {
             this->loopType = loopType;
         }
 
-        Frame GetCurrentFrame()
+        constexpr Frame GetCurrentFrame()
         {
             return frames[currentFrame];
         }
