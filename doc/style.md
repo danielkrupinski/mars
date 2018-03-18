@@ -14,3 +14,5 @@
 - [x] include/shortcuts.h
 - [x] include/Utils/
 - [x] include/Hacks/
+- [x] include/Hooks/
+- [x] include/ATGUI/
