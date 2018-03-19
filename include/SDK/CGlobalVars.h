@@ -1,7 +1,7 @@
-#pragma once
+#ifndef C_GLOBAL_VARS_H
+#define C_GLOBAL_VARS_H
 
-class CGlobalVars
-{
+class CGlobalVars {
 public:
     float realtime;
     int framecount;
@@ -22,3 +22,5 @@ private:
     int nTimestampNetworkingBase;
     int nTimestampRandomizeWindow;
 };
+
+#endif // C_GLOBAL_VARS_H
