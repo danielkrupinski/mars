@@ -39,17 +39,11 @@ int Settings::UI::Windows::Spectators::sizeY = 100;
 int Settings::UI::Windows::Spectators::posX = 50;
 int Settings::UI::Windows::Spectators::posY = 100;
 
-int Settings::UI::Windows::Walkbot::sizeX = 280;
-int Settings::UI::Windows::Walkbot::sizeY = 110;
-int Settings::UI::Windows::Walkbot::posX = 280;
-int Settings::UI::Windows::Walkbot::posY = 110;
-
 bool Settings::UI::Windows::Main::open = false;
 bool Settings::UI::Windows::Colors::open = false;
 bool Settings::UI::Windows::Config::open = false;
 bool Settings::UI::Windows::Playerlist::open = false;
 bool Settings::UI::Windows::Skinmodel::open = false;
-bool Settings::UI::Windows::Walkbot::open = false;
 
 bool Settings::UI::Windows::Main::reload = false;
 bool Settings::UI::Windows::Colors::reload = false;
@@ -57,7 +51,6 @@ bool Settings::UI::Windows::Config::reload = false;
 bool Settings::UI::Windows::Playerlist::reload = false;
 bool Settings::UI::Windows::Skinmodel::reload = false;
 bool Settings::UI::Windows::Spectators::reload = false;
-bool Settings::UI::Windows::Walkbot::reload = false;
 
 
 #define IM_ARRAYSIZE(_ARR)  ((int)(sizeof(_ARR)/sizeof(*_ARR)))
@@ -86,7 +79,6 @@ void SetupMainMenuBar()
         ImGui::Selectable(XORSTR("Player List Window"), &PlayerList::showWindow, 0, ImVec2(ImGui::CalcTextSize(XORSTR("Player List Window"), NULL, true).x, 0.0f));
         ImGui::SameLine();
 
-        ImGui::Selectable(XORSTR("Walk Bot Window"), &Walk::showWindow, 0, ImVec2(ImGui::CalcTextSize(XORSTR("Walk Bot Window"), NULL, true).x, 0.0f));
         ImGui::SameLine(ImGui::GetWindowContentRegionMax().x-ImVec2(ImGui::CalcTextSize(XORSTR("Unload   "), NULL, true)).x);
 
         if( ImGui::Button(XORSTR("Unload   "), ImVec2(ImGui::CalcTextSize(XORSTR("Unload   "), NULL, true).x, 0.0f)) )
@@ -134,7 +126,6 @@ void UI::SetupWindows()
         Configs::RenderWindow();
         Colors::RenderWindow();
         PlayerList::RenderWindow();
-        Walk::RenderWindow();
     }
 
     ShowSpectators::RenderWindow();
