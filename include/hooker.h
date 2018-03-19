@@ -14,10 +14,9 @@
 #include "interfaces.h"
 
 struct dlinfo_t {
-    const char* library;
-    uintptr_t address;
-    size_t size;
-    dlinfo_t() :library{}, address{}, size{} {}
+    const char* library {nullptr};
+    uintptr_t address {0};
+    size_t size {0};
 };
 
 namespace Hooker {
