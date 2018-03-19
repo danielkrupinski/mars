@@ -1,4 +1,5 @@
-#pragma once
+#ifndef CHECKSUM_MD5_H
+#define CHECKSUM_MD5_H
 
 #include <cstring>
 
@@ -274,3 +275,5 @@ inline bool MD5_Compare(const void* &data, const void* &compare)
 }
 
 //-----------------------------------------------------------------------------
+
+#endif // CHECKSUM_MD5_H
