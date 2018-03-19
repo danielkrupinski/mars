@@ -16,11 +16,6 @@ sudo rm -rf /tmp/dumps # Remove if it exists
 sudo mkdir /tmp/dumps # Make it as root
 sudo chmod 000 /tmp/dumps # No permissions
 
-#if [ ! -f build_id ]; then
-#    /bin/echo "Build ID not found. Please rebuild using the './build' script."
-#    exit
-#fi
-
 filename="libFuzion.so"
 
 # Credit: Aixxe @ aixxe.net
@@ -55,12 +50,6 @@ sudo rm /"$filename"
 sleep 1
 sudo killall -18 steamwebhelper
 sudo killall -18 steam
-
-#if [ -d "/usr/lib64/" ]; then
-#    sudo rm "/usr/lib64/${filename}"
-#else
-#    sudo rm "/usr/lib/x86_64-linux-gnu/${filename}"
-#fi
 
 last_line="${input##*$'\n'}"
 
