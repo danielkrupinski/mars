@@ -7,12 +7,11 @@
 #define MD5_DIGEST_LENGTH 16
 
 // MD5 Hash
-typedef struct
-{
+struct MD5Context_t {
     unsigned int	buf[4];
     unsigned int	bits[2];
     unsigned char	in[64];
-} MD5Context_t;
+};
 
 // The four core functions - F1 is optimized somewhat
 // #define F1(x, y, z) (x & y | ~x & z)
