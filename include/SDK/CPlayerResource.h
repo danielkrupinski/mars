@@ -1,9 +1,9 @@
-#pragma once
+#ifndef C_PLAYER_RESOURCE_H
+#define C_PLAYER_RESOURCE_H
 
-class CPlayerResource {};
+class CPlayerResource;
 
-class C_CSPlayerResource : public CPlayerResource
-{
+class C_CSPlayerResource : public CPlayerResource {
 public:
     int GetPing(int index)
     {
@@ -115,3 +115,5 @@ public:
         return (int*)((uintptr_t)this + offsets.DT_CSPlayerResource.m_nPersonaDataPublicCommendsFriendly + index * 4);
     }
 };
+
+#endif // C_PLAYER_RESOURCE_H
