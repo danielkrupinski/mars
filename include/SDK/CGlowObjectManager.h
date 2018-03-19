@@ -5,8 +5,7 @@
 #define END_OF_FREE_LIST -1
 #define ENTRY_IN_USE -2
 
-struct GlowObjectDefinition_t
-{
+struct GlowObjectDefinition_t {
     C_BaseEntity* m_pEntity;
     float m_flGlowColor[3];
     float m_flGlowAlpha;
@@ -23,13 +22,13 @@ struct GlowObjectDefinition_t
     int m_nSplitScreenSlot;
     int m_nNextFreeSlot;
 
-    bool IsUnused() const {
+    bool IsUnused() const
+    {
         return m_nNextFreeSlot != ENTRY_IN_USE;
     }
 };
 
-class CGlowObjectManager
-{
+class CGlowObjectManager {
 public:
     int RegisterGlowObject(C_BaseEntity* entity)
     {
