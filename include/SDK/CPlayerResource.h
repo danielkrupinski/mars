@@ -1,7 +1,7 @@
 #ifndef C_PLAYER_RESOURCE_H
 #define C_PLAYER_RESOURCE_H
 
-class CPlayerResource;
+class CPlayerResource {};
 
 class C_CSPlayerResource : public CPlayerResource {
 public:
