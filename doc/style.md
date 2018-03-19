@@ -20,3 +20,7 @@
 - [x] include/SDK/CCSGameRules.h
 - [x] include/SDK/CEffects.h
 - [x] include/SDK/CGameServer.h
+.
+.
+.
+- [x] include/SDK/CUtlMemory.h
