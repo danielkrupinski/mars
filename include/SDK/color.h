@@ -4,18 +4,12 @@
 #include "../../lib/ImGUI/imgui.h"
 
 struct Color {
-    int r;
-    int g;
-    int b;
-    int a;
+    int r {0};
+    int g {0};
+    int b {0};
+    int a {255};
 
-    Color()
-    {
-        this->r = 0;
-        this->g = 0;
-        this->b = 0;
-        this->a = 255;
-    }
+    Color() {}
 
     Color(int r, int g, int b)
     {
