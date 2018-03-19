@@ -6,7 +6,7 @@
 static EventListener* eventListener = nullptr;
 
 char Fuzion::buildID[NAME_MAX] = {
-    #include "../build_id_hex" // Made by ./build script.
+    "libFuzion.so" // Made by ./build script.
 };
 
 static bool preload = false;
