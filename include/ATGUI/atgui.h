@@ -14,7 +14,6 @@
 #include "Windows/playerlist.h"
 #include "Windows/colors.h"
 #include "Windows/main.h"
-#include "Windows/walk.h"
 #include "Tabs/aimbottab.h"
 #include "Tabs/triggerbottab.h"
 #include "Tabs/visualstab.h"
