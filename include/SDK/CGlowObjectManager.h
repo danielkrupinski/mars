@@ -1,4 +1,5 @@
-#pragma once
+#ifndef C_GLOW_OBJECT_MANAGER_H
+#define C_GLOW_OBJECT_MANAGER_H
 
 // Special values for GlowObjectDefinition_t::m_nNextFreeSlot
 #define END_OF_FREE_LIST -1
@@ -71,3 +72,5 @@ public:
     CUtlVector<GlowObjectDefinition_t> m_GlowObjectDefinitions;
     int m_nFirstFreeSlot;
 };
+
+#endif // C_GLOW_OBJECT_MANAGER_H
