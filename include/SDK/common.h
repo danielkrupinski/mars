@@ -1,13 +1,14 @@
-#pragma once
+#ifndef COMMON_H
+#define COMMON_H
+
 #include <cstring>
 
 typedef void* (*InstantiateInterfaceFn) ();
 
-struct InterfaceReg
-{
+struct InterfaceReg {
     InstantiateInterfaceFn m_CreateFn;
-    const char *m_pName;
-    InterfaceReg *m_pNext;
+    const char* m_pName;
+    InterfaceReg* m_pNext;
 };
 
 inline void**& getvtable(void* inst, size_t offset = 0)
@@ -79,3 +80,5 @@ T GetSymbolAddress(const char* filename, const char* symbol)
 
     return result;
 };
+
+#endif // COMMON_H
