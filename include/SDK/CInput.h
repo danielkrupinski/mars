@@ -1,5 +1,7 @@
-class CInput
-{
+#ifndef C_INPUT_H
+#define C_INPUT_H
+
+class CInput {
 public:
     char _pad0[0xAC];
     bool m_fCameraInterceptingMouse;
@@ -13,3 +15,5 @@ public:
     int m_nCameraY;
     bool m_CameraIsOrthographic;
 };
+
+#endif // C_INPUT_H
