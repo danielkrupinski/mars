@@ -32,13 +32,12 @@ sudo cp "$filename" /"$filename"
 
 steam_pids=($(pgrep steam))
 
-echo ${steam_pids[0]}
-echo ${steam_pids[1]}
-echo ${steam_pids[2]}
-echo ${steam_pids[3]}
-echo ${steam_pids[4]}
-echo ${steam_pids[5]}
-echo ${steam_pids[6]}
+echo "Number of steam processes: ${#steam_pids[*]}"
+
+for i in "${steam_pids[@]}"
+do
+	echo $i
+done
 
 sudo killall -19 steam
 sudo killall -19 steamwebhelper
