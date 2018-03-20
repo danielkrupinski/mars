@@ -1,5 +1,5 @@
 <p align="center">
-<img src="media/mars.jpg">
+<img src="media/mars2.jpg">
 </p>
 
 
