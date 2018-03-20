@@ -32,12 +32,9 @@ sudo cp "$filename" /"$filename"
 
 steam_pids=($(pgrep steam))
 
-echo "Number of steam processes: ${#steam_pids[*]}"
-
 for i in "${steam_pids[@]}"
 do
 	sudo kill -STOP ${i}
-    echo "Paused ${i}"
 done
 
     input="$(
@@ -59,7 +56,6 @@ sleep 1
 for i in "${steam_pids[@]}"
 do
 	sudo kill -CONT ${i}
-    echo "Resumed ${i}"
 done
 
 last_line="${input##*$'\n'}"
