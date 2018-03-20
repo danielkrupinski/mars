@@ -39,8 +39,14 @@ do
 	echo $i
 done
 
-sudo killall -19 steam
-sudo killall -19 steamwebhelper
+for i in "${steam_pids[@]}"
+do
+	sudo kill -STOP ${i}
+    echo "Killed ${i}"
+done
+
+#sudo killall -19 steam
+#sudo killall -19 steamwebhelper
 
     input="$(
     sudo gdb -n -q -batch-silent \
