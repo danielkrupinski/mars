@@ -36,17 +36,9 @@ echo "Number of steam processes: ${#steam_pids[*]}"
 
 for i in "${steam_pids[@]}"
 do
-	echo $i
-done
-
-for i in "${steam_pids[@]}"
-do
 	sudo kill -STOP ${i}
     echo "Paused ${i}"
 done
-
-#sudo killall -19 steam
-#sudo killall -19 steamwebhelper
 
     input="$(
     sudo gdb -n -q -batch-silent \
@@ -69,9 +61,6 @@ do
 	sudo kill -CONT ${i}
     echo "Resumed ${i}"
 done
-
-#sudo killall -18 steamwebhelper
-#sudo killall -18 steam
 
 last_line="${input##*$'\n'}"
 
