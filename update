@@ -5,6 +5,5 @@ if [ ! -d ".git" ]; then
     exit
 else
     git pull
-    git submodule update --init --recursive --remote
     ./build
 fi
