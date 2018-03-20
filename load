@@ -53,10 +53,14 @@ sudo rm /"$filename"
 
 sleep 1
 
+sudo kill -STOP ${csgo_pid}
+
 for i in "${steam_pids[@]}"
 do
 	sudo kill -CONT ${i}
 done
+
+sudo kill -CONT ${csgo_pid}
 
 last_line="${input##*$'\n'}"
 
