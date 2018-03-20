@@ -18,7 +18,7 @@ filename="libFuzion.so"
                 -ex "call \$dlclose(\$library)" \
                 -ex "detach" \
                 -ex "quit"
-            sudo rm /"$filename"
+            #sudo rm /"$filename"
     fi
 
 echo "Done. See CS:GO Console."
