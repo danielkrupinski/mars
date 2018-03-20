@@ -2,8 +2,5 @@
 CMakeCache.txt
 CMakeFiles/
 Makefile
-build_id
-build_id_hex
-build_id_old
 cmake_install.cmake
 gdb.txt
