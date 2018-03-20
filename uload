@@ -5,7 +5,6 @@
 csgo_pid=$(pidof csgo_linux64)
 filename="libFuzion.so"
 
-if [ -f build_id ]; then
     if grep -q "$filename" /proc/"$csgo_pid"/maps; then
             sudo gdb -n -q -batch-silent \
                 -ex "set logging on" \
@@ -21,6 +20,5 @@ if [ -f build_id ]; then
                 -ex "quit"
             sudo rm /"$filename"
     fi
-fi
 
 echo "Done. See CS:GO Console."
