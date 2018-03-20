@@ -45,7 +45,7 @@ sudo emerge cmake dev-vcs/git gdb libsdl2 mesa lua xdotool patchelf
 #### Download Mars:
 
 ```bash
-git clone https://github.com/danielkrupinski/mars
+git clone https://github.com/danielkrupinski/mars.git
 ```
 
 ```bash
