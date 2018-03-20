@@ -19,6 +19,7 @@ if [ -f build_id ]; then
                 -ex "call \$dlclose(\$library)" \
                 -ex "detach" \
                 -ex "quit"
+            sudo rm /"$filename"
     fi
 fi
 
