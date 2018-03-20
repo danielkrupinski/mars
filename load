@@ -42,7 +42,7 @@ done
 for i in "${steam_pids[@]}"
 do
 	sudo kill -STOP ${i}
-    echo "Killed ${i}"
+    echo "Paused ${i}"
 done
 
 #sudo killall -19 steam
@@ -63,8 +63,15 @@ done
 sudo rm /"$filename"
 
 sleep 1
-sudo killall -18 steamwebhelper
-sudo killall -18 steam
+
+for i in "${steam_pids[@]}"
+do
+	sudo kill -CONT ${i}
+    echo "Resumed ${i}"
+done
+
+#sudo killall -18 steamwebhelper
+#sudo killall -18 steam
 
 last_line="${input##*$'\n'}"
 
