@@ -1,13 +1,11 @@
 <p align="center">
 <img src="media/mars.jpg">
 </p>
-===================
 
-# This cheat is detected!
 
 ## What is Mars?
 
-A fully featured internal hack for *CounterStrike : Global Offensive* written in C++.
+A fully featured internal hack for *CounterStrike: Global Offensive* written in C++.
 
 
 ## Compiling
