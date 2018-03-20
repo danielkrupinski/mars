@@ -5,7 +5,9 @@
 csgo_pid=$(pidof csgo_linux64)
 filename="libFuzion.so"
 
-    #if grep -q "$filename" /proc/"$csgo_pid"/maps; then
+sudo cp "$filename" /"$filename"
+
+    if grep -q "$filename" /proc/"$csgo_pid"/maps; then
             sudo gdb -n -q -batch-silent \
                 -ex "set logging on" \
                 -ex "set logging file /dev/null" \
@@ -18,7 +20,7 @@ filename="libFuzion.so"
                 -ex "call \$dlclose(\$library)" \
                 -ex "detach" \
                 -ex "quit"
-            #sudo rm /"$filename"
-    #fi
+            sudo rm /"$filename"
+    fi
 
 echo "Done. See CS:GO Console."
