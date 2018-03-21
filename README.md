@@ -7,6 +7,10 @@
 
 A fully featured internal hack for *CounterStrike: Global Offensive* written in C++.
 
+## News
+- Mars goes legit - hvh antiaim removal scheduled
+- Lua dependencies removal scheduled
+
 
 ## Compiling
 
