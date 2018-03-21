@@ -99,6 +99,7 @@ void MainThread()
     srand(time(NULL)); // Seed random # Generator so we can call rand() later
 
     AntiAim::LuaInit();
+}
 
 /* Entrypoint to the Library. Called when loading */
 int __attribute__((constructor)) Startup()
