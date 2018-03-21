@@ -17,7 +17,6 @@
 #include "Tabs/aimbottab.h"
 #include "Tabs/triggerbottab.h"
 #include "Tabs/visualstab.h"
-#include "Tabs/hvhtab.h"
 #include "Tabs/misctab.h"
 #include "Tabs/modelstab.h"
 #include "Tabs/skinstab.h"
