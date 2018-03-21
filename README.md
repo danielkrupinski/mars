@@ -99,14 +99,6 @@ Now that Mars has been injected into the game, press <kbd>Insert</kbd> on your k
 If you want to change skins, create and load configs or open the player list, you can find those buttons at the top of the screen.
 
 
-## Unloading the hack
-
-If you wish to unload the hack from the game, you can do so by entering the command:
-```bash
-./uload
-```
-
-
 ## Configs
 
 Configs are stored in a hidden directory in your home folder. Specifically
