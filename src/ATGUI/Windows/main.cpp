@@ -73,7 +73,7 @@ void Main::RenderWindow()
             case 2:
             Visuals::RenderTab();
             break;
-            case 4:
+            case 3:
             Misc::RenderTab();
             break;
         }
