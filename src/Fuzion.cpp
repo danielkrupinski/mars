@@ -14,16 +14,6 @@ void *Fuzion::prev = NULL,*Fuzion::curr = NULL,*Fuzion::next = NULL;
 
 void MainThread()
 {
-    if( preload )
-    {
-        while( client == nullptr )
-        {
-            client = GetInterface<IBaseClientDLL>(XORSTR("./csgo/bin/linux64/client_client.so"), XORSTR("VClient"));
-            std::this_thread::sleep_for(std::chrono::seconds(3));
-        }
-
-        Preload::PrintStatus();
-    }
     Interfaces::FindInterfaces();
     //Interfaces::DumpInterfaces();
 
