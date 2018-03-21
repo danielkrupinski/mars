@@ -124,6 +124,7 @@ Fuzion::SelfShutdown();
 /* Entrypoint to the Library. Called when loading */
 int __attribute__((constructor)) Startup()
 {
+    /*
     // Search in Environment Memory for our buildID before purging environ memory
     for(int i = 0; environ[i]; i++)
     {
@@ -142,6 +143,7 @@ int __attribute__((constructor)) Startup()
             Preload::CleanEnvironment();
         }
     }
+    */
 
     std::thread mainThread(MainThread);
     // The root of all suffering is attachment
@@ -160,7 +162,7 @@ void __attribute__((destructor)) Shutdown()
     SDL2::UnhookWindow();
     SDL2::UnhookPollEvent();
 
-    Preload::Cleanup();
+    //Preload::Cleanup();
     AntiAim::LuaCleanup();
 
     Aimbot::XDOCleanup();
