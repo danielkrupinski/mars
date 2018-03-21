@@ -99,52 +99,10 @@ void MainThread()
     srand(time(NULL)); // Seed random # Generator so we can call rand() later
 
     AntiAim::LuaInit();
-    /*
-    Util::RemoveLinkMapEntry(Fuzion::buildID, &Fuzion::prev, &Fuzion::curr, &Fuzion::next); // This Breaks uload. Need to restore linked list first.
-    if( Util::SearchLinkMap(Fuzion::buildID) ) {
-    cvar->ConsoleColorPrintf(ColorRGBA(200, 0, 0), XORSTR( "Warning! .so file did not get removed in link_map\n" ) );
-}
 
-cvar->ConsoleColorPrintf(ColorRGBA(0, 225, 0), XORSTR("\nFuzion Successfully loaded.\n"));
-
-if( preload )
-{
-while( !isShuttingDown )
-{
-std::this_thread::sleep_for(std::chrono::seconds(1));
-if( Util::IsDebuggerPresent() != 0 )
-{
-cvar->ConsoleColorPrintf(ColorRGBA(225, 0, 0), XORSTR("DEBUGGER DETECTED! EXITING FUZION\n"));
-Fuzion::SelfShutdown();
-}
-}
-}
-*/
-}
 /* Entrypoint to the Library. Called when loading */
 int __attribute__((constructor)) Startup()
 {
-    /*
-    // Search in Environment Memory for our buildID before purging environ memory
-    for(int i = 0; environ[i]; i++)
-    {
-        if(strstr(environ[i], Fuzion::buildID) != NULL)
-        {
-            preload = true;
-            if( !Preload::Startup(Fuzion::buildID) )
-            {
-                char fd[PATH_MAX];
-                snprintf(fd, sizeof(fd), XORSTR("/tmp/%s.log"), Fuzion::buildID);
-                FILE *log = fopen(fd, "w");
-                fprintf(log, XORSTR("Could not find functions to hook in Preload::Startup(). Exiting.\n"));
-                fclose(log);
-                exit(-1);
-            }
-            Preload::CleanEnvironment();
-        }
-    }
-    */
-
     std::thread mainThread(MainThread);
     // The root of all suffering is attachment
     // Therefore our little buddy must detach from this realm.
@@ -162,7 +120,6 @@ void __attribute__((destructor)) Shutdown()
     SDL2::UnhookWindow();
     SDL2::UnhookPollEvent();
 
-    //Preload::Cleanup();
     AntiAim::LuaCleanup();
 
     Aimbot::XDOCleanup();
