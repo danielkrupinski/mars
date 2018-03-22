@@ -62,7 +62,7 @@ QAngle AimStepLastAngle;
 QAngle RCSLastPunch;
 
 int Aimbot::targetAimbot {-1};
-const int headVectors {11};
+constexpr int headVectors {11};
 
 static xdo_t *xdo = xdo_new(NULL);
 
