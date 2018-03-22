@@ -525,9 +525,6 @@ std::unordered_map<ItemDefinitionIndex, AimbotWeapon_t, Util::IntHash<ItemDefini
         if (!Settings::Aimbot::Smooth::enabled)
         return;
 
-        if (Settings::AntiAim::Pitch::enabled || Settings::AntiAim::Yaw::enabled)
-        return;
-
         if (!shouldAim || !player)
         return;
 
@@ -690,9 +687,6 @@ std::unordered_map<ItemDefinitionIndex, AimbotWeapon_t, Util::IntHash<ItemDefini
 
     static void ShootCheck(C_BaseCombatWeapon* activeWeapon, CUserCmd* cmd)
     {
-        if (!Settings::AntiAim::Pitch::enabled && !Settings::AntiAim::Yaw::enabled)
-        return;
-
         if (!Settings::Aimbot::silent)
         return;
 
