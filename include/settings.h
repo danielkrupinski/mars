@@ -462,10 +462,6 @@ struct AimbotWeapon_t {
             }
         }
 
-        namespace Resolver {
-            extern bool resolveAll;
-        }
-
         namespace ESP {
             extern bool enabled;
             extern ButtonCode_t key;
