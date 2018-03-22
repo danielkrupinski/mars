@@ -98,7 +98,7 @@ void MainThread()
 
     srand(time(NULL)); // Seed random # Generator so we can call rand() later
 
-    AntiAim::LuaInit();
+    //AntiAim::LuaInit();
 }
 
 /* Entrypoint to the Library. Called when loading */
@@ -121,7 +121,7 @@ void __attribute__((destructor)) Shutdown()
     SDL2::UnhookWindow();
     SDL2::UnhookPollEvent();
 
-    AntiAim::LuaCleanup();
+    //AntiAim::LuaCleanup();
 
     Aimbot::XDOCleanup();
     NoSmoke::Cleanup();
