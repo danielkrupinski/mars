@@ -47,48 +47,6 @@ enum class AutostrafeType : int {
     AS_RAGE,
 };
 
-enum class AntiAimType_Y : int {
-    SPIN_SLOW,
-    SPIN_FAST,
-    JITTER,
-    BACKJITTER,
-    SIDE,
-    BACKWARDS,
-    FORWARDS,
-    LEFT,
-    RIGHT,
-    STATICAA,
-    STATICJITTER,
-    STATICSMALLJITTER,
-    LUA1, // ImGui stole the name of LUA
-    LUA2, // Alternate LUA if you want a separate one for Fake.
-    CASUAL,
-    LISP,
-    LISP_SIDE,
-    LISP_JITTER,
-    ANGEL_BACKWARD,
-    ANGEL_INVERSE,
-    ANGEL_SPIN,
-    LOWERBODY,
-    LBYONGROUND,
-    LUA_UNCLAMPED,
-    LUA_UNCLAMPED2
-};
-
-enum class AntiAimType_X : int {
-    STATIC_UP,
-    STATIC_DOWN,
-    DANCE,
-    FRONT,
-    LUA1,
-    STATIC_UP_FAKE,
-    STATIC_DOWN_FAKE,
-    LISP_DOWN,
-    ANGEL_DOWN,
-    ANGEL_UP,
-    LUA_UNCLAMPED,
-};
-
 enum class ChamsType : int {
     CHAMS,
     CHAMS_XQZ,
@@ -525,13 +483,6 @@ struct AimbotWeapon_t {
             namespace HeadEdge {
                 extern bool enabled;
                 extern float distance;
-            }
-
-            namespace Lua {
-                extern bool debugMode; // turns on/off error checking. Can be turned off after your script is working for speed.
-                extern char scriptX[512];
-                extern char scriptY[512];
-                extern char scriptY2[512];
             }
         }
 
