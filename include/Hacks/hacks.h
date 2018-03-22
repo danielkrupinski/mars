@@ -25,7 +25,6 @@
 #include "predictionsystem.h"
 #include "radar.h"
 #include "recoilcrosshair.h"
-#include "resolver.h"
 #include "showranks.h"
 #include "showspectators.h"
 #include "skinchanger.h"
