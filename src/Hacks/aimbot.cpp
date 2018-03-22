@@ -17,12 +17,11 @@ bool Settings::Aimbot::AutoAim::enabled {false};
 float Settings::Aimbot::AutoAim::fov {180.0f};
 bool Settings::Aimbot::AutoAim::realDistance {false};
 bool Settings::Aimbot::AutoAim::closestBone {false};
-bool Settings::Aimbot::AutoAim::desiredBones[] = {true, true, true, true, true, true, true, // center mass
-                                                  false, false, false, false, false, false, false, // left arm
-                                                  false, false, false, false, false, false, false, // right arm
-                                                  false, false, false, false, false, // left leg
-                                                  false, false, false, false, false  // right leg
-};
+bool Settings::Aimbot::AutoAim::desiredBones[] {true, true, true, true, true, true, true, // center mass
+                                                false, false, false, false, false, false, false, // left arm
+                                                false, false, false, false, false, false, false, // right arm
+                                                false, false, false, false, false, // left leg
+                                                false, false, false, false, false}; // right leg
 bool Settings::Aimbot::AutoAim::engageLock {false};
 bool Settings::Aimbot::AutoAim::engageLockTR {false}; // engage lock Target Reacquisition ( re-target after getting a kill when spraying ).
 int Settings::Aimbot::AutoAim::engageLockTTR {700}; // Time to Target Reacquisition in ms
@@ -53,18 +52,18 @@ bool Settings::Aimbot::AutoSlow::goingToSlow {false};
 bool Settings::Aimbot::Prediction::enabled {false};
 bool Settings::Aimbot::moveMouse {false};
 
-bool Aimbot::aimStepInProgress = false;
+bool Aimbot::aimStepInProgress {false};
 std::vector<int64_t> Aimbot::friends;
 std::vector<long> killTimes; // the Epoch time from when we kill someone
 
-bool shouldAim;
+bool shouldAim {false};
 QAngle AimStepLastAngle;
 QAngle RCSLastPunch;
 
 int Aimbot::targetAimbot {-1};
 constexpr int headVectors {11};
 
-static xdo_t *xdo = xdo_new(NULL);
+static xdo_t* xdo = xdo_new(NULL);
 
 std::unordered_map<ItemDefinitionIndex, AimbotWeapon_t, Util::IntHash<ItemDefinitionIndex>> Settings::Aimbot::weapons = {
     { ItemDefinitionIndex::INVALID, { false, false, false, false, false, false, 700, Bone::BONE_HEAD, ButtonCode_t::MOUSE_MIDDLE, false, false, 1.0f,
