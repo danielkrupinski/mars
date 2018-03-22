@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.9.2)
-project(Fuzion)
+project(Mars)
 
 if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
     if (CMAKE_CXX_COMPILER_VERSION VERSION_LESS 7.2)
@@ -38,5 +38,5 @@ endif(NOT CMAKE_BUILD_TYPE)
 file(GLOB_RECURSE SOURCE_FILES "${CMAKE_SOURCE_DIR}/*.cpp")
 EXCLUDE_FILES_FROM_DIR_IN_LIST("${SOURCE_FILES}" "${CMAKE_SOURCE_DIR}/lib/ImGUI/extra_fonts" FALSE)
 
-add_library(Fuzion SHARED ${SOURCE_FILES})
-target_link_libraries(Fuzion SDL2 GL dl xdo)
+add_library(Mars SHARED ${SOURCE_FILES})
+target_link_libraries(Mars SDL2 GL dl xdo)

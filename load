@@ -16,7 +16,7 @@ sudo rm -rf /tmp/dumps # Remove if it exists
 sudo mkdir /tmp/dumps # Make it as root
 sudo chmod 000 /tmp/dumps # No permissions
 
-filename="libFuzion.so"
+filename="libMars.so"
 
 # Credit: Aixxe @ aixxe.net
 if grep -q "$filename" /proc/"$csgo_pid"/maps; then
