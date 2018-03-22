@@ -216,17 +216,6 @@ void Settings::LoadDefaultsOrSave(std::string path)
     settings[XORSTR("Triggerbot")][XORSTR("RandomDelay")][XORSTR("lowBound")] = Settings::Triggerbot::RandomDelay::lowBound;
     settings[XORSTR("Triggerbot")][XORSTR("RandomDelay")][XORSTR("highBound")] = Settings::Triggerbot::RandomDelay::highBound;
 
-    settings[XORSTR("AntiAim")][XORSTR("Yaw")][XORSTR("enabled")] = Settings::AntiAim::Yaw::enabled;
-    settings[XORSTR("AntiAim")][XORSTR("Yaw")][XORSTR("type")] = (int) Settings::AntiAim::Yaw::type;
-    settings[XORSTR("AntiAim")][XORSTR("Yaw")][XORSTR("type_fake")] = (int) Settings::AntiAim::Yaw::typeFake;
-    settings[XORSTR("AntiAim")][XORSTR("Yaw")][XORSTR("antiResolver")] = Settings::AntiAim::Yaw::antiResolver;
-    settings[XORSTR("AntiAim")][XORSTR("Pitch")][XORSTR("enabled")] = Settings::AntiAim::Pitch::enabled;
-    settings[XORSTR("AntiAim")][XORSTR("Pitch")][XORSTR("type")] = (int) Settings::AntiAim::Pitch::type;
-    settings[XORSTR("AntiAim")][XORSTR("HeadEdge")][XORSTR("enabled")] = Settings::AntiAim::HeadEdge::enabled;
-    settings[XORSTR("AntiAim")][XORSTR("HeadEdge")][XORSTR("distance")] = Settings::AntiAim::HeadEdge::distance;
-    settings[XORSTR("AntiAim")][XORSTR("AutoDisable")][XORSTR("no_enemy")] = Settings::AntiAim::AutoDisable::noEnemy;
-    settings[XORSTR("AntiAim")][XORSTR("AutoDisable")][XORSTR("knife_held")] = Settings::AntiAim::AutoDisable::knifeHeld;
-
     settings[XORSTR("ESP")][XORSTR("enabled")] = Settings::ESP::enabled;
     settings[XORSTR("ESP")][XORSTR("key")] = Util::GetButtonName(Settings::ESP::key);
     LoadColor(settings[XORSTR("ESP")][XORSTR("enemy_color")], Settings::ESP::enemyColor);
@@ -670,17 +659,6 @@ void Settings::LoadConfig(std::string path)
         GetVal(settings[XORSTR("Triggerbot")][XORSTR("RandomDelay")][XORSTR("enabled")], &Settings::Triggerbot::RandomDelay::enabled);
         GetVal(settings[XORSTR("Triggerbot")][XORSTR("RandomDelay")][XORSTR("lowBound")], &Settings::Triggerbot::RandomDelay::lowBound);
         GetVal(settings[XORSTR("Triggerbot")][XORSTR("RandomDelay")][XORSTR("highBound")], &Settings::Triggerbot::RandomDelay::highBound);
-
-        GetVal(settings[XORSTR("AntiAim")][XORSTR("Yaw")][XORSTR("enabled")], &Settings::AntiAim::Yaw::enabled);
-        GetVal(settings[XORSTR("AntiAim")][XORSTR("Yaw")][XORSTR("type")], (int*)& Settings::AntiAim::Yaw::type);
-        GetVal(settings[XORSTR("AntiAim")][XORSTR("Yaw")][XORSTR("type_fake")], (int*)& Settings::AntiAim::Yaw::typeFake);
-        GetVal(settings[XORSTR("AntiAim")][XORSTR("Yaw")][XORSTR("antiResolver")], &Settings::AntiAim::Yaw::antiResolver);
-        GetVal(settings[XORSTR("AntiAim")][XORSTR("Pitch")][XORSTR("enabled")], &Settings::AntiAim::Pitch::enabled);
-        GetVal(settings[XORSTR("AntiAim")][XORSTR("Pitch")][XORSTR("type")], (int*)& Settings::AntiAim::Pitch::type);
-        GetVal(settings[XORSTR("AntiAim")][XORSTR("HeadEdge")][XORSTR("enabled")], &Settings::AntiAim::HeadEdge::enabled);
-        GetVal(settings[XORSTR("AntiAim")][XORSTR("HeadEdge")][XORSTR("distance")], &Settings::AntiAim::HeadEdge::distance);
-        GetVal(settings[XORSTR("AntiAim")][XORSTR("AutoDisable")][XORSTR("knife_held")], &Settings::AntiAim::AutoDisable::knifeHeld);
-        GetVal(settings[XORSTR("AntiAim")][XORSTR("AutoDisable")][XORSTR("no_enemy")], &Settings::AntiAim::AutoDisable::noEnemy);
 
         GetVal(settings[XORSTR("ESP")][XORSTR("enabled")], &Settings::ESP::enabled);
         GetButtonCode(settings[XORSTR("ESP")][XORSTR("key")], &Settings::ESP::key);
