@@ -1,5 +1,38 @@
 #include "../include/interfaces.h"
 
+IBaseClientDLL* client = nullptr;
+IClientMode* clientMode = nullptr;
+ICommandLine* commandline = nullptr;
+C_CSGameRules** csGameRules = nullptr;
+C_CSPlayerResource** csPlayerResource = nullptr;
+ICvar* cvar = nullptr;
+IVDebugOverlay* debugOverlay = nullptr;
+CEffects* effects = nullptr;
+IEngineClient* engine = nullptr;
+IEngineVGui* engineVGui = nullptr;
+IClientEntityList* entityList = nullptr;
+IGameEventManager2* gameEvents = nullptr;
+IGameMovement* gameMovement = nullptr;
+CGlobalVars* globalVars = nullptr;
+CGlowObjectManager* glowManager = nullptr;
+CInput* input = nullptr;
+IInputInternal* inputInternal = nullptr;
+IInputSystem* inputSystem = nullptr;
+ILauncherMgr* launcherMgr = nullptr;
+ILocalize* localize = nullptr;
+IMaterialSystem* material = nullptr;
+IVModelInfo* modelInfo = nullptr;
+IVModelRender* modelRender = nullptr;
+IMoveHelper* moveHelper = nullptr;
+IVPanel* panel = nullptr;
+IPhysicsSurfaceProps* physics = nullptr;
+IPrediction* prediction = nullptr;
+IEngineSound* sound = nullptr;
+ISurface* surface = nullptr;
+IEngineTrace* trace = nullptr;
+CViewRender* viewRender = nullptr;
+
+
 void Interfaces::FindInterfaces()
 {
     client = GetInterface<IBaseClientDLL>(XORSTR("./csgo/bin/linux64/client_client.so"), XORSTR("VClient"));
