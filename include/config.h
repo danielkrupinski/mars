@@ -18,7 +18,8 @@ struct Config {
     std::string name;
     std::string path;
 
-    Config(const char*, const char*);
+    Config(const char* name, const char* path)
+        : this->name{(char*)name}, this->path{(char*)path} {}
 };
 
 std::vector<Config> GetConfigs(const char*);

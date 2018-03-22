@@ -1,10 +1,10 @@
 #include "../include/config.h"
 
-Config::Config(const char* name, const char* path)
-{
-    this->name = (char*)name;
-    this->path = (char*)path;
-}
+//Config::Config(const char* name, const char* path)
+//{
+//    this->name = (char*)name;
+//    this->path = (char*)path;
+//}
 
 bool DoesFileExist(const char* path)
 {
