@@ -462,30 +462,6 @@ struct AimbotWeapon_t {
             }
         }
 
-        namespace AntiAim {
-            namespace AutoDisable {
-                extern bool noEnemy;
-                extern bool knifeHeld;
-            }
-
-            namespace Yaw {
-                extern bool enabled;
-                extern AntiAimType_Y type;
-                extern AntiAimType_Y typeFake;
-                extern bool antiResolver;
-            }
-
-            namespace Pitch {
-                extern bool enabled;
-                extern AntiAimType_X type;
-            }
-
-            namespace HeadEdge {
-                extern bool enabled;
-                extern float distance;
-            }
-        }
-
         namespace Resolver {
             extern bool resolveAll;
         }
