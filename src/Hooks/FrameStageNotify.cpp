@@ -7,7 +7,6 @@ void Hooks::FrameStageNotify(void* thisptr, ClientFrameStage_t stage)
     SkinChanger::FrameStageNotifySkins(stage);
     Noflash::FrameStageNotify(stage);
     View::FrameStageNotify(stage);
-    Resolver::FrameStageNotify(stage);
     SkyBox::FrameStageNotify(stage);
     ASUSWalls::FrameStageNotify(stage);
     NoSmoke::FrameStageNotify(stage);
