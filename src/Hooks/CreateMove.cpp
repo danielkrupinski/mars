@@ -33,6 +33,7 @@ bool Hooks::CreateMove(void* thisptr, float flInputSampleTime, CUserCmd* cmd)
         AutoKnife::CreateMove(cmd);
         FakeLag::CreateMove(cmd);
         ESP::CreateMove(cmd);
+        TracerEffect::CreateMove(cmd);
         PredictionSystem::EndPrediction();
 
         EdgeJump::PostPredictionCreateMove(cmd);

@@ -545,6 +545,10 @@ struct AimbotWeapon_t {
                 extern BarColorType colorType;
             }
 
+            namespace BulletTracers {
+                extern bool enabled;
+            }
+
             namespace Bomb {
                 extern bool enabled;
             }

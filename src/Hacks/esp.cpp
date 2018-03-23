@@ -73,6 +73,9 @@ BoxType Settings::ESP::Boxes::type = BoxType::FRAME_2D;
 bool Settings::ESP::Bars::enabled = false;
 BarColorType Settings::ESP::Bars::colorType = BarColorType::HEALTH_BASED;
 BarType Settings::ESP::Bars::type = BarType::HORIZONTAL;
+bool Settings::ESP::Tracers::enabled = false;
+TracerType Settings::ESP::Tracers::type = TracerType::BOTTOM;
+bool Settings::ESP::BulletTracers::enabled = false;
 bool Settings::ESP::FOVCrosshair::enabled = false;
 bool Settings::ESP::FOVCrosshair::filled = false;
 ColorVar Settings::ESP::FOVCrosshair::color = ImColor(255, 0, 0, 255);
@@ -448,6 +451,51 @@ static bool GetBox(C_BaseEntity* entity, int& x, int& y, int& w, int& h)
         }
     }
 
+    static void DrawBulletTrace(C_BasePlayer* player)
+    {
+        Vector src3D, dst3D, forward, src, dst;
+        trace_t tr;
+        Ray_t ray;
+        CTraceFilter filter;
+
+        Math::AngleVectors(*player->GetEyeAngles(), forward);
+        filter.pSkip = player;
+        src3D = player->GetEyePosition();
+        dst3D = src3D + (forward * 8192);
+
+        ray.Init(src3D, dst3D);
+
+        trace->TraceRay(ray, MASK_SHOT, &filter, &tr);
+
+        if (debugOverlay->ScreenPosition(src3D, src) || debugOverlay->ScreenPosition(tr.endpos, dst))
+        return;
+
+        Draw::Line((int)(src.x), (int)(src.y), (int)(dst.x), (int)(dst.y), Color::FromImColor(ESP::GetESPPlayerColor(player, true)));
+        Draw::FilledRectangle((int)(dst.x - 3), (int)(dst.y - 3), 6, 6, Color::FromImColor(ESP::GetESPPlayerColor(player, false)));
+    }
+
+    static void DrawTracer(C_BasePlayer* player)
+    {
+        Vector src3D, src;
+        src3D = player->GetVecOrigin() - Vector(0, 0, 0);
+
+        if (debugOverlay->ScreenPosition(src3D, src))
+        return;
+
+        int ScreenWidth, ScreenHeight;
+        engine->GetScreenSize(ScreenWidth, ScreenHeight);
+
+        int x = (int)(ScreenWidth * 0.5f);
+        int y = 0;
+
+        if (Settings::ESP::Tracers::type == TracerType::CURSOR)
+        y = (int)(ScreenHeight * 0.5f);
+        else if (Settings::ESP::Tracers::type == TracerType::BOTTOM)
+        y = ScreenHeight;
+
+        bool bIsVisible = Entity::IsVisible(player, (int)Bone::BONE_HEAD, 180.f, Settings::ESP::Filters::smokeCheck);
+        Draw::Line((int)(src.x), (int)(src.y), x, y, Color::FromImColor(ESP::GetESPPlayerColor(player, bIsVisible)));
+    }
     static void DrawAimbotSpot( ) {
         C_BasePlayer* localplayer = ( C_BasePlayer* ) entityList->GetClientEntity( engine->GetLocalPlayer() );
         if ( !localplayer || !localplayer->GetAlive() ){
@@ -896,6 +944,12 @@ static void DrawPlayer(int index, C_BasePlayer* player, IEngineClient::player_in
 
     if (Settings::ESP::Skeleton::enabled)
     DrawSkeleton(player);
+
+    if (Settings::ESP::BulletTracers::enabled)
+    DrawBulletTrace(player);
+
+    if (Settings::ESP::Tracers::enabled && player != localplayer)
+    DrawTracer(player);
 
     if (Settings::ESP::HeadDot::enabled)
     DrawHeaddot(player);
