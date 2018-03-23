@@ -3,10 +3,6 @@
 </p>
 
 
-## Note
-Today Valve changed weapon info function so aimbot is crashing the game. Don't use it.
-
-
 ## What is Mars?
 
 A fully featured internal hack for *CounterStrike: Global Offensive* written in C++.
