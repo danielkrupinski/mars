@@ -20,7 +20,7 @@ if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE RELEASE)
 endif(NOT CMAKE_BUILD_TYPE)
 
-file(GLOB_RECURSE SOURCE_FILES "${CMAKE_SOURCE_DIR}/*.cpp")
+file(GLOB_RECURSE SOURCE_FILES "${CMAKE_SOURCE_DIR}/src/*.cpp")
 
 add_library(Mars SHARED ${SOURCE_FILES})
 target_link_libraries(Mars SDL2 GL dl xdo)
