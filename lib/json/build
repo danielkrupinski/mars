@@ -1,3 +1,0 @@
-g++ -fpic -c jsoncpp.cpp
-
-g++ -shared -o libJSON.so jsoncpp.o
