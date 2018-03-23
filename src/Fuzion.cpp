@@ -125,6 +125,7 @@ void __attribute__((destructor)) Shutdown()
 
     Aimbot::XDOCleanup();
     NoSmoke::Cleanup();
+    TracerEffect::RestoreTracers();
 
     clientVMT->ReleaseVMT();
     clientModeVMT->ReleaseVMT();
