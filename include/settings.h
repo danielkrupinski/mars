@@ -13,7 +13,6 @@
 #include "fonts.h"
 #include "Utils/draw.h"
 #include "Hacks/skinchanger.h"
-#include "Hacks/tracereffect.h"
 #include "Utils/util.h"
 #include "Utils/util_items.h"
 #include "Utils/util_sdk.h"
@@ -25,11 +24,6 @@ enum class SmoothType : int {
     SLOW_END,
     CONSTANT,
     FAST_END,
-};
-
-enum class TracerType : int {
-    BOTTOM,
-    CURSOR,
 };
 
 enum class ClanTagType : int {
@@ -551,11 +545,6 @@ struct AimbotWeapon_t {
                 extern BarColorType colorType;
             }
 
-            namespace Tracers {
-                extern bool enabled;
-                extern TracerType type;
-            }
-
             namespace BulletTracers {
                 extern bool enabled;
             }
@@ -869,14 +858,6 @@ struct AimbotWeapon_t {
             extern bool forceReset;
             extern bool autobuy;
             extern int autobuyAt;
-        }
-
-        namespace TracerEffects {
-            extern bool enabled;
-            extern bool serverSide;
-            extern TracerEffects_t effect;
-            extern int frequency;
-
         }
 
         namespace AutoKnife {
