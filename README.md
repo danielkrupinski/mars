@@ -3,7 +3,7 @@
 </p>
 
 
-##Note
+## Note
 This cheat is no longer developed and *is Vac detected*.
 ## What is Mars?
 
