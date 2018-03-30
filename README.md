@@ -3,8 +3,10 @@
 </p>
 
 
-## Note
-This cheat is no longer developed and **is Vac detected**.
+## Important info
+This cheat is no longer developed and **is VAC detected!**
+
+
 ## What is Mars?
 
 A fully featured internal hack for *CounterStrike: Global Offensive* written in C++.
