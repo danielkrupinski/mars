@@ -4,7 +4,7 @@
 
 
 ## Note
-**This cheat is Vac detected!**
+**This cheat is VAC detected!**
 
 
 ## What is Mars?
