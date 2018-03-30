@@ -3,8 +3,8 @@
 </p>
 
 
-## Note
-**This cheat is Vac detected**.
+## Important info
+**This cheat is VAC detected**.
 
 
 ## What is Mars?
